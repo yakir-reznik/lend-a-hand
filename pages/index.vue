@@ -1,5 +1,6 @@
 <template>
-	<h1>This is pages/index.vue</h1>
+	<SectionHero />
+	<div style="height: 3000px"></div>
 </template>
 
 <script setup lang="ts"></script>
