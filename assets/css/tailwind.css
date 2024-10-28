@@ -8,5 +8,5 @@ html {
 }
 
 .wrapper {
-	@apply relative px-4 desktop:mx-auto desktop:w-[1200px] desktop:px-[40px];
+	@apply relative px-4 desktop:mx-auto desktop:w-[1200px] desktop:px-0;
 }

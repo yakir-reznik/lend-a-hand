@@ -1,7 +1,7 @@
 <template>
 	<nav class="fixed left-0 top-0 z-10 w-full bg-primary text-dark">
 		<div class="wrapper">
-			<div class="track flex items-center justify-between py-4">
+			<div class="flex items-center justify-between py-4">
 				<h1 class="flex items-center gap-2 text-2xl font-extrabold" title="ישראלים מובילים לשחרור החטופים">
 					<span>ישראלים מובילים</span>
 					<img src="/img/open-hands.svg" class="h-8" alt="Open hands" />

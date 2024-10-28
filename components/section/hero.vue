@@ -1,12 +1,22 @@
 <template>
-	<div class="relative bg-dark pb-20">
+	<div class="relative bg-dark pb-16">
 		<div class="wrapper">
 			<img class="mx-auto" src="/img/romi.png" alt="Bring Romi home" />
 		</div>
 		<div class="absolute bottom-0 left-0 w-full bg-dark/50 py-8 text-center">
-			<h2 class="text-5xl font-bold text-white">רומי</h2>
-			<p class="text-2xl font-medium text-gray-300">מחכה שנחזיר אותה הביתה</p>
-			<HandBtn class="translate-y-16">גם אני רוצה לתת יד</HandBtn>
+			<div class="wrapper">
+				<h2 class="text-5xl font-bold text-white">רומי</h2>
+				<p class="text-2xl font-medium text-gray-300">מחכה שנחזיר אותה הביתה</p>
+				<HandBtn class="-mt-4 translate-y-16">גם אני רוצה לתת יד</HandBtn>
+				<div class="absolute bottom-0 left-0 text-center">
+					<p class="text-6xl font-black text-primary">124,345</p>
+					<h5 class="text-xl font-semibold tracking-wide text-white">נתנו יד להשבת החטופים</h5>
+				</div>
+				<div class="right-0-0 absolute bottom-0 text-center">
+					<p class="text-6xl font-black text-primary">387</p>
+					<h5 class="text-xl font-semibold tracking-wide text-white">ימים בשבי</h5>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
