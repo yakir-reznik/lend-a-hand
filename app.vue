@@ -1,0 +1,6 @@
+<template>
+	<Nav />
+	<div class="wrapper">
+		<h1 class="text-primary">Hello world!</h1>
+	</div>
+</template>
