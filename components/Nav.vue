@@ -1,20 +1,22 @@
 <template>
-	<nav class="w-full bg-primary text-dark">
+	<nav class="fixed left-0 top-0 z-10 w-full bg-primary text-dark">
 		<div class="wrapper">
-			<div class="flex justify-between py-4">
-				<div class="flex gap-2 text-xl font-bold">
-					<div id="img" class="">👐🏻</div>
-					<h1>ישראלים מובילים לשחרור החטופים</h1>
-				</div>
+			<div class="track flex items-center justify-between py-4">
+				<h1 class="flex items-center gap-2 text-2xl font-extrabold" title="ישראלים מובילים לשחרור החטופים">
+					<span>ישראלים מובילים</span>
+					<img src="/img/open-hands.svg" class="h-8" alt="Open hands" />
+					<span>לשחרור החטופים</span>
+				</h1>
+
 				<ul class="flex gap-4">
 					<li>
-						<a href="#0">אני רוצה לתת יד</a>
+						<a class="font-semibold hover:underline" href="#0">אני רוצה לתת יד</a>
 					</li>
 					<li class="text-dark/20">
 						<span>|</span>
 					</li>
 					<li>
-						<a href="#0">יוצרים ותומכים</a>
+						<a class="font-semibold hover:underline" href="#0">יוצרים ותומכים</a>
 					</li>
 				</ul>
 			</div>
@@ -24,4 +26,8 @@
 
 <script setup lang="ts"></script>
 
-<style lang="sass" scoped></style>
+<style lang="css">
+	body {
+		padding-top: 64px;
+	}
+</style>
