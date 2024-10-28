@@ -18,7 +18,11 @@
 					/>
 				</div>
 				<div class="right-0-0 absolute bottom-0 text-center">
-					<p class="text-6xl font-black text-primary">387</p>
+					<p class="dir-ltr text-dark-800 mb-2 flex gap-2 text-5xl font-black">
+						<span class="bg-primary p-2">3</span>
+						<span class="bg-primary p-2">8</span>
+						<span class="bg-primary p-2">8</span>
+					</p>
 					<h5 class="text-xl font-semibold tracking-wide text-white">ימים בשבי</h5>
 					<img
 						class="absolute -bottom-1 left-0 h-[6px]"
