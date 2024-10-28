@@ -4,9 +4,9 @@
 
 html {
 	font-size: 16px;
-	@apply text-dark;
+	@apply font-heebo text-dark;
 }
 
 .wrapper {
-	@apply desktop:w-[1200px] desktop:mx-auto desktop:px-[40px] px-4;
+	@apply relative px-4 desktop:mx-auto desktop:w-[1200px] desktop:px-[40px];
 }
