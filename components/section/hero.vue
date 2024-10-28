@@ -1,9 +1,9 @@
 <template>
-	<div class="relative bg-dark pb-16">
+	<div class="bg-dark-900 relative pb-16">
 		<div class="wrapper">
 			<img class="mx-auto" src="/img/romi.png" alt="Bring Romi home" />
 		</div>
-		<div class="absolute bottom-0 left-0 w-full bg-dark/60 py-8 text-center">
+		<div class="bg-dark-900/70 absolute bottom-0 left-0 w-full py-8 text-center">
 			<div class="wrapper">
 				<h2 class="text-5xl font-bold text-white">רומי</h2>
 				<p class="text-2xl font-medium text-gray-300">מחכה שנחזיר אותה הביתה</p>

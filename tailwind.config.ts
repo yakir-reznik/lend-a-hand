@@ -19,7 +19,10 @@ export default <Partial<Config>>{
 					'900': '#7a360d',
 					'950': '#461b02',
 				},
-				dark: '#010120',
+				dark: {
+					'800': '#333333',
+					'900': '#010120',
+				},
 				mid: '#334D6E',
 				gray: {
 					DEFAULT: '#ededed',
