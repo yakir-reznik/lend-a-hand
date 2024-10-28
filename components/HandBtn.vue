@@ -17,6 +17,7 @@
 			minSize: '40px',
 			maxSize: '60px',
 			density: 0.625,
+			distanceToTravel: '180px',
 			elements: [
 				{
 					content: '👋',
