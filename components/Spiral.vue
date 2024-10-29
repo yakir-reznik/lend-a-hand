@@ -1,5 +1,5 @@
 <template>
-	<div class="relative mx-auto size-[500px]">
+	<div class="relative mx-auto h-[65svh] w-full overflow-hidden desktop:h-[600px]">
 		<div id="spiralContainer" class="h-full">
 			<div class="item grid place-items-center" v-for="i in 240">
 				<img src="/img/yellow-hand.svg" alt="hand icon" class="w-full" />

@@ -16,6 +16,7 @@
 					רק יחד, נצליח להחזיר אותם הביתה.
 				</p>
 			</div>
+
 			<ul class="grid grid-cols-3 justify-items-center">
 				<figure class="text-mid max-w-48">
 					<img class="mx-auto mb-4" src="/img/hand-in-heart.svg" alt="Hand in heart" />
@@ -32,10 +33,6 @@
 					<figcaption class="text-xl font-semibold">כולנו יחד נחזיר אותם הביתה</figcaption>
 				</figure>
 			</ul>
-
-			<div>
-				<h5>This is some underlined text</h5>
-			</div>
 		</div>
 	</section>
 </template>

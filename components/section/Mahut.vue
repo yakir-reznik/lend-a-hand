@@ -18,10 +18,6 @@
 					<figcaption class="text-xl font-semibold">כולנו יחד נחזיר אותם הביתה</figcaption>
 				</figure>
 			</ul>
-
-			<div>
-				<h5>This is some underlined text</h5>
-			</div>
 		</div>
 	</section>
 </template>

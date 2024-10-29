@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="hand-btn shadow-dark-900 inline-flex items-center gap-4 rounded-full bg-primary px-12 py-4 text-2xl font-bold transition hover:bg-primary-400 active:scale-[0.975]"
+		class="hand-btn shadow-dark-900 inline-flex items-center gap-4 rounded-full bg-primary px-12 py-4 text-xl font-bold transition hover:bg-primary-400 active:scale-[0.975] desktop:text-2xl"
 		@click="handleClick"
 	>
 		<img src="/img/one-hand.svg" alt="One hand" />
