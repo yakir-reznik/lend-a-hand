@@ -25,6 +25,27 @@
 						<label class="text-lg font-semibold">אני מעל גיל 12</label>
 					</button>
 				</fieldset>
+				<fieldset class="mt-12 px-4">
+					<input
+						class="w-full rounded-md border border-gray-200 p-2 text-lg"
+						type="text"
+						placeholder="שם מלא (חובה)"
+						autocomplete="name"
+						v-model="data.name"
+					/>
+				</fieldset>
+				<fieldset class="mt-8 px-4">
+					<input
+						class="w-full rounded-md border border-gray-200 p-2 text-lg"
+						type="email"
+						placeholder="דוא״ל (חובה)"
+						autocomplete="email"
+						v-model="data.email"
+					/>
+				</fieldset>
+				<div class="mt-12 h-32 text-center">
+					<HandBtn class="mx-auto w-5/6">צרפו אותי</HandBtn>
+				</div>
 			</form>
 		</div>
 	</section>
@@ -37,6 +58,8 @@
 
 	const data = reactive({
 		under12: false,
+		name: '',
+		email: '',
 	})
 </script>
 
