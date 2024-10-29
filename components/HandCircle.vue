@@ -1,7 +1,9 @@
 <template>
-	<div ref="el" class="rotator" :class="props.direction">
+	<div ref="container" class="container" :class="props.direction">
 		<div v-for="i in props.draw" class="grid place-items-center">
-			<span class="relative inline-block -rotate-45">✋</span>
+			<span class="relative inline-block">
+				<img class="w-full" src="/img/yellow-hand.svg" alt="hand" />
+			</span>
 		</div>
 		<div v-for="i in props.empty"></div>
 	</div>
@@ -11,33 +13,39 @@
 	const props = defineProps<{
 		draw: number
 		empty: number
-		size: number
-		radius: number
+		elementSize: number
+		diameter: number
+		duration: number
 		direction: 'clockwise' | 'counter-clockwise'
 	}>()
 
-	const el = ref<HTMLDivElement>()
+	const container = ref<HTMLDivElement>()
 
 	onMounted(() => {
-		if (!el.value) return
+		if (!container.value) return
 
-		el.value.style.animation = 'circle 25s linear infinite'
-		el.value.style.animationDirection = props.direction === 'counter-clockwise' ? 'reverse' : 'normal'
+		container.value.style.width = props.diameter + 'px'
+		container.value.style.height = props.diameter + 'px'
+		container.value.style.animation = `circle ${props.duration}s linear infinite`
+		container.value.style.animationDirection = props.direction === 'counter-clockwise' ? 'reverse' : 'normal'
 
-		const blocks = el.value.querySelectorAll<HTMLDivElement>('div')
-		const increase = (Math.PI * 2) / blocks.length
+		const items = container.value.querySelectorAll<HTMLDivElement>('div')
+		const increase = (Math.PI * 2) / items.length
 
 		let x = 0
 		let y = 0
 		let angle = 0
 
-		for (var i = 0; i < blocks.length; i++) {
-			const elem = blocks[i]
-			x = props.radius * Math.cos(angle) + 325
-			y = props.radius * Math.sin(angle) + 325
-			elem.style.left = x + 'px'
-			elem.style.top = y + 'px'
-			// var rot = 90 + i * (360 / blocks.length)
+		for (var i = 0; i < items.length; i++) {
+			const item = items[i]
+			const itemSizeOffset = props.diameter / 2 - props.elementSize / 2
+			x = (props.diameter / 2) * Math.cos(angle) + itemSizeOffset
+			y = (props.diameter / 2) * Math.sin(angle) + itemSizeOffset
+			item.style.left = x + 'px'
+			item.style.top = y + 'px'
+			item.style.width = props.elementSize + 'px'
+			item.style.height = props.elementSize + 'px'
+			item.style.animationDuration = `${props.duration}s`
 			angle += increase
 		}
 	})
@@ -53,7 +61,7 @@
 		}
 	}
 
-	@keyframes inner-circle {
+	@keyframes inner-circle-clockwise {
 		from {
 			transform: rotate(0deg);
 		}
@@ -61,31 +69,40 @@
 			transform: rotate(-360deg);
 		}
 	}
-	.rotator {
+
+	@keyframes inner-circle-counter-clockwise {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.container {
 		grid-row: 1;
 		grid-column: 1;
-		width: 700px;
-		height: 700px;
-		margin: 20px auto;
-		font-size: 10px;
-		line-height: 1;
+		margin: 0 auto;
 		transform-origin: 50% 50%;
 	}
 
-	.rotator > div {
-		font-size: 2rem;
+	.container > div {
 		position: absolute;
-		animation: inner-circle 25s linear infinite;
-		width: 50px;
-		height: 50px;
-		transform: rotate(45deg);
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
 	}
 
-	.rotator.clockwise > div {
-		animation-direction: normal;
+	.container.clockwise > div {
+		animation-name: inner-circle-clockwise;
+	}
+	.container.clockwise > div > span {
+		transform: rotate(0deg);
 	}
 
-	.rotator.counter-clockwise > div {
-		animation-direction: reverse;
+	.container.counter-clockwise > div {
+		animation-name: inner-circle-counter-clockwise;
+	}
+	.container.counter-clockwise > div > span {
+		transform: rotate(-45deg);
 	}
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<div class="bg-dark-900 relative pb-16">
-		<div class="wrapper">
-			<img class="mx-auto" src="/img/romi.png" alt="Bring Romi home" />
+		<div class="wrapper py-20">
+			<Spiral />
 		</div>
 		<div class="bg-dark-900/70 absolute bottom-0 left-0 w-full py-8 text-center">
 			<div class="wrapper">
