@@ -1,6 +1,6 @@
 <template>
-	<div ref="el" class="rotator">
-		<div v-for="i in props.draw">
+	<div ref="el" class="rotator" :class="props.direction">
+		<div v-for="i in props.draw" class="grid place-items-center">
 			<span class="relative inline-block -rotate-45">✋</span>
 		</div>
 		<div v-for="i in props.empty"></div>
@@ -33,8 +33,8 @@
 
 		for (var i = 0; i < blocks.length; i++) {
 			const elem = blocks[i]
-			x = props.radius * Math.cos(angle) + 150
-			y = props.radius * Math.sin(angle) + 150
+			x = props.radius * Math.cos(angle) + 325
+			y = props.radius * Math.sin(angle) + 325
 			elem.style.left = x + 'px'
 			elem.style.top = y + 'px'
 			// var rot = 90 + i * (360 / blocks.length)
@@ -64,8 +64,8 @@
 	.rotator {
 		grid-row: 1;
 		grid-column: 1;
-		width: 350px;
-		height: 350px;
+		width: 700px;
+		height: 700px;
 		margin: 20px auto;
 		font-size: 10px;
 		line-height: 1;
@@ -79,5 +79,13 @@
 		width: 50px;
 		height: 50px;
 		transform: rotate(45deg);
+	}
+
+	.rotator.clockwise > div {
+		animation-direction: normal;
+	}
+
+	.rotator.counter-clockwise > div {
+		animation-direction: reverse;
 	}
 </style>
