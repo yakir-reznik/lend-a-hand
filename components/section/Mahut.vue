@@ -1,8 +1,8 @@
 <template>
 	<section class="py-24">
 		<div class="wrapper text-center">
-			<h2 class="mb-12 text-5xl font-bold">מהות הפרוייקט</h2>
-			<ul class="grid grid-cols-3 justify-items-center">
+			<h2 class="mb-12 text-4xl font-bold desktop:text-5xl">מהות הפרוייקט</h2>
+			<ul class="grid justify-items-center gap-12 desktop:grid-cols-3">
 				<figure class="text-mid max-w-48">
 					<img class="mx-auto mb-4" src="/img/hand-in-heart.svg" alt="Hand in heart" />
 					<figcaption class="text-xl font-semibold">כל אחד יכול לתמוך מכל מקום</figcaption>

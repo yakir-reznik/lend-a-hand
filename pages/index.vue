@@ -2,6 +2,8 @@
 	<SectionHero />
 	<SectionMahut />
 	<SectionGoals />
+	<SectionSignup />
+
 	<!-- <div class="grid grid-cols-1 grid-rows-1 place-items-center border border-blue-600">
 		<img src="https://picsum.photos/220/220" alt="" style="grid-row: 1; grid-column: 1" class="rounded-full" />
 		<HandCircle :diameter="700" :draw="36" :empty="12" direction="clockwise" :element-size="0" :duration="25" />
