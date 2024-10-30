@@ -32,7 +32,7 @@
 						<label class="text-lg font-semibold">אני מעל גיל 12</label>
 					</button>
 				</fieldset>
-				<fieldset class="mt-12 px-4">
+				<fieldset class="mx-auto mt-12 px-4 desktop:max-w-sm">
 					<input
 						class="w-full rounded-md border border-gray-200 p-2 text-lg"
 						type="text"
@@ -41,7 +41,7 @@
 						v-model="data.name"
 					/>
 				</fieldset>
-				<fieldset class="mt-8 px-4">
+				<fieldset class="mx-auto mt-8 px-4 desktop:max-w-sm">
 					<input
 						class="w-full rounded-md border border-gray-200 p-2 text-lg"
 						type="email"
@@ -50,7 +50,7 @@
 						v-model="data.email"
 					/>
 				</fieldset>
-				<fieldset class="flex flex-wrap gap-2">
+				<fieldset class="flex flex-wrap justify-center gap-2">
 					<label class="mb-4 mt-8 block w-full text-center text-lg font-semibold">אפשר גם להוסיף ברכה:</label>
 					<div
 						v-for="(message, messageId) in messages"
@@ -67,7 +67,7 @@
 					</div>
 				</fieldset>
 				<div class="mt-12 h-32 text-center">
-					<HandBtn class="mx-auto w-5/6">צרפו אותי</HandBtn>
+					<HandBtn class="mx-auto w-5/6 desktop:w-72">צרפו אותי</HandBtn>
 				</div>
 			</form>
 		</div>
@@ -80,18 +80,11 @@
 		e.preventDefault()
 	}
 
-	const messages = {
-		gave_hand: 'גם אני נתתי יד',
-		miss_you: 'מתגעגעים אליכם',
-		want_you_home: 'גם אני רוצה אתכם בבית',
-		it_will_be_good: 'כמה טוב יהיה כשתשובו',
-	}
-
 	type Data = {
 		under12: boolean
 		name: string
 		email: string
-		messageId: keyof typeof messages
+		messageId: MessageID
 	}
 	const data = reactive<Data>({
 		under12: false,

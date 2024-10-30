@@ -5,7 +5,16 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			htmlAttrs: { lang: 'he', dir: 'rtl' },
+			charset: 'utf-8',
+			viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0',
+			title: 'ישראלים מובילים לשחרור החטופים',
 		},
 	},
-	devtools: { enabled: true },
+	ssr: false,
+	nitro: { preset: 'static' },
+	routeRules: {
+		// disable prerendering for all routes except home
+		'**': { prerender: true },
+	},
+	devtools: { enabled: false },
 })

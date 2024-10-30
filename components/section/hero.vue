@@ -1,6 +1,7 @@
 <template>
 	<div class="bg-dark-900 relative pb-16">
-		<Spiral />
+		<!-- <Spiral /> -->
+		<SpiralRows />
 
 		<div class="bg-dark-900/70 absolute bottom-0 left-0 w-full py-8 text-center">
 			<div class="wrapper">
