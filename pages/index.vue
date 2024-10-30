@@ -3,7 +3,7 @@
 	<SectionMahut />
 	<SectionGoals />
 	<SectionSignup />
-	<SectionList />
+	<SectionMessageBoard />
 	<div style="height: 3000px"></div>
 </template>
 

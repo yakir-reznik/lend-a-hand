@@ -9,8 +9,27 @@
 					alt="Yellow styled underline"
 				/>
 			</h2>
-			<table>
-				<tr></tr>
+
+			<table class="table-auto">
+				<tbody>
+					<tr v-for="row in feed">
+						<td class="">
+							<div
+								class="mb-2 grid size-12 place-items-center rounded-full border-2 bg-white p-2 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
+							>
+								<img
+									:class="{ 'w-4': row.under12, 'w-8': !row.under12 }"
+									src="/img/abstract-yellow-hand.svg"
+									alt="hand icon"
+								/>
+							</div>
+						</td>
+						<td class="px-4 text-gray-500">{{ row.date }}</td>
+						<td class="px-4 text-gray-500">{{ row.time }}</td>
+						<td class="text-mid px-4 font-semibold">{{ row.name }}</td>
+						<td class="font-semibold">{{ row.messageId }}</td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</section>
@@ -24,6 +43,7 @@
 		name: string
 		messageId: MessageID
 	}
+
 	const feed: FeedRecord[] = [
 		{
 			date: '2021-08-01',
@@ -35,7 +55,7 @@
 		{
 			date: '2021-08-01',
 			time: '12:00',
-			under12: false,
+			under12: true,
 			name: 'א.ת',
 			messageId: 'it_will_be_good',
 		},
