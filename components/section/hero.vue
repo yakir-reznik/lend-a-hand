@@ -9,7 +9,7 @@
 			<div class="wrapper">
 				<h2 class="text-5xl font-bold text-white">רומי</h2>
 				<p class="text-2xl font-medium text-gray-300">מחכה שנחזיר אותה הביתה</p>
-				<HandBtn class="-mt-4 translate-y-16" @click="handleClick">גם אני רוצה לתת יד</HandBtn>
+				<HandBtn class="relative z-10 -mt-4 translate-y-16" @click="handleClick">גם אני רוצה לתת יד</HandBtn>
 			</div>
 		</div>
 
