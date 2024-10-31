@@ -1,9 +1,9 @@
 <template>
-	<nav class="fixed left-0 top-0 z-10 w-full bg-primary">
+	<nav class="fixed left-0 top-0 z-20 w-full bg-primary">
 		<div class="wrapper">
 			<div class="flex items-center justify-between desktop:py-4">
 				<h1
-					class="text-dark-900 flex items-center gap-2 whitespace-nowrap text-sm font-extrabold desktop:text-2xl"
+					class="flex items-center gap-2 whitespace-nowrap text-sm font-extrabold text-dark-900 desktop:text-2xl"
 					title="ישראלים מובילים לשחרור החטופים"
 				>
 					<span>ישראלים מובילים</span>

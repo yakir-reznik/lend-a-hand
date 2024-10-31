@@ -7,7 +7,9 @@
 				src="/img/two-yellow-hands-white-border.svg"
 				alt="two yellow hands white border"
 			/>
-			<h2 class="mx-auto mb-10 text-5xl font-bold desktop:max-w-lg">תודה שנתת את ידך להשבת החטופים הביתה</h2>
+			<h2 class="mx-auto mb-10 text-3xl font-bold desktop:max-w-lg desktop:text-5xl">
+				תודה שנתת את ידך להשבת החטופים הביתה
+			</h2>
 			<button
 				ref="shareBtn"
 				class="hand-btn inline-flex items-center justify-center gap-4 rounded-full bg-primary px-12 py-4 text-xl font-bold shadow-dark-900 transition hover:bg-primary-400 active:scale-[0.975] desktop:text-2xl"
