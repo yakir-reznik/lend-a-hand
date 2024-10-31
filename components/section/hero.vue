@@ -2,12 +2,8 @@
 	<div class="bg-dark-900 relative pb-16">
 		<!-- <Spiral /> -->
 		<!-- <SpiralRows /> -->
-
-		<div class="relative h-[70vh]">
-			<div class="glow absolute-center size-[190px] rounded-full"></div>
-			<img src="/img/romi.jpg" alt="" class="absolute-center rounded-full" />
-			<div id="aaa" class="absolute -bottom-1/2 left-0 h-full w-full"></div>
-		</div>
+		<!-- <FloatingEmojis /> -->
+		<StarField />
 
 		<div class="bg-dark-900/70 absolute bottom-0 left-0 w-full py-8 text-center">
 			<div class="wrapper">
@@ -31,7 +27,11 @@
 				<img class="absolute -bottom-1 left-0 h-[6px]" src="/img/underline.svg" alt="Yellow styled underline" />
 			</div>
 			<div class="relative text-center">
-				<p class="text-5xl font-black text-primary desktop:text-6xl">124,345</p>
+				<div v-if="isLoading" class="absolute left-0 top-0 w-full">
+					<Spinner :size="40" class="absolute-center" />
+				</div>
+				<p class="text-5xl font-black text-primary desktop:text-6xl">{{ formatted_total_users || '&nbsp;' }}</p>
+
 				<h5 class="font-semibold tracking-wide text-white desktop:text-xl">נתנו יד להשבת החטופים</h5>
 				<img class="absolute -bottom-1 left-0 h-[6px]" src="/img/underline.svg" alt="Yellow styled underline" />
 			</div>
@@ -40,44 +40,14 @@
 </template>
 
 <script setup lang="ts">
-	import useFloatingIcons from 'floating-icons'
+	const { total_users, last_10_users, isLoading } = toRefs(useUserStore())
 
-	onMounted(() => {
-		setInterval(() => {
-			const el = document.querySelector('#aaa')
-			useFloatingIcons({
-				target: el as HTMLElement,
-				minSize: '40px',
-				maxSize: '60px',
-				density: 0.3,
-				distanceToTravel: '500px',
-				minDuration: 2500,
-				maxDuration: 5000,
-				elements: [
-					{
-						content: '👋',
-						probability: 4,
-					},
-					{
-						content: '✋',
-						probability: 4,
-					},
-					{
-						content: '❤️',
-						probability: 1,
-					},
-					{
-						content: '🇮🇱',
-						probability: 1,
-					},
-				],
-			})
-		}, 1000)
+	const formatted_total_users = computed(() => {
+		if (total_users.value) {
+			return total_users.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+		}
+		return ''
 	})
 </script>
 
-<style lang="css" scoped>
-	.glow {
-		box-shadow: 0 0 10rem 0 rgba(117, 170, 255, 0.5);
-	}
-</style>
+<style lang="css" scoped></style>

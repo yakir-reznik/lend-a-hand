@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2024-04-03',
-	modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts'],
+	modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@pinia/nuxt'],
 	app: {
 		head: {
 			htmlAttrs: { lang: 'he', dir: 'rtl' },
@@ -16,5 +16,6 @@ export default defineNuxtConfig({
 		// disable prerendering for all routes except home
 		'**': { prerender: true },
 	},
+
 	devtools: { enabled: false },
 })
