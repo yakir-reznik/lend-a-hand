@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-gray" id="signup-container">
+	<section class="w-screen overflow-hidden bg-gray" id="signup-container">
 		<div class="wrapper">
 			<SignUpSuccess :signedUp />
 

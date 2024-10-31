@@ -36,35 +36,37 @@
 		if (!props.signedUp) return
 		if (!scrollAnchor || !shareBtn.value) return
 
-		scrollAnchor.value?.scrollIntoView({ behavior: 'smooth' })
+		setTimeout(() => {
+			useFloatingIcons({
+				target: shareBtn.value!,
+				minSize: '40px',
+				maxSize: '60px',
+				density: 0.625,
+				distanceToTravel: '180px',
+				minElementCount: 16,
+				maxElementCount: 24,
+				elements: [
+					{
+						content: '👋',
+						probability: 4,
+					},
+					{
+						content: '✋',
+						probability: 4,
+					},
+					{
+						content: '❤️',
+						probability: 1,
+					},
+					{
+						content: '🇮🇱',
+						probability: 1,
+					},
+				],
+			})
+		}, 500)
 
-		useFloatingIcons({
-			target: shareBtn.value,
-			minSize: '40px',
-			maxSize: '60px',
-			density: 0.625,
-			distanceToTravel: '180px',
-			minElementCount: 16,
-			maxElementCount: 24,
-			elements: [
-				{
-					content: '👋',
-					probability: 4,
-				},
-				{
-					content: '✋',
-					probability: 4,
-				},
-				{
-					content: '❤️',
-					probability: 1,
-				},
-				{
-					content: '🇮🇱',
-					probability: 1,
-				},
-			],
-		})
+		scrollAnchor.value?.scrollIntoView({ behavior: 'smooth' })
 	})
 
 	const handleClick = () => {
