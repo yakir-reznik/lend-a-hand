@@ -2,6 +2,17 @@
 
 require_once 'functions.php';
 
+
+if ($_SERVER['HTTP_HOST'] === 'localhost') {
+	header('Access-Control-Allow-Origin: *');
+	if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+		header('Access-Control-Allow-Methods: POST');
+		header('Access-Control-Allow-Headers: Content-Type');
+		http_response_code(200);
+		die();
+	}
+}
+
 # check request method is POST
 define('LOG_FILE', __DIR__ . '/logs/create.log');
 

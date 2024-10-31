@@ -4,7 +4,6 @@
 	<SectionGoals />
 	<SectionSignup />
 	<SectionMessageBoard />
-	<div style="height: 3000px"></div>
 </template>
 
 <script setup lang="ts">
