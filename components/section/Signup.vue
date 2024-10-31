@@ -97,17 +97,11 @@
 
 	const signedUp = ref(false)
 
+	const userStore = useUserStore()
+
 	const handleSubmit = (e: Event) => {
 		e.preventDefault()
-
-		const response = fetch('http://localhost/lend-a-hand/php/createUser.php', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(data),
-		})
-
+		userStore.createUser(data)
 		signedUp.value = true
 	}
 

@@ -8,6 +8,9 @@ export type User = {
 }
 
 export const useUserStore = defineStore('userStore', () => {
+	const apiBase =
+		process.env.NODE_ENV === 'development' ? 'http://localhost/lend-a-hand/php' : 'https://yakirr12.sg-host.com/php'
+
 	const loaded = ref(false)
 	const isLoading = ref(false)
 	const isError = ref(false)
@@ -22,10 +25,7 @@ export const useUserStore = defineStore('userStore', () => {
 
 			isLoading.value = true
 
-			const endpoint =
-				process.env.NODE_ENV === 'development'
-					? 'http://localhost/lend-a-hand/php/users.php'
-					: 'https://yakirr12.sg-host.com/php/users.php'
+			const endpoint = `${apiBase}/users.php`
 
 			const response = await fetch(endpoint)
 			if (response.status !== 200) throw new Error('Not 200')
@@ -42,5 +42,17 @@ export const useUserStore = defineStore('userStore', () => {
 		}
 	}
 
-	return { load, isLoading, isError, days_since_oct_7th_2023, total_users, last_10_users }
+	async function createUser<T>(user: T) {
+		const endpoint = `${apiBase}/createUser.php`
+
+		const response = fetch(endpoint, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(user),
+		})
+	}
+
+	return { apiBase, load, isLoading, isError, days_since_oct_7th_2023, total_users, last_10_users, createUser }
 })

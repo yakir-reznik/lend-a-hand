@@ -17,9 +17,6 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
 define('LOG_NAME', 'getUsers');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-	write_log(LOG_NAME, [
-		'error' => 'Invalid request method'
-	]);
 	http_response_code(405);
 	die();
 }
