@@ -1,7 +1,8 @@
 <?php
 
 # Writes a line to a log file
-function write_log($log_file_path, $item, $max_lines = 50) {
+function write_log($log_name, $item, $max_lines = 50) {
+	$log_file_path = $_SERVER['DOCUMENT_ROOT'] . '/../logs/' . $log_name . '.json';
 
 	// create file if it doesnt exist
 	if (!file_exists($log_file_path)) {
@@ -24,10 +25,20 @@ function write_log($log_file_path, $item, $max_lines = 50) {
 }
 
 function create_pdo() {
+
+	if ($_SERVER['HTTP_HOST'] === 'localhost') {
+		# DEV
+		$dbname = 'notnim-yad';
+		$user = 'root';
+		$pass = 'e18e18';
+	} else {
+		# PROD
+		$dbname = 'dbswcewqxungjl';
+		$user = 'us6v3barh485g';
+		$pass = 'vxgk1rmxigbs';
+	}
+
 	$host = 'localhost';
-	$dbname = 'notnim-yad';
-	$user = 'root';
-	$pass = 'e18e18';
 	$charset = 'utf8';
 	$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
 	$options = [

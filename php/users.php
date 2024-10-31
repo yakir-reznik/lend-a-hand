@@ -1,5 +1,9 @@
 <?php
 
+# get logs dir which is in the root dir
+$log_dir = __DIR__ . '/logs';
+define('ROOT_DIR', __DIR__);
+
 # Cache for 30 seconds
 header('Cache-Control: max-age=30');
 
@@ -10,10 +14,10 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
 }
 
 # check request method is POST
-define('LOG_FILE', __DIR__ . '/logs/users.log');
+define('LOG_NAME', 'getUsers');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-	write_log(LOG_FILE, [
+	write_log(LOG_NAME, [
 		'error' => 'Invalid request method'
 	]);
 	http_response_code(405);
@@ -32,8 +36,11 @@ $last_10_users = array_map(function ($user) {
 	return $user;
 }, $last_10_users);
 
+
+
 $data = [
 	'status' => 'success',
+	'days_since_oct_7th_2023' => (new DateTime())->diff(new DateTime('2023-10-07'))->days,
 	'total_users' => $total_users,
 	'last_10_users' => $last_10_users,
 ];

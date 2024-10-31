@@ -18,10 +18,19 @@
 		>
 			<div class="absolute inset-0 bg-gradient-to-b from-black to-transparent desktop:hidden"></div>
 			<div class="relative text-center">
-				<p class="dir-ltr mb-2 flex gap-1 text-3xl font-black text-dark-800 desktop:gap-2 desktop:text-5xl">
-					<span class="bg-primary px-2 py-[2px] desktop:p-2">3</span>
-					<span class="bg-primary px-2 py-[2px] desktop:p-2">8</span>
-					<span class="bg-primary px-2 py-[2px] desktop:p-2">8</span>
+				<div v-if="isLoading" class="absolute -top-4 left-0 h-full w-full">
+					<Spinner :size="40" />
+				</div>
+				<p
+					class="dir-ltr mb-2 flex gap-1 text-3xl font-black text-dark-800 desktop:gap-2 desktop:text-5xl"
+					:class="{ 'opacity-0': isLoading }"
+				>
+					<span
+						v-for="num in days_since_oct_7th_2023.toString()"
+						class="bg-primary px-2 py-[2px] desktop:p-2"
+					>
+						{{ num }}
+					</span>
 				</p>
 				<h5 class="font-semibold tracking-wide text-white desktop:text-xl">ימים בשבי</h5>
 				<img class="absolute -bottom-1 left-0 h-[6px]" src="/img/underline.svg" alt="Yellow styled underline" />
@@ -40,7 +49,7 @@
 </template>
 
 <script setup lang="ts">
-	const { total_users, isLoading } = storeToRefs(useUserStore())
+	const { days_since_oct_7th_2023, total_users, isLoading } = storeToRefs(useUserStore())
 
 	const formatted_total_users = computed(() => {
 		if (total_users.value) {

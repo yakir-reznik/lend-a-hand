@@ -14,10 +14,10 @@ if ($_SERVER['HTTP_HOST'] === 'localhost') {
 }
 
 # check request method is POST
-define('LOG_FILE', __DIR__ . '/logs/create.log');
+define('LOG_NAME', 'createUser');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-	write_log(LOG_FILE, [
+	write_log(LOG_NAME, [
 		'error' => 'Invalid request method'
 	]);
 	http_response_code(405);
@@ -34,7 +34,7 @@ $under12 = filter_var($json['under12'], FILTER_VALIDATE_BOOLEAN);
 $messageId = sanitize_string($json['messageId']);
 
 if (!$name || !$email || !$messageId) {
-	write_log(LOG_FILE, [
+	write_log(LOG_NAME, [
 		'error' => 'Invalid input',
 		'input' => $json
 	]);
@@ -62,7 +62,7 @@ try {
 		'message' => 'User created'
 	]);
 } catch (PDOException $e) {
-	write_log(LOG_FILE, [
+	write_log(LOG_NAME, [
 		'error' => 'Database error',
 		'message' => $e->getMessage()
 	]);

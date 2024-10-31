@@ -11,6 +11,7 @@ export const useUserStore = defineStore('userStore', () => {
 	const loaded = ref(false)
 	const isLoading = ref(false)
 	const isError = ref(false)
+	const days_since_oct_7th_2023 = ref(0)
 	const total_users = ref(0)
 	const last_10_users = ref<User[]>([])
 
@@ -20,10 +21,17 @@ export const useUserStore = defineStore('userStore', () => {
 			if (loaded.value) return
 
 			isLoading.value = true
-			const response = await fetch('http://localhost/lend-a-hand/php/users.php')
+
+			const endpoint =
+				process.env.NODE_ENV === 'development'
+					? 'http://localhost/lend-a-hand/php/users.php'
+					: 'https://yakirr12.sg-host.com/php/users.php'
+
+			const response = await fetch(endpoint)
 			if (response.status !== 200) throw new Error('Not 200')
 			const json = await response.json()
 			if (!json) throw new Error('No JSON')
+			days_since_oct_7th_2023.value = parseInt(json?.days_since_oct_7th_2023)
 			total_users.value = parseInt(json?.total_users)
 			last_10_users.value = json.last_10_users as User[]
 			isLoading.value = false
@@ -34,5 +42,5 @@ export const useUserStore = defineStore('userStore', () => {
 		}
 	}
 
-	return { load, isLoading, isError, total_users, last_10_users }
+	return { load, isLoading, isError, days_since_oct_7th_2023, total_users, last_10_users }
 })

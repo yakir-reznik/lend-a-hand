@@ -1,3 +1,6 @@
+import fs from 'fs'
+import path from 'path'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2024-04-03',
@@ -18,4 +21,22 @@ export default defineNuxtConfig({
 	},
 
 	devtools: { enabled: false },
+
+	hooks: {
+		close: () => {
+			// const src = path.join(__dirname) + '/php'
+			// const dest = path.join(__dirname, '.output/public/php')
+			const src = '/Applications/MAMP/htdocs/lend-a-hand/php'
+			const dest = '/Applications/MAMP/htdocs/lend-a-hand/.output/public/php'
+
+			console.log('Copying PHP files...')
+			fs.cpSync(src, dest, { recursive: true })
+
+			// for (const file of files) {
+			// 	const src = path.join(__dirname, file)
+			// 	const dest = path.join(output, file)
+			// 	fs.copySync(src, dest)
+			// }
+		},
+	},
 })

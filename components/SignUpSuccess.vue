@@ -44,6 +44,8 @@
 			maxSize: '60px',
 			density: 0.625,
 			distanceToTravel: '180px',
+			minElementCount: 16,
+			maxElementCount: 24,
 			elements: [
 				{
 					content: '👋',
