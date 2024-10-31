@@ -10,9 +10,13 @@
 				/>
 			</h2>
 
-			<table class="table-auto">
+			<div v-if="isLoading">
+				<Spinner />
+			</div>
+
+			<table v-else class="table-auto">
 				<tbody>
-					<tr v-for="row in feed">
+					<tr v-for="row in last_10_users">
 						<td class="">
 							<div
 								class="mb-2 grid size-12 place-items-center rounded-full border-2 bg-white p-2 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
@@ -24,10 +28,10 @@
 								/>
 							</div>
 						</td>
-						<td class="px-4 text-gray-500">{{ row.date }}</td>
-						<td class="px-4 text-gray-500">{{ row.time }}</td>
-						<td class="text-mid px-4 font-semibold">{{ row.name }}</td>
-						<td class="font-semibold">{{ row.messageId }}</td>
+						<td class="px-4 text-gray-500">{{ formatDate(row.createdAt) }}</td>
+						<td class="px-4 text-gray-500">{{ formatTime(row.createdAt) }}</td>
+						<td class="px-4 font-semibold text-mid">{{ row.initials }}</td>
+						<td class="font-semibold">{{ messages[row.messageId] || '❤️' }}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -36,86 +40,24 @@
 </template>
 
 <script setup lang="ts">
-	type FeedRecord = {
-		date: string
-		time: string
-		under12: boolean
-		name: string
-		messageId: MessageID
+	const { last_10_users, isLoading } = storeToRefs(useUserStore())
+
+	const formatDate = (date: string) => {
+		const d = new Date(date)
+		return d.toLocaleDateString('he-IL', {
+			day: '2-digit',
+			month: 'numeric',
+			year: '2-digit',
+		})
 	}
 
-	const feed: FeedRecord[] = [
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: true,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-		{
-			date: '2021-08-01',
-			time: '12:00',
-			under12: false,
-			name: 'א.ת',
-			messageId: 'it_will_be_good',
-		},
-	]
+	const formatTime = (date: string) => {
+		const d = new Date(date)
+		return d.toLocaleTimeString('he-IL', {
+			hour: '2-digit',
+			minute: '2-digit',
+		})
+	}
 </script>
 
 <style lang="sass" scoped></style>

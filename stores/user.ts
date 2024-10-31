@@ -1,6 +1,7 @@
 export type User = {
 	email: string
-	name: string
+	// name: string
+	initials: string
 	under12: boolean
 	messageId: MessageID
 	createdAt: string

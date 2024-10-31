@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-	const { total_users, last_10_users, isLoading } = toRefs(useUserStore())
+	const { total_users, isLoading } = storeToRefs(useUserStore())
 
 	const formatted_total_users = computed(() => {
 		if (total_users.value) {
