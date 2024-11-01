@@ -1,8 +1,19 @@
 <?php
 
+# Define constants
+if ($_SERVER['HTTP_HOST'] === 'localhost') {
+	# DEV
+	define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . 'lend-a-hand/');
+} else {
+	# PROD
+	define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/../');
+}
+
+require_once BASE_DIR . 'enviroment_variables.php';
+
 # Writes a line to a log file
 function write_log($log_name, $item, $max_lines = 50) {
-	$log_file_path = $_SERVER['DOCUMENT_ROOT'] . '/../logs/' . $log_name . '.json';
+	$log_file_path = BASE_DIR . 'logs/' . $log_name . '.json';
 
 	// create file if it doesnt exist
 	if (!file_exists($log_file_path)) {
@@ -26,9 +37,9 @@ function write_log($log_name, $item, $max_lines = 50) {
 
 function create_pdo() {
 
-	$dbname = getenv('DB_NAME');
-	$user = getenv('DB_USER');
-	$pass = getenv('DB_PASS');
+	$dbname = DB_NAME;
+	$user = DB_USER;
+	$pass = DB_PASS;
 
 	$host = 'localhost';
 	$charset = 'utf8';

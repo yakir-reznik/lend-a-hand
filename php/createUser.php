@@ -81,12 +81,6 @@ try {
 	die();
 }
 
-
-# check if duplicate entry 
-
-
-
-
 function sanitize_string($val) {
 	$val = trim($val);
 	$val = htmlspecialchars($val, ENT_QUOTES, 'UTF-8');
