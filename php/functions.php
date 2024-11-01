@@ -26,17 +26,9 @@ function write_log($log_name, $item, $max_lines = 50) {
 
 function create_pdo() {
 
-	if ($_SERVER['HTTP_HOST'] === 'localhost') {
-		# DEV
-		$dbname = 'notnim-yad';
-		$user = 'root';
-		$pass = 'e18e18';
-	} else {
-		# PROD
-		$dbname = 'dbswcewqxungjl';
-		$user = 'us6v3barh485g';
-		$pass = 'vxgk1rmxigbs';
-	}
+	$dbname = getenv('DB_NAME');
+	$user = getenv('DB_USER');
+	$pass = getenv('DB_PASS');
 
 	$host = 'localhost';
 	$charset = 'utf8';
