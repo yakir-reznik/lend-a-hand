@@ -70,8 +70,6 @@
 		el.scrollIntoView({ behavior: 'smooth' })
 	}
 
-	// TODO: Change it to just randomize the entire array and loop over it.
-	// TODO: Also make it preload the next image.
 	const person = ref<Person>(people[0])
 	const randomizePerson = () => {
 		const randomIndex = Math.floor(Math.random() * people.length)
