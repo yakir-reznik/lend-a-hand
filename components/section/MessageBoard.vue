@@ -16,7 +16,7 @@
 
 			<div v-else>
 				<!-- Tablet and mobile -->
-				<div>
+				<div class="desktop:hidden">
 					<div v-for="row in last_10_users">
 						<div class="mb-8 flex">
 							<div

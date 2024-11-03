@@ -143,4 +143,8 @@
 	}
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+	input[type='email']:not(:placeholder-shown) {
+		direction: ltr;
+	}
+</style>
