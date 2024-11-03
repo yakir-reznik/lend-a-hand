@@ -3,12 +3,18 @@
 		<!-- <Spiral /> -->
 		<!-- <SpiralRows /> -->
 		<!-- <FloatingEmojis /> -->
-		<StarField />
+		<StarField>
+			<RoundImageSlider :person />
+		</StarField>
 
 		<div class="absolute bottom-0 left-0 w-full bg-dark-900/70 py-8 text-center">
 			<div class="wrapper">
-				<h2 class="text-5xl font-bold text-white">רומי</h2>
-				<p class="text-2xl font-medium text-gray-300">מחכה שנחזיר אותה הביתה</p>
+				<h2 class="overflow-hidden text-ellipsis whitespace-nowrap text-5xl font-bold text-white">
+					{{ person.name }}
+				</h2>
+				<p class="text-2xl font-medium text-gray-300">
+					מחכה שנחזיר {{ person?.gender === 'male' ? 'אותו' : 'אותה' }} הביתה
+				</p>
 				<HandBtn class="relative z-10 -mt-4 translate-y-16" @click="handleClick">גם אני רוצה לתת יד</HandBtn>
 			</div>
 		</div>
@@ -63,6 +69,21 @@
 		if (!el) return
 		el.scrollIntoView({ behavior: 'smooth' })
 	}
+
+	const person = ref<Person>(people[0])
+	const randomizePerson = () => {
+		const randomIndex = Math.floor(Math.random() * people.length)
+		const newPerson = people[randomIndex]
+		if (newPerson.name === person.value?.name) {
+			randomizePerson()
+			return
+		}
+		person.value = people[randomIndex]
+	}
+	onMounted(() => {
+		randomizePerson()
+		setInterval(randomizePerson, 5000)
+	})
 </script>
 
 <style lang="css" scoped></style>

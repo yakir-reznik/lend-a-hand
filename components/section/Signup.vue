@@ -57,23 +57,25 @@
 							required
 						/>
 					</fieldset>
-					<fieldset class="flex flex-wrap justify-center gap-2">
-						<label class="mb-4 mt-8 block w-full text-center text-lg font-semibold"
-							>אפשר גם להוסיף ברכה:</label
-						>
-						<div
-							v-for="(message, messageId) in messages"
-							:key="message"
-							class="group"
-							:class="{ selected: data.messageId === messageId }"
-						>
-							<button
-								@click="data.messageId = messageId"
-								class="rounded-md border border-b-4 border-r-4 border-gray-300 bg-[#EFE9D8] px-4 py-2 text-lg font-semibold text-dark-800/60 transition active:scale-95 group-[.selected]:border-primary-600/60 group-[.selected]:bg-primary group-[.selected]:text-dark-800"
-								type="button"
+					<fieldset class="">
+						<label class="mb-4 mt-8 block w-full text-center text-lg font-semibold">
+							אפשר גם להוסיף ברכה:
+						</label>
+						<div class="flex flex-wrap justify-stretch gap-2 desktop:justify-center">
+							<div
+								v-for="(message, messageId) in messages"
+								:key="message"
+								class="group grow desktop:grow-0"
+								:class="{ selected: data.messageId === messageId }"
 							>
-								{{ message }}
-							</button>
+								<button
+									@click="data.messageId = messageId"
+									class="w-full rounded-md border border-b-4 border-r-4 border-gray-300 bg-[#EFE9D8] px-4 py-2 text-lg font-semibold text-dark-800/60 transition active:scale-95 group-[.selected]:border-primary-600/60 group-[.selected]:bg-primary group-[.selected]:text-dark-800"
+									type="button"
+								>
+									{{ message }}
+								</button>
+							</div>
 						</div>
 					</fieldset>
 					<div class="mt-12 h-32 text-center">
@@ -93,8 +95,6 @@
 </template>
 
 <script setup lang="ts">
-	import { useFloatingIcons } from 'floating-icons'
-
 	const signedUp = ref(false)
 
 	const userStore = useUserStore()
@@ -103,6 +103,17 @@
 		e.preventDefault()
 		userStore.createUser(data)
 		signedUp.value = true
+
+		// Make it look like registered instantly but only locally
+		const localUserData = {
+			email: data.email,
+			initials: nameToInitials(data.name),
+			under12: data.under12,
+			messageId: data.messageId,
+			createdAt: new Date().toISOString(),
+		}
+		userStore.last_10_users = [localUserData, ...userStore.last_10_users]
+		userStore.total_users++
 	}
 
 	type Data = {
@@ -117,6 +128,19 @@
 		email: '',
 		messageId: 'gave_hand',
 	})
+
+	const nameToInitials = (name: string): string => {
+		name = name.trim()
+		name = name.replace(/\s+/g, ' ')
+
+		const words = name.split(' ')
+
+		// If 2 words or more return 2 initials
+		if (words.length >= 2) {
+			return words[0].charAt(0) + '.' + words[1].charAt(0)
+		}
+		return words[0].charAt(0)
+	}
 </script>
 
 <style lang="css" scoped></style>

@@ -14,10 +14,11 @@
 				<Spinner />
 			</div>
 
-			<table v-else class="table-auto">
-				<tbody>
-					<tr v-for="row in last_10_users">
-						<td class="">
+			<div v-else>
+				<!-- Tablet and mobile -->
+				<div>
+					<div v-for="row in last_10_users">
+						<div class="mb-8 flex">
 							<div
 								class="mb-2 grid size-12 place-items-center rounded-full border-2 bg-white p-2 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
 							>
@@ -27,14 +28,43 @@
 									alt="hand icon"
 								/>
 							</div>
-						</td>
-						<td class="px-4 text-gray-500">{{ formatDate(row.createdAt) }}</td>
-						<td class="px-4 text-gray-500">{{ formatTime(row.createdAt) }}</td>
-						<td class="px-4 font-semibold text-mid">{{ row.initials }}</td>
-						<td class="font-semibold">{{ messages[row.messageId] || '❤️' }}</td>
-					</tr>
-				</tbody>
-			</table>
+							<div>
+								<div class="flex">
+									<p class="px-4 text-gray-500">{{ formatDate(row.createdAt) }}</p>
+									<p class="px-4 text-gray-500">{{ formatTime(row.createdAt) }}</p>
+								</div>
+								<div class="flex">
+									<p class="px-4 font-semibold text-mid">{{ row.initials }}</p>
+									<p class="font-semibold">״{{ messages[row.messageId] || '❤️' }}״</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Desktop -->
+				<table class="hidden table-auto desktop:block">
+					<tbody>
+						<tr v-for="row in last_10_users">
+							<td class="">
+								<div
+									class="mb-2 grid size-12 place-items-center rounded-full border-2 bg-white p-2 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
+								>
+									<img
+										:class="{ 'w-4': row.under12, 'w-8': !row.under12 }"
+										src="/img/abstract-yellow-hand.svg"
+										alt="hand icon"
+									/>
+								</div>
+							</td>
+							<td class="px-4 text-gray-500">{{ formatDate(row.createdAt) }}</td>
+							<td class="px-4 text-gray-500">{{ formatTime(row.createdAt) }}</td>
+							<td class="px-4 font-semibold text-mid">{{ row.initials }}</td>
+							<td class="font-semibold">״{{ messages[row.messageId] || '❤️' }}״</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</section>
 </template>

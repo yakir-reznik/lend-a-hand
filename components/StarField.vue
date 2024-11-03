@@ -1,8 +1,7 @@
 <template>
 	<div class="relative h-[70vh]">
 		<div class="starfield"></div>
-		<div class="glow absolute-center aspect-square w-1/2 rounded-full desktop:size-[190px]"></div>
-		<img src="/img/romi.jpg" alt="" class="absolute-center w-1/2 rounded-full desktop:size-[190px]" />
+		<slot></slot>
 	</div>
 </template>
 
