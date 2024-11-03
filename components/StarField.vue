@@ -15,7 +15,22 @@
 			const randomRotation = Math.floor(Math.random() * 40) - 20
 
 			star.classList.add('star')
-			star.textContent = '✋'
+
+			// get random number between 1 and 100
+			const randomNumber = Math.floor(Math.random() * 100) + 1
+			let randomIcon = '✋'
+
+			if (randomNumber > 0 && randomNumber <= 8) {
+				randomIcon = '❤️'
+			}
+			if (randomNumber > 10 && randomNumber <= 16) {
+				randomIcon = '🤍'
+			}
+			if (randomNumber > 20 && randomNumber <= 24) {
+				randomIcon = '🇮🇱'
+			}
+
+			star.textContent = randomIcon
 			star.style.left = Math.floor(Math.random() * 100) + '%'
 			star.style.top = Math.floor(Math.random() * 100) + '%'
 			star.style.fontSize = randomSize() + 'px'
