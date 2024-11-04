@@ -27,7 +27,12 @@
 				randomIcon = '🇮🇱'
 			}
 
-			star.textContent = randomIcon
+			if (randomIcon === '✋') {
+				star.innerHTML = "<img class='w-[0.9em]' src='/img/abstract-yellow-hand.svg' alt='hand'/>"
+			} else {
+				star.textContent = randomIcon
+			}
+
 			star.style.left = Math.floor(Math.random() * 100) + '%'
 			star.style.top = Math.floor(Math.random() * 150) + '%'
 			star.style.fontSize = randomSize() + 'px'
