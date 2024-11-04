@@ -20,7 +20,14 @@ export default defineNuxtConfig({
 				{ rel: 'manifest', href: '/site.webmanifest' },
 				{ rel: 'preload', href: '/img/two-yellow-hands-white-border.svg', as: 'image' },
 			],
-			meta: [{ name: 'apple-mobile-web-app-title', content: 'ישראלים מובילים לשחרור החטופים' }],
+			meta: [
+				{ name: 'apple-mobile-web-app-title', content: 'ישראלים מובילים לשחרור החטופים' },
+				{
+					name: 'description',
+					content:
+						'נותנים יד להשבת כל החטופים הביתה. ישראלים מובילים לשחרור החטופים. תנו יד ועזרו להשיב את כולם הביתה',
+				},
+			],
 		},
 	},
 	ssr: false,
