@@ -9,7 +9,9 @@
 
 		<div class="absolute bottom-0 left-0 w-full bg-dark-900/70 py-8 text-center">
 			<div class="wrapper">
-				<h2 class="overflow-hidden text-ellipsis whitespace-nowrap text-5xl font-bold text-white">
+				<h2
+					class="overflow-hidden text-ellipsis whitespace-nowrap text-4xl font-bold text-white desktop:text-5xl"
+				>
 					{{ currentPerson.name }}
 				</h2>
 				<p class="text-2xl font-medium text-gray-300">
