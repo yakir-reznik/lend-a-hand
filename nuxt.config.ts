@@ -27,6 +27,10 @@ export default defineNuxtConfig({
 					content:
 						'נותנים יד להשבת כל החטופים הביתה. ישראלים מובילים לשחרור החטופים. תנו יד ועזרו להשיב את כולם הביתה',
 				},
+				{
+					name: 'og:image',
+					content: 'https://yakirr12.sg-host.com/img/notnim-yad-screenshot.jpg',
+				},
 			],
 		},
 	},

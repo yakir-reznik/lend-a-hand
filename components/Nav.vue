@@ -1,5 +1,11 @@
 <template>
-	<nav class="fixed left-0 top-0 z-20 w-full bg-primary">
+	<div
+		id="blanket"
+		class="fixed left-0 top-0 z-20 h-screen bg-black/70 backdrop-blur-sm"
+		:class="{ isOpen }"
+		@click="isOpen = false"
+	></div>
+	<nav class="fixed left-0 top-0 z-30 w-full bg-primary">
 		<div class="wrapper">
 			<div class="flex items-center justify-between desktop:py-4">
 				<h1
@@ -13,17 +19,31 @@
 
 				<BurgerBtn @toggle="handleToggle" :is-open />
 
-				<ul class="hidden gap-4 desktop:flex">
+				<ul class="flex gap-4 mobile:hidden">
 					<li>
-						<a class="font-semibold hover:underline" href="#0">אני רוצה לתת יד</a>
-					</li>
-					<li class="text-dark-800/30">
-						<span>|</span>
+						<a class="font-bold underline" href="#0">אני רוצה לתת יד</a>
 					</li>
 					<li>
-						<a class="font-semibold hover:underline" href="#0">יוצרים ותומכים</a>
+						<a class="text-black/60 hover:underline" href="#0">יוצרים ותומכים</a>
 					</li>
 				</ul>
+
+				<!-- Mobile menu -->
+				<Transition name="fade">
+					<div v-if="isOpen" class="fixed left-0 top-12 hidden bg-primary mobile:block">
+						<ul class="py-4">
+							<li>
+								<a class="px-8 font-bold underline" href="#0">אני רוצה לתת יד</a>
+							</li>
+							<li class="text-dark-800/30">
+								<span>|</span>
+							</li>
+							<li>
+								<a class="px-8 text-black/60 hover:underline" href="#0">יוצרים ותומכים</a>
+							</li>
+						</ul>
+					</div>
+				</Transition>
 			</div>
 		</div>
 	</nav>
@@ -40,5 +60,27 @@
 <style lang="css">
 	body {
 		@apply pt-[49px] desktop:pt-16;
+	}
+
+	#blanket:not(.isOpen) {
+		@apply w-0 opacity-0;
+		transition:
+			opacity 0.3s 0s,
+			width 0s 0.3s;
+	}
+	#blanket.isOpen {
+		@apply w-screen opacity-100;
+		transition:
+			opacity 0.3s 0s,
+			width 0s 0s;
+	}
+
+	.fade-enter-active,
+	.fade-leave-active {
+		@apply transition-opacity duration-300;
+	}
+	.fade-enter-from,
+	.fade-leave-to {
+		@apply opacity-0;
 	}
 </style>

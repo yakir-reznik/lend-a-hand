@@ -1,8 +1,8 @@
 <template>
-	<button @click="emit('toggle')" class="w-14 desktop:hidden" :class="{ 'is-open': props.isOpen }">
-		<span class="top bg-dark-800 block h-[0.15rem] w-full rounded"></span>
-		<span class="mid bg-dark-800 block h-[0.15rem] w-full rounded"></span>
-		<span class="bot bg-dark-800 block h-[0.15rem] w-full rounded"></span>
+	<button @click="emit('toggle')" class="-ml-4 w-14 desktop:hidden" :class="{ 'is-open': props.isOpen }">
+		<span class="top block h-[0.15rem] w-full rounded bg-dark-800"></span>
+		<span class="mid block h-[0.15rem] w-full rounded bg-dark-800"></span>
+		<span class="bot block h-[0.15rem] w-full rounded bg-dark-800"></span>
 	</button>
 </template>
 
@@ -27,12 +27,12 @@
 			transform: translateX(0.25rem)
 
 			.top
-				transform: rotate(225deg) translate(-7px, -1px) scaleX(0.35)
+				transform: rotate(-225deg) translate(7px, 1px) scaleX(0.35)
 
 			.mid
-				transform: scaleX(0.6)
+				transform: scaleX(0.5) translate(0px, -0.5px)
 			.bot
-				transform: rotate(-225deg) translate(-7px, 1px) scaleX(0.35)
+				transform: rotate(225deg) translate(7px, 0px) scaleX(0.35)
 				transition-delay: 80ms
 
 	span

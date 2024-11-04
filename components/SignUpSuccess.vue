@@ -20,6 +20,11 @@
 			</button>
 		</div>
 	</Transition>
+	<div class="hidden">
+		<div id="success-hand-svg">
+			<img class="size-[3.5em]" src="/img/abstract-yellow-hand-2.svg" alt="hand" />
+		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -37,25 +42,22 @@
 		if (!scrollAnchor || !shareBtn.value) return
 
 		setTimeout(() => {
+			const svg = document.getElementById('success-hand-svg') as HTMLImageElement
 			useFloatingIcons({
 				target: shareBtn.value!,
 				minSize: '40px',
 				maxSize: '60px',
-				density: 0.625,
+				density: 1,
 				distanceToTravel: '180px',
 				minElementCount: 16,
 				maxElementCount: 24,
 				elements: [
 					{
-						content: '👋',
-						probability: 4,
+						content: svg,
+						probability: 8,
 					},
 					{
-						content: '✋',
-						probability: 4,
-					},
-					{
-						content: '❤️',
+						content: '🤍',
 						probability: 1,
 					},
 					{
