@@ -34,11 +34,12 @@ export default defineNuxtConfig({
 			],
 		},
 	},
-	ssr: false,
+
 	nitro: { preset: 'static' },
 	routeRules: {
 		// disable prerendering for all routes except home
-		'**': { prerender: true },
+		'**': { prerender: false },
+		'/': { prerender: true },
 	},
 
 	devtools: { enabled: false },

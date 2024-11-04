@@ -1,26 +1,26 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@nuxt/fonts": "^0.10.2",
-    "@pinia/nuxt": "^0.6.0",
-    "floating-icons": "^1.0.11",
-    "nuxt": "^3.13.2",
-    "pinia": "^2.2.5",
-    "vue": "latest",
-    "vue-router": "latest"
-  },
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "sass": "^1.80.4"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@nuxt/fonts": "^0.10.2",
+		"@pinia/nuxt": "^0.6.0",
+		"floating-icons": "^1.0.11",
+		"nuxt": "^3.13.2",
+		"pinia": "^2.2.5",
+		"vue": "latest",
+		"vue-router": "latest"
+	},
+	"devDependencies": {
+		"@nuxtjs/tailwindcss": "^6.12.2",
+		"prettier-plugin-tailwindcss": "^0.6.8",
+		"sass": "^1.80.4"
+	}
 }
