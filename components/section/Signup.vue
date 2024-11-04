@@ -19,7 +19,7 @@
 							<div
 								class="mb-2 grid size-20 place-items-center rounded-full border-2 bg-white p-4 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
 							>
-								<img class="w-6" src="/img/abstract-yellow-hand.svg" alt="hand icon" />
+								<img class="w-6" src="/img/abstract-yellow-hand-3.svg" alt="hand icon" />
 							</div>
 							<label class="text-lg font-semibold">אני מתחת לגיל 12</label>
 						</button>
@@ -32,7 +32,7 @@
 							<div
 								class="mb-2 grid size-20 place-items-center rounded-full border-2 bg-white p-4 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
 							>
-								<img class="w-10" src="/img/abstract-yellow-hand.svg" alt="hand icon" />
+								<img class="w-10" src="/img/abstract-yellow-hand-3.svg" alt="hand icon" />
 							</div>
 							<label class="text-lg font-semibold">אני מעל גיל 12</label>
 						</button>

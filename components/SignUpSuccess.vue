@@ -22,7 +22,7 @@
 	</Transition>
 	<div class="hidden">
 		<div id="success-hand-svg">
-			<img class="size-[3.5em]" src="/img/abstract-yellow-hand-2.svg" alt="hand" />
+			<img class="size-[2em]" src="/img/abstract-yellow-hand-3.svg" alt="hand" />
 		</div>
 	</div>
 </template>

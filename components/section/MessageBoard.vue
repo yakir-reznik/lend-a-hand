@@ -23,8 +23,8 @@
 								class="mb-2 grid size-12 place-items-center rounded-full border-2 bg-white p-2 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
 							>
 								<img
-									:class="{ 'w-4': row.under12, 'w-8': !row.under12 }"
-									src="/img/abstract-yellow-hand.svg"
+									:class="{ 'w-4': row.under12, 'w-6': !row.under12 }"
+									src="/img/abstract-yellow-hand-3.svg"
 									alt="hand icon"
 								/>
 							</div>
@@ -51,8 +51,8 @@
 									class="mb-2 grid size-12 place-items-center rounded-full border-2 bg-white p-2 transition group-[.selected]:border-primary-400 group-[.selected]:bg-primary-100"
 								>
 									<img
-										:class="{ 'w-4': row.under12, 'w-8': !row.under12 }"
-										src="/img/abstract-yellow-hand.svg"
+										:class="{ 'w-5': row.under12, 'w-7': !row.under12 }"
+										src="/img/abstract-yellow-hand-3.svg"
 										alt="hand icon"
 									/>
 								</div>
