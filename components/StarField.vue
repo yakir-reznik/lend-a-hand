@@ -20,19 +20,16 @@
 			const randomNumber = Math.floor(Math.random() * 100) + 1
 			let randomIcon = '✋'
 
-			if (randomNumber > 0 && randomNumber <= 8) {
-				randomIcon = '❤️'
-			}
-			if (randomNumber > 10 && randomNumber <= 16) {
+			if (randomNumber > 0 && randomNumber <= 5) {
 				randomIcon = '🤍'
 			}
-			if (randomNumber > 20 && randomNumber <= 24) {
+			if (randomNumber > 5 && randomNumber <= 10) {
 				randomIcon = '🇮🇱'
 			}
 
 			star.textContent = randomIcon
 			star.style.left = Math.floor(Math.random() * 100) + '%'
-			star.style.top = Math.floor(Math.random() * 100) + '%'
+			star.style.top = Math.floor(Math.random() * 150) + '%'
 			star.style.fontSize = randomSize() + 'px'
 			star.style.transform = `rotate(${randomRotation}deg)`
 			star.style.animationDelay = Math.random() * 10 + 's'
@@ -42,9 +39,9 @@
 
 	function randomSize() {
 		if (isDesktop) {
-			return Math.floor(Math.random() * 70) + 20
+			return Math.floor(Math.random() * 84) + 20
 		}
-		return Math.floor(Math.random() * 50) + 10
+		return Math.floor(Math.random() * 48) + 10
 	}
 </script>
 

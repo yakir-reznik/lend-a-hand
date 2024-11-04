@@ -8,32 +8,49 @@
 	import type { Person } from '~/composables/people'
 
 	const props = defineProps<{
-		person: Person | undefined
+		personIndex: number
 	}>()
 
 	const container = ref<HTMLDivElement>()
+	const nextEl = ref<HTMLImageElement>()
 
-	onUpdated(() => {
-		console.log(container.value, props.person)
-		if (!container.value || !props.person) return
+	const renderImage = () => {
+		if (!container.value) return
+
+		const currentPerson: Person = randomizedPeople[props.personIndex]
 
 		const prevElements = container.value.querySelectorAll('img')
 
-		const newEl = document.createElement('img')
+		let newEl: HTMLImageElement
+		// if nextEl exists (not the first time this runs)
+		if (nextEl.value) {
+			newEl = nextEl.value
+		} else {
+			newEl = document.createElement('img')
+			newEl.src = currentPerson.image
+		}
+
 		const classNames = 'absolute-center w-1/2 tablet:w-1/3 rounded-full desktop:size-[190px]'.split(' ')
 		newEl.classList.add(...classNames)
-		newEl.src = props.person.image
-		newEl.alt = props.person.name
+		newEl.alt = currentPerson.name
 		newEl.style.animation = 'round-image-slider-fade-in 1s forwards ease-out'
-
 		container.value.appendChild(newEl)
+
+		// Prefetch next image
+		const nextPersonIndex = (props.personIndex + 1) % randomizedPeople.length
+		nextEl.value = new Image()
+		nextEl.value.src = randomizedPeople[nextPersonIndex].image
 
 		setTimeout(() => {
 			prevElements.forEach((el) => {
 				el.remove()
 			})
 		}, 1100)
-	})
+	}
+
+	// Run the function onMount and onUpdate
+	onMounted(renderImage)
+	onUpdated(renderImage)
 </script>
 
 <style lang="css">

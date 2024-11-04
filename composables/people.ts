@@ -707,3 +707,5 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 ]
+
+export const randomizedPeople: Person[] = people.sort(() => Math.random() - 0.5)
