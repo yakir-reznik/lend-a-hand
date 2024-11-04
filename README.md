@@ -18,8 +18,8 @@ Then clear cache on SiteGround UI
 [x] - Mobile menu
 [x] - og:image
 [x] - og meta tags
+[x] - Add footer (iris linkedin link) (iris will design)
 [ ] - Buy domain "notnim-yad"
 [ ] - Upload images (3 images, title, description (up to 100 chars), who uploaded, date)
 [ ] - In the success message add a link to "create and support
 [ ] - Categories for uploading [misgeret hinuchit, merkaz kehilati, yozma atzmait, acher]
-[ ] - Add footer (iris linkedin link) (iris will design)

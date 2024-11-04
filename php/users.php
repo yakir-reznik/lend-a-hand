@@ -37,7 +37,7 @@ $last_10_users = array_map(function ($user) {
 
 $data = [
 	'status' => 'success',
-	'days_since_oct_7th_2023' => (new DateTime())->diff(new DateTime('2023-10-07'))->days,
+	'days_since_oct_7th_2023' => (new DateTime())->diff(new DateTime('2023-10-07'))->days + 1,
 	'total_users' => $total_users,
 	'last_10_users' => $last_10_users,
 ];
