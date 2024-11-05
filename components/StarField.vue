@@ -29,7 +29,7 @@
 
 			if (randomIcon === '✋') {
 				star.innerHTML =
-					"<img class='desktop:w-[1.35em] w-[0.85em]' src='/img/abstract-yellow-hand-3.svg' alt='hand'/>"
+					"<img class='desktop:w-[1em] w-[0.85em]' src='/img/abstract-yellow-hand-3.svg' alt='hand'/>"
 			} else {
 				star.textContent = randomIcon
 			}
