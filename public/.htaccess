@@ -1,0 +1,5 @@
+RewriteEngine on
+
+# Redirect all traffic from notnimyad.net to notnim-yad.net
+RewriteCond %{HTTP_HOST} ^(www\.)?notnimyad\.net$ [NC]
+RewriteRule ^(.*)$ https://notnim-yad.net/$1 [L,R=301]
