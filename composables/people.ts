@@ -708,5 +708,4 @@ export const people: Person[] = [
 	},
 ]
 
-// export const randomizedPeople: Person[] = people.sort(() => Math.random() - 0.5)
-export const randomizedPeople = people.filter((p) => p.name === 'רומי גונן')
+export const randomizedPeople: Person[] = people.sort(() => Math.random() - 0.5)
