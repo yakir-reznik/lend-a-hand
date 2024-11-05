@@ -24,7 +24,7 @@
 						<a class="font-bold underline" href="#0">אני רוצה לתת יד</a>
 					</li>
 					<li>
-						<a class="text-black/60 hover:underline" href="#0">יוצרים ותומכים</a>
+						<a class="text-black/60 hover:underline">יוצרים ותומכים</a>
 					</li>
 				</ul>
 
