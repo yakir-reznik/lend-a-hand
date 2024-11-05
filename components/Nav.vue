@@ -23,9 +23,9 @@
 					<li>
 						<a class="font-bold underline" href="#0">אני רוצה לתת יד</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a class="text-black/60 hover:underline">יוצרים ותומכים</a>
-					</li>
+					</li> -->
 				</ul>
 
 				<!-- Mobile menu -->
@@ -35,12 +35,12 @@
 							<li>
 								<a class="px-8 font-bold underline" href="#0">אני רוצה לתת יד</a>
 							</li>
-							<li class="text-dark-800/30">
+							<!-- <li class="text-dark-800/30">
 								<span>|</span>
 							</li>
 							<li>
 								<a class="px-8 text-black/60 hover:underline" href="#0">יוצרים ותומכים</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 				</Transition>
