@@ -33,7 +33,7 @@
 					<div v-if="isOpen" class="fixed left-0 top-12 hidden bg-primary mobile:block">
 						<ul class="py-4">
 							<li>
-								<a class="px-8 font-bold underline" href="#0">אני רוצה לתת יד</a>
+								<a class="px-8 font-bold underline" href="https://notnim-yad.net/">אני רוצה לתת יד</a>
 							</li>
 							<!-- <li class="text-dark-800/30">
 								<span>|</span>
