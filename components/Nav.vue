@@ -21,7 +21,7 @@
 
 				<ul class="flex gap-4 mobile:hidden">
 					<li>
-						<a class="font-bold underline" href="#0">אני רוצה לתת יד</a>
+						<a class="font-bold underline" href="https://notnim-yad.net/">אני רוצה לתת יד</a>
 					</li>
 					<!-- <li>
 						<a class="text-black/60 hover:underline">יוצרים ותומכים</a>
