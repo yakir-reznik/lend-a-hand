@@ -22,7 +22,7 @@
 		</div>
 
 		<div
-			class="absolute left-0 top-0 flex w-full justify-between px-4 pb-24 pt-4 desktop:bottom-0 desktop:left-1/2 desktop:top-auto desktop:w-[1200px] desktop:-translate-x-1/2 desktop:px-0 desktop:pb-12"
+			class="absolute left-0 top-0 flex w-full justify-between px-4 pb-24 pt-4 tablet:py-8 desktop:bottom-0 desktop:left-1/2 desktop:top-auto desktop:w-[1200px] desktop:-translate-x-1/2 desktop:px-0 desktop:pb-12"
 		>
 			<div class="absolute inset-0 bg-gradient-to-b from-black to-transparent desktop:hidden"></div>
 			<div class="relative text-center">

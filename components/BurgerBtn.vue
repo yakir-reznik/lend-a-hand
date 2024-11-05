@@ -1,5 +1,9 @@
 <template>
-	<button @click="emit('toggle')" class="-ml-4 w-14 desktop:hidden" :class="{ 'is-open': props.isOpen }">
+	<button
+		@click="emit('toggle')"
+		class="-ml-4 w-14 tablet:hidden desktop:hidden"
+		:class="{ 'is-open': props.isOpen }"
+	>
 		<span class="top block h-[0.15rem] w-full rounded bg-dark-800"></span>
 		<span class="mid block h-[0.15rem] w-full rounded bg-dark-800"></span>
 		<span class="bot block h-[0.15rem] w-full rounded bg-dark-800"></span>
