@@ -37,7 +37,7 @@
 							<label class="text-lg font-semibold">אני מעל גיל 12</label>
 						</button>
 					</fieldset>
-					<fieldset class="mx-auto mt-12 px-4 desktop:max-w-sm">
+					<fieldset class="mx-auto mt-12 px-4 tablet:max-w-sm desktop:max-w-sm">
 						<input
 							class="w-full rounded-md border border-gray-200 p-2 text-lg"
 							type="text"
@@ -47,7 +47,7 @@
 							required
 						/>
 					</fieldset>
-					<fieldset class="mx-auto mt-8 px-4 desktop:max-w-sm">
+					<fieldset class="mx-auto mt-8 px-4 tablet:max-w-sm desktop:max-w-sm">
 						<input
 							class="w-full rounded-md border border-gray-200 p-2 text-lg"
 							type="email"
@@ -57,15 +57,20 @@
 							required
 						/>
 					</fieldset>
+
+					<p class="mt-4 text-center text-sm font-light text-gray-400">
+						פרטיך האישיים לא יפורסמו ולא ייעשה בהם כל שימוש
+					</p>
+
 					<fieldset class="">
 						<label class="mb-4 mt-8 block w-full text-center text-lg font-semibold">
 							אפשר גם להוסיף ברכה:
 						</label>
-						<div class="flex flex-wrap justify-stretch gap-2 desktop:justify-center">
+						<div class="flex flex-wrap justify-stretch gap-2 tablet:justify-center desktop:justify-center">
 							<div
 								v-for="(message, messageId) in messages"
 								:key="message"
-								class="group grow desktop:grow-0"
+								class="group grow tablet:grow-0 desktop:grow-0"
 								:class="{ selected: data.messageId === messageId }"
 							>
 								<button
