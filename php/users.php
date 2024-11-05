@@ -30,6 +30,12 @@ $total_users = $pdo->query('SELECT COUNT(*) FROM users;')->fetchColumn();
 $last_10_users = array_map(function ($user) {
 	$user['initials'] = name_to_initials($user['name']);
 	unset($user['name']);
+
+	# Convert to israel timezone
+	$created_at_gmt = new DateTime($user['createdAt'], new DateTimeZone('GMT'));
+	$created_at_israel_timezone = $created_at_gmt->setTimezone(new DateTimeZone('Asia/Jerusalem'));
+	$user['createdAt'] = $created_at_israel_timezone->format('Y-m-d H:i:s');
+
 	return $user;
 }, $last_10_users);
 
