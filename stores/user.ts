@@ -9,7 +9,7 @@ export type User = {
 
 export const useUserStore = defineStore('userStore', () => {
 	const apiBase =
-		process.env.NODE_ENV === 'development' ? 'http://localhost/lend-a-hand/php' : 'https://yakirr12.sg-host.com/php'
+		process.env.NODE_ENV === 'development' ? 'http://localhost/lend-a-hand/php' : 'https://notnim-yad.net/php'
 
 	const loaded = ref(false)
 	const isLoading = ref(false)

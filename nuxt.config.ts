@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 				},
 				{
 					name: 'og:image',
-					content: 'https://yakirr12.sg-host.com/img/notnim-yad-screenshot.jpg',
+					content: 'https://notnim-yad.net/img/notnim-yad-screenshot.jpg',
 				},
 			],
 		},
