@@ -45,13 +45,14 @@ if (!$name || !$email || !$messageId) {
 
 $pdo = create_pdo();
 
-$insert = $pdo->prepare('INSERT INTO users (email, name, under12, messageId) VALUES (:email, :name, :under12, :messageId);');
+$insert = $pdo->prepare('INSERT INTO users (email, name, under12, messageId, ip) VALUES (:email, :name, :under12, :messageId, :ip);');
 try {
 	$insert->execute([
 		'email' => $email,
 		'name' => $name,
 		'under12' => $under12 ? 1 : 0,
 		'messageId' => $messageId,
+		'ip' => $_SERVER['REMOTE_ADDR']
 	]);
 
 	http_response_code(201);
