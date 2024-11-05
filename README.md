@@ -4,7 +4,7 @@
 php deploy.php
 ```
 
-Then clear cache on SiteGround UI
+Then clear cache on SiteGround admin UI: Speed -> Caching -> Dynamic Cache (tab) -> Click the brush icon
 
 # TODO:
 
@@ -19,7 +19,7 @@ Then clear cache on SiteGround UI
 [x] - og:image
 [x] - og meta tags
 [x] - Add footer (iris linkedin link) (iris will design)
-[ ] - Buy domain "notnim-yad"
+[x] - Buy domain "notnim-yad"
 [ ] - Upload images (3 images, title, description (up to 100 chars), who uploaded, date)
 [ ] - In the success message add a link to "create and support
 [ ] - Categories for uploading [misgeret hinuchit, merkaz kehilati, yozma atzmait, acher]
