@@ -79,7 +79,7 @@
 		navigator.share({
 			title: 'ישראלים מובילים לשחרור החטופים',
 			text: 'הצטרפו גם אתם למאבק ועזרו להשיב את החטופים הביתה',
-			url: 'https://www.notnim-yad.co.il',
+			url: 'https://notnim-yad.net/',
 		})
 	}
 </script>
