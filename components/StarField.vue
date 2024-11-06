@@ -54,7 +54,6 @@
 <style lang="css">
 	.starfield {
 		height: 100%;
-
 		overflow: hidden;
 		position: relative;
 		perspective: 1000px;
@@ -87,6 +86,28 @@
 		100% {
 			transform: translateZ(0px) rotate(20deg) translateY(-300px);
 			opacity: 0;
+		}
+	}
+
+	/* Mobile */
+	@media screen and (max-width: 767px) {
+		.starfield {
+			perspective: 800px;
+		}
+
+		@keyframes fly {
+			0% {
+				transform: translateZ(-600px) rotate(20deg) translateY(0);
+				opacity: 0;
+			}
+			50% {
+				transform: translateZ(-300px) rotate(-20deg) translateY(-100px);
+				opacity: 1;
+			}
+			100% {
+				transform: translateZ(0px) rotate(20deg) translateY(-300px);
+				opacity: 0;
+			}
 		}
 	}
 </style>
