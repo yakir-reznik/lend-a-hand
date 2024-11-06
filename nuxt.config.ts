@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 			htmlAttrs: { lang: 'he', dir: 'rtl' },
 			charset: 'utf-8',
 			viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0',
-			title: 'ישראלים מובילים לשחרור החטופים',
+			title: 'נותנים יד לשחרור החטופים',
 			link: [
 				{ rel: 'icon', type: 'image/png', href: '/favicon-96x96.png' },
 				{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 				{ rel: 'preload', href: '/img/two-yellow-hands-white-border.svg', as: 'image' },
 			],
 			meta: [
-				{ name: 'apple-mobile-web-app-title', content: 'ישראלים מובילים לשחרור החטופים' },
+				{ name: 'apple-mobile-web-app-title', content: 'נותנים יד לשחרור החטופים' },
 				{
 					name: 'description',
 					content:
