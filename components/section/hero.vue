@@ -1,19 +1,23 @@
 <template>
 	<div class="relative bg-dark-900 pb-16">
 		<StarField>
-			<RoundImageSlider :personIndex v-if="hydrated" />
+			<ClientOnly>
+				<RoundImageSlider :personIndex />
+			</ClientOnly>
 		</StarField>
 
-		<div class="absolute bottom-0 left-0 w-full bg-dark-900/70 py-8 text-center" v-if="hydrated">
+		<div class="absolute bottom-0 left-0 w-full bg-dark-900/70 py-8 text-center">
 			<div class="wrapper">
-				<h2
-					class="overflow-hidden text-ellipsis whitespace-nowrap text-4xl font-bold text-white desktop:text-5xl"
-				>
-					{{ currentPerson.name }}
-				</h2>
-				<p class="text-2xl font-medium text-gray-300">
-					מחכה שנחזיר {{ currentPerson?.gender === 'male' ? 'אותו' : 'אותה' }} הביתה
-				</p>
+				<ClientOnly>
+					<h2
+						class="overflow-hidden text-ellipsis whitespace-nowrap text-4xl font-bold text-white desktop:text-5xl"
+					>
+						{{ currentPerson.name }}
+					</h2>
+					<p class="text-2xl font-medium text-gray-300">
+						מחכה שנחזיר {{ currentPerson?.gender === 'male' ? 'אותו' : 'אותה' }} הביתה
+					</p>
+				</ClientOnly>
 				<HandBtn class="relative z-10 -mt-4 translate-y-16" @click="handleClick">גם אני רוצה לתת יד</HandBtn>
 			</div>
 		</div>
@@ -72,10 +76,10 @@
 	const personIndex = ref(0)
 	const currentPerson = computed(() => randomizedPeople[personIndex.value])
 
-	const hydrated = ref(false)
+	// const hydrated = ref(false)
 
 	onMounted(() => {
-		hydrated.value = true
+		// hydrated.value = true
 		setInterval(function () {
 			personIndex.value = (personIndex.value + 1) % randomizedPeople.length
 		}, 6000)

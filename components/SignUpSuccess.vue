@@ -1,6 +1,6 @@
 <template>
 	<Transition name="scale-in">
-		<div class="py-24 text-center" v-if="props.signedUp">
+		<div class="py-16 text-center desktop:py-24" v-if="props.signedUp">
 			<span ref="scrollAnchor" class="block -translate-y-48"></span>
 			<img
 				class="mx-auto mb-6"
@@ -16,7 +16,7 @@
 				@click="handleClick"
 			>
 				<img src="/img/share.svg" alt="Share icon" />
-				<span>שתף חברים</span>
+				<span>שתפ/י חברים</span>
 			</button>
 		</div>
 	</Transition>

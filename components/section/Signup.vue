@@ -4,9 +4,19 @@
 			<SignUpSuccess :signedUp />
 
 			<template v-if="!signedUp">
-				<h2 class="mb-12 text-balance pt-24 text-center text-4xl font-bold desktop:text-5xl">
-					אני גם רוצה להצטרף ולתמוך
-				</h2>
+				<div class="mb-16 text-center">
+					<h2
+						class="relative inline-block text-balance px-2 pt-16 text-4xl font-bold mobile:w-64 desktop:pt-20 desktop:text-5xl"
+					>
+						<span class="relative z-10">גם אני רוצה לתת יד ולתמוך</span>
+						<img
+							class="absolute -bottom-3 left-0 h-4 w-full"
+							src="/img/underline.svg"
+							alt="Yellow styled underline"
+						/>
+					</h2>
+				</div>
+
 				<form @submit="handleSubmit">
 					<fieldset class="flex justify-center gap-8">
 						<button

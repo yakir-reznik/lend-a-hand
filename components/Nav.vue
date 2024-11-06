@@ -10,7 +10,7 @@
 			<div class="flex items-center justify-between tablet:py-4 desktop:py-4">
 				<h1
 					class="flex items-center gap-2 whitespace-nowrap font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl"
-					title="ישראלים מובילים לשחרור החטופים"
+					title="נותנים יד לשחרור החטופים"
 				>
 					<img src="/img/open-hands.svg" class="h-6" alt="Open hands" />
 
@@ -21,10 +21,10 @@
 
 				<ul class="flex gap-4 mobile:hidden">
 					<li>
-						<a class="font-bold underline" href="https://notnim-yad.net/">אני רוצה לתת יד</a>
+						<a class="font-bold underline" href="https://notnim-yad.net/">לתת יד ברשת</a>
 					</li>
 					<!-- <li>
-						<a class="text-black/60 hover:underline">יוצרים ותומכים</a>
+						<a class="text-black/60 hover:underline">ליצור ולתמוך בקהילה</a>
 					</li> -->
 				</ul>
 
