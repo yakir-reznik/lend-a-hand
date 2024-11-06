@@ -9,12 +9,12 @@
 		<div class="wrapper">
 			<div class="flex items-center justify-between tablet:py-4 desktop:py-4">
 				<h1
-					class="flex items-center gap-2 whitespace-nowrap text-sm font-extrabold text-dark-900 desktop:text-2xl"
+					class="flex items-center gap-2 whitespace-nowrap font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl"
 					title="ישראלים מובילים לשחרור החטופים"
 				>
-					<span>ישראלים מובילים</span>
-					<img src="/img/open-hands.svg" class="h-4 desktop:h-6" alt="Open hands" />
-					<span>לשחרור החטופים</span>
+					<img src="/img/open-hands.svg" class="h-6" alt="Open hands" />
+
+					<span>נותנים יד לשחרור החטופים</span>
 				</h1>
 
 				<BurgerBtn @toggle="handleToggle" :is-open />
