@@ -1,6 +1,6 @@
 <template>
 	<div ref="container" class="">
-		<div class="glow absolute-center aspect-square w-1/2 rounded-full tablet:w-1/3 desktop:size-[190px]"></div>
+		<div class="glow absolute-center aspect-square w-1/2 rounded-full tablet:w-1/3 desktop:size-[280px]"></div>
 	</div>
 </template>
 
@@ -30,7 +30,7 @@
 			newEl.src = currentPerson.image
 		}
 
-		const classNames = 'absolute-center w-1/2 tablet:w-1/3 rounded-full desktop:size-[190px]'.split(' ')
+		const classNames = 'absolute-center w-1/2 tablet:w-1/3 rounded-full desktop:size-[280px]'.split(' ')
 		newEl.classList.add(...classNames)
 		newEl.alt = currentPerson.name
 		newEl.style.animation = 'round-image-slider-fade-in 1s forwards ease-out'
