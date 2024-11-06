@@ -1,8 +1,5 @@
 <template>
 	<div class="relative bg-dark-900 pb-16">
-		<!-- <Spiral /> -->
-		<!-- <SpiralRows /> -->
-		<!-- <FloatingEmojis /> -->
 		<StarField>
 			<RoundImageSlider :personIndex />
 		</StarField>
