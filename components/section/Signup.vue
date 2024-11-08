@@ -51,10 +51,9 @@
 						<input
 							class="w-full rounded-md border border-gray-200 p-2 text-lg"
 							type="text"
-							placeholder="שם מלא (חובה)"
+							placeholder="שם מלא"
 							autocomplete="name"
 							v-model="data.name"
-							required
 						/>
 					</fieldset>
 					<fieldset class="mx-auto mt-8 px-4 tablet:max-w-sm desktop:max-w-sm">
@@ -68,7 +67,8 @@
 						/>
 					</fieldset>
 
-					<p class="mt-4 text-center text-sm font-light text-gray-400">
+					<p class="mt-4 text-center text-sm font-light text-gray-500">
+						<span class="text-rose-400">*</span>
 						פרטיך האישיים לא יפורסמו ולא ייעשה בהם כל שימוש
 					</p>
 
@@ -147,6 +147,10 @@
 	const nameToInitials = (name: string): string => {
 		name = name.trim()
 		name = name.replace(/\s+/g, ' ')
+
+		if (!name) {
+			return '(אנונימי)'
+		}
 
 		const words = name.split(' ')
 
