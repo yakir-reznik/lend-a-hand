@@ -61,6 +61,10 @@ function name_to_initials(string $name): string {
 	# remove dots and digits
 	$name = preg_replace('/[0-9.]/', '', $name);
 
+	if (empty($name)) {
+		return 'א.א';
+	}
+
 	$words = explode(' ', $name);
 
 	# If 2 words or more return 2 initials
