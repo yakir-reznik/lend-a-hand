@@ -55,14 +55,19 @@ die();
 
 
 function name_to_initials(string $name): string {
+
+	# Remove non utf-8 characters
+	$name = preg_replace('/[^\p{L}\s]/u', '', $name);
+
+	# allow only hebrew and english letters and spaces
+	$name = preg_replace('/[^א-תa-zA-Z ]/', '', $name);
+
+	# Remove white spaces
 	$name = trim($name);
 	$name = preg_replace('/\s+/', ' ', $name);
 
-	# remove dots and digits
-	$name = preg_replace('/[0-9.]/', '', $name);
-
 	if (empty($name)) {
-		return 'א.א';
+		return '(אנונימי)';
 	}
 
 	$words = explode(' ', $name);

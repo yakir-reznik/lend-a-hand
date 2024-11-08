@@ -42,7 +42,6 @@ if (!$email || !$messageId) {
 	die();
 }
 
-
 $pdo = create_pdo();
 
 $insert = $pdo->prepare('INSERT INTO users (email, name, under12, messageId, ip) VALUES (:email, :name, :under12, :messageId, :ip);');
