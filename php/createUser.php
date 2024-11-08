@@ -28,11 +28,12 @@ $input = file_get_contents('php://input');
 $json = json_decode($input, true);
 
 $email = filter_var($json['email'], FILTER_VALIDATE_EMAIL);
-$name = sanitize_string($json['name']);
+$name = sanitize_string($json['name'] ?: '');
+
 $under12 = filter_var($json['under12'], FILTER_VALIDATE_BOOLEAN);
 $messageId = sanitize_string($json['messageId']);
 
-if (!$name || !$email || !$messageId) {
+if (!$email || !$messageId) {
 	write_log(LOG_NAME, [
 		'error' => 'Invalid input',
 		'input' => $json
