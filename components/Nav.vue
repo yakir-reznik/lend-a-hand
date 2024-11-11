@@ -8,14 +8,16 @@
 	<nav class="fixed left-0 top-0 z-30 w-full bg-primary">
 		<div class="wrapper">
 			<div class="flex items-center justify-between tablet:py-4 desktop:py-4">
-				<h1
-					class="flex items-center gap-2 whitespace-nowrap font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl"
-					title="נותנים יד לשחרור החטופים"
-				>
-					<img src="/img/open-hands.svg" class="h-6" alt="Open hands" />
+				<a href="https://notnim-yad.net/">
+					<h1
+						class="flex items-center gap-2 whitespace-nowrap font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl"
+						title="נותנים יד לשחרור החטופים"
+					>
+						<img src="/img/open-hands.svg" class="h-6" alt="Open hands" />
 
-					<span>נותנים יד לשחרור החטופים</span>
-				</h1>
+						<span>נותנים יד לשחרור החטופים</span>
+					</h1>
+				</a>
 
 				<BurgerBtn @toggle="handleToggle" :is-open />
 
