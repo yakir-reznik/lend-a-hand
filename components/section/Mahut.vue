@@ -6,6 +6,15 @@
 				מיזם תמיכה חווייתי ומתפתח, במרחבי הדיגיטל והקהילה, המאפשר הבעה אישית וערבות הדדית
 			</p>
 
+			<p>
+				<NuxtLink
+					to="/about"
+					class="mt-8 inline-block rounded-full bg-gray px-8 py-2 font-semibold tracking-wide text-gray-700 transition hover:bg-gray-200 hover:text-gray-900 active:scale-95"
+				>
+					עוד אודות המיזם
+				</NuxtLink>
+			</p>
+
 			<ul class="mt-16 grid justify-items-center gap-12 tablet:grid-cols-3 desktop:grid-cols-3">
 				<figure class="max-w-64">
 					<img class="mx-auto mb-4" src="/img/hand-in-heart.svg" alt="Hand in heart" />
