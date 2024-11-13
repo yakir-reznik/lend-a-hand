@@ -7,42 +7,53 @@
 	></div>
 	<nav class="fixed left-0 top-0 z-30 w-full bg-primary">
 		<div class="wrapper">
-			<div class="flex items-center justify-between tablet:py-4 desktop:py-4">
-				<a href="https://notnim-yad.net/">
-					<h1
-						class="flex items-center gap-2 whitespace-nowrap font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl"
-						title="נותנים יד לשחרור החטופים"
-					>
-						<img src="/img/open-hands.svg" class="h-6" alt="Open hands" />
-
-						<span>נותנים יד לשחרור החטופים</span>
-					</h1>
-				</a>
+			<div class="flex items-center justify-between tablet:py-3 desktop:py-3">
+				<NuxtLink to="/">
+					<div class="flex items-center gap-2 whitespace-nowrap">
+						<img src="/img/open-hands.svg" class="h-8" alt="Open hands" />
+						<div>
+							<h2 class="-mb-1 text-sm font-semibold text-dark-900/70 desktop:-mb-2 desktop:text-lg">
+								ערבות הדדית ישראל
+							</h2>
+							<h1 class="font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl">
+								נותנים יד לשחרור החטופים
+							</h1>
+						</div>
+					</div>
+				</NuxtLink>
 
 				<BurgerBtn @toggle="handleToggle" :is-open />
 
 				<ul class="flex gap-4 mobile:hidden">
-					<li>
-						<a class="font-bold underline" href="https://notnim-yad.net/">לתת יד ברשת</a>
+					<li v-for="link in links">
+						<NuxtLink
+							v-if="!link.hidden"
+							:to="link.url"
+							:title="link.text"
+							:target="link.target"
+							active-class="font-bold underline"
+						>
+							{{ link.text }}
+						</NuxtLink>
 					</li>
-					<!-- <li>
-						<a class="text-black/60 hover:underline">ליצור ולתמוך בקהילה</a>
-					</li> -->
 				</ul>
 
 				<!-- Mobile menu -->
 				<Transition name="fade">
 					<div v-if="isOpen" class="fixed left-0 top-12 hidden bg-primary mobile:block">
 						<ul class="py-4">
-							<li>
-								<a class="px-8 font-bold underline" href="https://notnim-yad.net/">אני רוצה לתת יד</a>
+							<li v-for="link in links">
+								<NuxtLink
+									v-if="!link.hidden"
+									:to="link.url"
+									:title="link.text"
+									:target="link.target"
+									class="block px-8 py-2"
+									active-class="font-bold underline"
+								>
+									{{ link.text }}
+								</NuxtLink>
 							</li>
-							<!-- <li class="text-dark-800/30">
-								<span>|</span>
-							</li>
-							<li>
-								<a class="px-8 text-black/60 hover:underline" href="#0">יוצרים ותומכים</a>
-							</li> -->
 						</ul>
 					</div>
 				</Transition>
@@ -52,6 +63,35 @@
 </template>
 
 <script setup lang="ts">
+	type Link = {
+		text: string
+		url: string
+		target?: '_blank'
+		hidden?: boolean
+	}
+
+	const links: Link[] = [
+		{
+			text: 'נותנים יד בדיגיטל',
+			url: '/',
+		},
+		{
+			text: 'אודותינו',
+			url: 'about',
+			hidden: true,
+		},
+		{
+			text: 'יוצרים בקהילה',
+			url: '#0',
+			hidden: true,
+		},
+		{
+			text: 'צרו קשר',
+			url: '#0',
+			hidden: true,
+		},
+	]
+
 	const isOpen = ref(false)
 
 	const handleToggle = () => {
