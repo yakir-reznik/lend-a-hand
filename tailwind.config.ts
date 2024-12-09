@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import colors from 'tailwindcss/colors'
 
 export default <Partial<Config>>{
 	theme: {
@@ -19,6 +18,21 @@ export default <Partial<Config>>{
 					'900': '#7a360d',
 					'950': '#461b02',
 				},
+				secondary: {
+					DEFAULT: '#1043b8',
+					'50': '#edf7ff',
+					'100': '#d8edff',
+					'200': '#b9dfff',
+					'300': '#89ccff',
+					'400': '#52afff',
+					'500': '#298dff',
+					'600': '#126cfe',
+					'700': '#0b55ea',
+					'800': '#1043b8',
+					'900': '#143e94',
+					'950': '#11275a',
+				},
+
 				dark: {
 					'800': '#333333',
 					'900': '#010120',

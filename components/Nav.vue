@@ -5,17 +5,17 @@
 		:class="{ isOpen }"
 		@click="isOpen = false"
 	></div>
-	<nav class="fixed left-0 top-0 z-30 w-full bg-primary">
+	<nav class="bg-secondary fixed left-0 top-0 z-30 w-full">
 		<div class="wrapper">
 			<div class="flex items-center justify-between tablet:py-3 desktop:py-3">
 				<NuxtLink to="/">
 					<div class="flex items-center gap-2 whitespace-nowrap">
-						<img src="/img/open-hands.svg" class="h-8" alt="Open hands" />
+						<img src="/img/two-yellow-hands.svg" class="h-8" alt="Open hands" />
 						<div>
-							<h2 class="-mb-1 text-sm font-semibold text-dark-900/70 desktop:-mb-2 desktop:text-lg">
+							<h2 class="-mb-1 text-sm font-semibold text-white/80 desktop:-mb-2 desktop:text-lg">
 								ערבות הדדית ישראל
 							</h2>
-							<h1 class="font-extrabold text-dark-900 tablet:text-xl desktop:text-2xl">
+							<h1 class="font-extrabold text-white tablet:text-xl desktop:text-2xl">
 								נותנים יד לשחרור החטופים
 							</h1>
 						</div>
@@ -31,7 +31,7 @@
 							:to="link.url"
 							:title="link.text"
 							:target="link.target"
-							active-class="font-bold underline"
+							active-class="font-bold underline text-white"
 						>
 							{{ link.text }}
 						</NuxtLink>
@@ -40,7 +40,7 @@
 
 				<!-- Mobile menu -->
 				<Transition name="fade">
-					<div v-if="isOpen" class="fixed left-0 top-12 hidden bg-primary mobile:block">
+					<div v-if="isOpen" class="bg-secondary fixed left-0 top-12 hidden mobile:block">
 						<ul class="py-4">
 							<li v-for="link in links">
 								<NuxtLink
@@ -49,7 +49,7 @@
 									:title="link.text"
 									:target="link.target"
 									class="block px-8 py-2"
-									active-class="font-bold underline"
+									active-class="font-bold underline text-white"
 								>
 									{{ link.text }}
 								</NuxtLink>
