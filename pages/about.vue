@@ -1,7 +1,24 @@
 <template>
 	<section class="pb-10 pt-20">
 		<div class="wrapper">
-			<p class="font-bold text-primary">אודות המיזם</p>
+			<h1 class="text-center text-5xl font-bold">תשובות ענייניות לשאלות חשובות</h1>
+			<ul>
+				<FAQItem>
+					<template #question>
+						<p class="text-2xl font-bold">מה זה ערבות הדדית?</p>
+					</template>
+					<template #answer>
+						ערבות הדדית היא הדבק המלכד את החברה הישראלית רבת השבטים - החוסן המיוחד שלנו אלפי שנים בתפוצות
+						ובישראל.
+					</template>
+				</FAQItem>
+			</ul>
+		</div>
+	</section>
+
+	<section class="pb-10 pt-20">
+		<div class="wrapper">
+			<p class="text-secondary font-bold">אודות המיזם</p>
 			<h1 class="text-5xl font-bold">ערבות הדדית ישראל</h1>
 
 			<div class="mt-8 flex max-w-xl flex-col gap-4 text-xl leading-8">
