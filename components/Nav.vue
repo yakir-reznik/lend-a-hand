@@ -31,6 +31,7 @@
 							:to="link.url"
 							:title="link.text"
 							:target="link.target"
+							class="text-secondary-100"
 							active-class="font-bold underline text-white"
 						>
 							{{ link.text }}
