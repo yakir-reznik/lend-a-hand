@@ -498,13 +498,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'איתי סבירסקי',
-		age: 38,
-		desc: 'נחטף מבארי',
-		image: '/img/people/notnim-yad-79.jpg',
-		gender: 'male',
-	},
-	{
 		name: "קית' שמואל סיגל",
 		age: 65,
 		desc: 'נחטף מכפר עזה',
