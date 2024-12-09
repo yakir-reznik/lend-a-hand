@@ -1,15 +1,15 @@
 <template>
-	<li>
-		<button class="btn py-1 transition-all" @click.capture="handleItemClick($event)">
+	<li class="border-b border-gray-200 last:border-b-0">
+		<button class="btn py-3 transition-all" @click.capture="handleItemClick($event)">
 			<p class="relative flex gap-2">
 				<span class="icon relative mt-[4px] h-4 w-4"></span>
-				<span class="question-text w-full text-right text-lg mobile:text-base">
-					<slot name="question"></slot>
+				<span class="question-text w-full pr-8 text-right text-xl">
+					<slot name="question" class=""></slot>
 				</span>
 			</p>
 		</button>
-		<div class="answer relative h-auto overflow-hidden px-6 text-right">
-			<slot name="question"></slot>
+		<div class="answer relative h-auto overflow-hidden border-t border-gray-200 bg-gray-50 px-6 text-right text-lg">
+			<slot name="answer"></slot>
 		</div>
 	</li>
 </template>
@@ -22,21 +22,8 @@
 			button = e.target.closest('.btn')
 		}
 
-		console.log(button)
-
 		button.classList.toggle('active')
-
 		if (!button.classList.contains('active')) return
-		if (false) {
-			setTimeout(() => {
-				const buttonTop = button.getBoundingClientRect().top
-				const offsetTop = buttonTop + window.pageYOffset - 120
-				window.scrollTo({
-					top: offsetTop,
-					behavior: 'smooth',
-				})
-			}, 1)
-		}
 	}
 </script>
 
@@ -44,14 +31,14 @@
 	.icon:before, .icon:after
 		content: ''
 		position: absolute
-		right: 1px
+		right: 20px
 		background: #000
 		width: 0.8rem
 		height: 2px
 		border-radius: 4px
 		transform: rotate(0deg)
 		transition: transform 500ms ease-out
-		top: 10px
+		top: 8px
 
 	.icon:after
 		transform: rotate(90deg)
@@ -63,7 +50,7 @@
 
 	.question-text
 		transition: transform 150ms ease-out, text-shadow 150ms ease-out
-		text-shadow: 1px 0 0 rgba(255,255,255,0)
+		// text-shadow: 2px 0 0 rgba(255,255,255,0)
 
 	.answer
 		max-height: 0rem
@@ -72,16 +59,15 @@
 		&:before, &:after
 			content: ''
 			display: block
-			height: 1.25rem
-		&:before
-			height: 0.25rem
+			height: 2rem
 
 
 	.btn.active
 		.question-text
-			text-shadow: 1px 0 0 currentColor
+			// text-shadow: 2px 0 0 currentColor
+			font-weight: bold
 			transform: translateX(-1px)
-		.answer
+		& + .answer
 			opacity: 1
-			max-height: 50rem
+			max-height: 110rem
 </style>

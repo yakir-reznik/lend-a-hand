@@ -49,8 +49,9 @@
 									:to="link.url"
 									:title="link.text"
 									:target="link.target"
-									class="block px-8 py-2"
+									class="text-secondary-100 block px-8 py-2"
 									active-class="font-bold underline text-white"
+									@click="isOpen = false"
 								>
 									{{ link.text }}
 								</NuxtLink>
@@ -79,7 +80,7 @@
 		{
 			text: 'אודותינו',
 			url: 'about',
-			hidden: true,
+			hidden: false,
 		},
 		{
 			text: 'יוצרים בקהילה',

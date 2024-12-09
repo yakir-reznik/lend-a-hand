@@ -1,80 +1,129 @@
 <template>
 	<section class="pb-10 pt-20">
 		<div class="wrapper">
-			<h1 class="text-center text-5xl font-bold">תשובות ענייניות לשאלות חשובות</h1>
-			<ul>
+			<h1 class="text-center text-5xl font-bold">על כל שאלה - תשובה</h1>
+			<ul class="mt-20 desktop:mx-auto desktop:max-w-3xl">
 				<FAQItem>
-					<template #question>
-						<p class="text-2xl font-bold">מה זה ערבות הדדית?</p>
-					</template>
+					<template #question>מה זה "נותנים יד לשחרור החטופים"?</template>
 					<template #answer>
-						ערבות הדדית היא הדבק המלכד את החברה הישראלית רבת השבטים - החוסן המיוחד שלנו אלפי שנים בתפוצות
-						ובישראל.
+						<ul class="list-disc space-y-4 pr-4">
+							<li>אתר ומיצג שמאפשר לכל אחד ואחת, להביע את תמיכתו בשחרור החטופים, מכל מקום ובכל זמן.</li>
+							<li>
+								המיצג היברידי, ומופיע גם במרחב הדיגיטלי וגם במרחב הקהילתי. המיצג הדיגיטלי יוקרן במקומות
+								ציבוריים וניתן להצטרף אליו באתר.המיצג הקהילתי יוצג פיזית ויוקרן דיגיטלית במרחבי קהילה
+								וחינוך. מובילי קהילה וחינוך מוזמנים לבחור מתוך מערכי-הפעילות שבאתר ולהנחות קבוצות ילדים,
+								נוער ומבוגרים במסגרות חינוך ובמרכזי קהילה, הקבוצות יכולות להכין יצירות-ידיים ושבילי
+								אבנים צהובות אל החופש. היצירות יופיעו בגלריה באתר ויוקרנו על מסכים במרחבי קהילה, חינוך
+								וציבור ברחבי הארץ.
+							</li>
+							<li>המטרה שלנו היא שכל פעולה תחזק את החיבור והחוסן בחברה שלנו ותקדם את שחרור החטופים.</li>
+						</ul>
+					</template>
+				</FAQItem>
+
+				<FAQItem>
+					<template #question>מי אחראי על המיצג?</template>
+					<template #answer>
+						<div class="space-y-4">
+							<p>
+								צוות מתנדבים עצמאי הכולל אנשי דיגיטל, חינוך וקהילה בהובלת איריס דואני מומחית חווית משתמש
+								וד"ר דינה כהן-אור תרפיסטית בביבליותרפיה ובפסיכותרפית הצבע ומרצה לא.נשי חינוך באקדמיה.
+							</p>
+							<p>אנחנו גוף לא-פוליטי הפועל בהתנדבות מלאה ושואף להתחבר לכל הגוונים של הקשת הישראלית.</p>
+						</div>
+					</template>
+				</FAQItem>
+
+				<FAQItem>
+					<template #question>איך התגבשתם ולמה?</template>
+					<template #answer>
+						<div class="space-y-4">
+							<p>
+								אחרי שנה של מלחמה, הבנו שאי אפשר להמשיך בשגרה כש-100 חטופים עדיין נמצאים בעזה. ידענו
+								שרוב הישראלים תומכים בשחרור החטופים, הרבה יותר ממה שרואים ברחובות. מתוך תחושת דחיפות,
+								הקמנו צוות ופיתחנו מיצג דיגיטלי וקהילתי שיביא את קול הרוב לידי ביטוי.
+							</p>
+							<p>
+								הרעיון החל מיוזמה פרטית, הודעת וואטצאפ שהתגלגלה בקבוצות מאחת לשנייה. אחרי שיחה הבנו שיש
+								רצון וצורך לייצר משהו יחד. חיפשנו דרך לעשות משהו, להשפיע, להביע את הכמיהה שלנו להחזיר את
+								החטופים הביתה.
+							</p>
+							<p>
+								הרעיון התגבש והמיזם התרחב עם הצטרפות א.נשים, מוכשרים וטובים בתחומם, שפועלים בזמנם הפרטי,
+								בהתנדבות מלאה ומתוך תחושת שליחות לשחרור החטופים.
+							</p>
+						</div>
+					</template>
+				</FAQItem>
+
+				<FAQItem>
+					<template #question>מה המיצג דיגיטלי - קהילתי ייתן ואיך זה יחזיר אותם הביתה?</template>
+					<template #answer>
+						<div class="space-y-4">
+							<p>
+								כחברה, השבי הנמשך של החטופים צורב ופוגע בנו, מבוגרים וילדים. הצורך והיכולת להעניק חמלה
+								ועזרה לחטופים ולרפא גם את עצמנו נמצא בידיים שלנו. פעילות היא ערכית, נגישה גם מהבית וכל
+								אחד יכול לקחת בה חלק, גם ילדים ונוער.
+							</p>
+							<h6 class="pt-4 underline">המיצג הקהילתי:</h6>
+							<p class="">
+								האפשרות להביע ביצירות-ידיים אמפטיה וכאב ולהשמיע קול לתמיכה בשחרור החטופים מטעינה אותנו
+								בתחושת מסוגלות ובתקווה. הידיים התומכות שלנו יוצגו במרחבים קהילתיים וחינוכיים ויהדהדו את
+								המסר לקהילה. צילומי-היצירות שנעלה לאתר יוקרנו על מסכים ויפיצו 24/7 את המסר למעגלים
+								נוספים.
+							</p>
+							<h6 class="pt-4 underline">המיצג הדיגיטלי:</h6>
+							<p class="pb-4">
+								מיצג חזותי של אחיותינו ואחינו החטופים עטופים בידינו התומכות ומוקרן בראשי חוצות על
+								בניינים - שווה אלף מילים !האתר מאפשר בלחיצת כפתור להיות חלק ולהשמיע בעוצמה את הקול של
+								רוב אזרחי ישראל. כדי להגיע לכולם, כל אחת ואחד יכולים להצטרף ולחבר חברי משפחה וחברים
+								למיצג הדיגיטלי. יחד, קול ועוד קול נגיע למספר מרשים שישקף את התמיכה הישראלית בשחרור
+								החטופים.
+							</p>
+							<p>
+								המיצגים הדיגיטלי והקהילתי יוקרנו וישקפו באופן רציף וללא הפסקה את התמיכה שלנו בשחרור
+								החטופים. אנחנו מאמינים שלכל מעשה, גם לקטן ביותר, יש את היכולת להשפיע ולשנות.
+							</p>
+							<p>
+								חשוב לנו להנגיש לכולם את האפשרות לעשות שינוי ולהרגיש חלק מהתמיכה הציבורית. לפעילויות
+								תמיכה קהילתית וחינוכית ברחבי ישראל ובתפוצות יש כוח לעורר הד ציבורי ולהשפיע על מקבלי
+								ההחלטות.
+							</p>
+							<p class="italic"><span> - </span> "אחרי המעשים נמשכים הלבבות" (הרמב"ם)</p>
+						</div>
+					</template>
+				</FAQItem>
+
+				<FAQItem>
+					<template #question>נתתי יד, מה עוד אפשר לעשות?</template>
+					<template #answer>
+						<div class="space-y-4">
+							<p>אנו פתוחים לקבלת מתנדבים בקהילה, שיעזרו בפיתוח ובהפצת העצומה בפלטפורמות השונות.</p>
+						</div>
+					</template>
+				</FAQItem>
+
+				<FAQItem>
+					<template #question>האם יש פעולות נוספות שמתוכננות?</template>
+					<template #answer>
+						<div class="space-y-4">
+							<p>
+								בודאי 🙂 חיבור וערבות הדדית בין קהילות נוספות מכל גווני הקשת הישראלית, לבנות עוד שבילי
+								חופש שיתפרשו מעזה ועד הבית של החטוף.ה, הזמנה של משפחות חטופים לשתף ולספר על יקיריהם,
+								יצירות ידיים ושבילי חופש בכל מסגרת חינוכית פורמאלי ובתנועות הנוער, ובקהילות הציבור
+								החילוני, הדתי והחרדי, שת"פ עם יום אחדות ישראל, עם קהילות יהודיות בתפוצות ועוד
+							</p>
+						</div>
 					</template>
 				</FAQItem>
 			</ul>
 		</div>
 	</section>
 
-	<section class="pb-10 pt-20">
-		<div class="wrapper">
-			<p class="text-secondary font-bold">אודות המיזם</p>
-			<h1 class="text-5xl font-bold">ערבות הדדית ישראל</h1>
-
-			<div class="mt-8 flex max-w-xl flex-col gap-4 text-xl leading-8">
-				<p>
-					את מיזם ״ערבות ההדדית ישראל״ הקמנו על-מנת לחזק את הערבות ההדדית בין כל חלקי החברה הישראלית והנכחת
-					התמיכה של כולנו בשחרור החטופים.
-				</p>
-
-				<p>
-					ערבות הדדית היא הדבק המלכד את החברה הישראלית רבת השבטים - החוסן המיוחד שלנו אלפי שנים בתפוצות
-					ובישראל.
-				</p>
-
-				<p>
-					החטופים הם אחיותינו ואחינו הזקוקים לנו היום שנציל אותם. כולנו רקמה אנושית אחת, אם נעמוד מן הצד
-					כשאחינו בסכנה - נחלש. היכולת להשמיע קול ברור למען הצלתם היא בידיים שלנו.
-				</p>
-
-				<p>
-					<a class="font-bold" href="https://notnim-yad.net/">זה הזמן לתת יד, יחד.</a>
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="pb-20 pt-10">
-		<div class="wrapper">
-			<h2 class="text-4xl font-bold">מטרות המיזם</h2>
-
-			<div class="mt-8 flex max-w-xl flex-col gap-4 text-xl leading-8">
-				<p>
-					המיזם יאפשר את הבעת הערבות ההדדית להצלת החטופים, באמצעות פעילויות מוחשיות הנעשית על ידי יצירות ידיים
-					קבוצתיות במרחבים קהילתיים ומוסדיים.
-				</p>
-
-				<p>
-					אנו מציעים למורים ולמדריכים מגוון פעילויות יצירה באמצעות צילום, הדפסה וציור של כפות-הידיים של חברי
-					הקבוצה, שיחה בעקבות טקסטים מן התרבות והתורה, התנסות במשחקים המפתחים ערבות הדדית בין חברי הקבוצה
-					והחלשים בחברה.
-				</p>
-
-				<p>
-					הדגש ביישום יצירות הידיים יעשה לפי החלטת המנחה בהתאמה לגיל המשתתפים ולאופי הקהילה. אפשר להתמקד בנושא
-					הכללי והעמוק של ערבות הדדית ישראל, אפשר לחבר אליו את הנושא הספציפי והדחוף של ערבות הדדית לחטופים
-					ועוד.
-				</p>
-
-				<p class="font-bold">נחזור להיות שלמים כשכולם חוזרים.</p>
-			</div>
-		</div>
-	</section>
-
 	<section class="bg-gray py-24">
 		<div class="wrapper">
-			<h2 class="text-4xl font-bold">חברי הצוות</h2>
-			<p class="mt-2 text-primary-700/50">כל חברי הצוות פועלים כגוף עצמאי ובהתנדבות מלאה</p>
+			<h2 class="text-center text-4xl font-bold">חברי הצוות</h2>
+			<p class="text-secondary mt-2 text-center">כל חברי הצוות פועלים כגוף עצמאי ובהתנדבות מלאה</p>
 
 			<div class="mt-12 grid gap-8 mobile:grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4">
 				<a
