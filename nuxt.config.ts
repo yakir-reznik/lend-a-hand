@@ -45,6 +45,7 @@ export default defineNuxtConfig({
 		// disable prerendering for all routes except home
 		'**': { prerender: false },
 		'/': { prerender: true },
+		'/about': { prerender: true },
 	},
 
 	devtools: { enabled: false },
