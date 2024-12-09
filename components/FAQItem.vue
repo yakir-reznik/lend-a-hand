@@ -1,6 +1,10 @@
 <template>
 	<li class="border-b border-gray-200 last:border-b-0">
-		<button class="btn py-3 transition-all" @click.capture="handleItemClick($event)">
+		<button
+			class="btn py-3 transition-all"
+			:class="{ active: props.isOpen }"
+			@click.capture="handleItemClick($event)"
+		>
 			<p class="relative flex gap-2">
 				<span class="icon relative mt-[4px] h-4 w-4"></span>
 				<span class="question-text w-full pr-8 text-right text-xl">
@@ -15,6 +19,15 @@
 </template>
 
 <script setup lang="ts">
+	const props = withDefaults(
+		defineProps<{
+			isOpen?: boolean
+		}>(),
+		{
+			isOpen: false,
+		}
+	)
+
 	function handleItemClick(e: MouseEvent) {
 		let button = e.target as HTMLButtonElement
 		if (!button.classList.contains('btn')) {

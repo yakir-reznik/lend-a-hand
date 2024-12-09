@@ -3,7 +3,7 @@
 		<div class="wrapper">
 			<h1 class="text-center text-5xl font-bold">על כל שאלה - תשובה</h1>
 			<ul class="mt-20 desktop:mx-auto desktop:max-w-3xl">
-				<FAQItem>
+				<FAQItem :is-open="true">
 					<template #question>מה זה "נותנים יד לשחרור החטופים"?</template>
 					<template #answer>
 						<ul class="list-disc space-y-4 pr-4">
@@ -123,7 +123,7 @@
 	<section class="bg-gray py-24">
 		<div class="wrapper">
 			<h2 class="text-center text-4xl font-bold">חברי הצוות</h2>
-			<p class="text-secondary mt-2 text-center">כל חברי הצוות פועלים כגוף עצמאי ובהתנדבות מלאה</p>
+			<p class="mt-2 text-center text-secondary">כל חברי הצוות פועלים כגוף עצמאי ובהתנדבות מלאה</p>
 
 			<div class="mt-12 grid gap-8 mobile:grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-4">
 				<a
