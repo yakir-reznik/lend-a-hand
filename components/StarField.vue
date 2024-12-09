@@ -30,6 +30,9 @@
 			if (randomIcon === '✋') {
 				star.innerHTML =
 					"<img class='desktop:w-[1em] w-[0.85em]' src='/img/abstract-yellow-hand-3.svg' alt='hand'/>"
+			} else if (randomIcon === '🇮🇱') {
+				star.innerHTML =
+					"<img class='desktop:w-[1em] w-[0.85em]' src='/img/israel-flag.png' alt='flag of israel'/>"
 			} else {
 				star.textContent = randomIcon
 			}
