@@ -1,7 +1,7 @@
 <template>
 	<section class="pb-10 pt-20">
 		<div class="wrapper">
-			<h1 class="text-center text-5xl font-bold">על כל שאלה - תשובה</h1>
+			<h1 class="text-center text-5xl font-bold">אודותינו</h1>
 			<ul class="mt-20 desktop:mx-auto desktop:max-w-3xl">
 				<FAQItem :is-open="true">
 					<template #question>מה זה "נותנים יד לשחרור החטופים"?</template>
@@ -182,8 +182,13 @@
 			url: 'https://thereznik.com/',
 		},
 		{
-			name: 'מירי גרוטו',
+			name: 'מירי רבינר-גרוטו',
 			position: 'הפקה קהילתית בפועל',
+			desc: 'יוצרת ומחנכת לקיימות דרך אמנות',
+		},
+		{
+			name: 'מוריה בן-דרור',
+			desc: 'יזמת פרויקטורית, פעילת הרבעון הרביעי',
 		},
 		{
 			name: 'עליזה פלורנטל',
@@ -192,6 +197,10 @@
 		{
 			name: 'אדווה איזנברג',
 			desc: 'תירפיסטית בתנועה',
+		},
+		{
+			name: 'אורלי נקר',
+			position: 'עריכה לשונית וספרותית',
 		},
 	]
 </script>
