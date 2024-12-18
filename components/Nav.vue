@@ -5,7 +5,7 @@
 		:class="{ isOpen }"
 		@click="isOpen = false"
 	></div>
-	<nav class="bg-secondary fixed left-0 top-0 z-30 w-full">
+	<nav class="fixed left-0 top-0 z-30 w-full bg-secondary">
 		<div class="wrapper">
 			<div class="flex items-center justify-between tablet:py-3 desktop:py-3">
 				<NuxtLink to="/">
@@ -41,7 +41,7 @@
 
 				<!-- Mobile menu -->
 				<Transition name="fade">
-					<div v-if="isOpen" class="bg-secondary fixed left-0 top-12 hidden mobile:block">
+					<div v-if="isOpen" class="fixed left-0 top-12 hidden bg-secondary mobile:block">
 						<ul class="py-4">
 							<li v-for="link in links">
 								<NuxtLink
@@ -49,7 +49,7 @@
 									:to="link.url"
 									:title="link.text"
 									:target="link.target"
-									class="text-secondary-100 block px-8 py-2"
+									class="block px-8 py-2 text-secondary-100"
 									active-class="font-bold underline text-white"
 									@click="isOpen = false"
 								>
@@ -84,8 +84,8 @@
 		},
 		{
 			text: 'יוצרים בקהילה',
-			url: '#0',
-			hidden: true,
+			url: 'https://gallery.notnim-yad.net/',
+			hidden: false,
 		},
 		{
 			text: 'צרו קשר',
