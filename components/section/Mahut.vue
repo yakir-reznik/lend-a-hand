@@ -3,7 +3,7 @@
 		<div class="wrapper text-center">
 			<h2 class="mb-4 text-4xl font-bold desktop:text-5xl">מי אנחנו</h2>
 			<p class="mx-auto text-xl font-semibold text-mid tablet:max-w-xl desktop:max-w-2xl desktop:text-2xl">
-				מיזם תמיכה חווייתי ומתפתח, במרחבי הדיגיטל והקהילה, המאפשר הבעה אישית וערבות הדדית
+				מרחב דיגיטלי משותף להבעת תמיכה בחטופים ובמשפחותיהם ולקידום הערבות ההדדית בין גווני הקשת הישראלית.
 			</p>
 
 			<!-- <p>
