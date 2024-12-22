@@ -21,6 +21,16 @@
 						בניית אתר ואנימציה: יקיר רזניק
 					</a>
 				</li>
+				<li class="hidden px-2 text-white/30 desktop:block">|</li>
+				<li>
+					<a
+						href="https://www.adir.me/?utm_source=notnim-yad&utm_medium=referral&utm_campaign=footer-link"
+						target="_blank"
+						class="text-white/60 hover:text-white/80"
+					>
+						Adir Cohen - Product Design & Fullstack
+					</a>
+				</li>
 			</ul>
 		</div>
 	</footer>

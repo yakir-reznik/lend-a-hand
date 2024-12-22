@@ -134,8 +134,16 @@
 					:class="{ 'tablet:col-span-2 desktop:col-span-2': member.doubleSize }"
 				>
 					<span class="mb-1 block text-xl font-bold">{{ member.name }}</span>
-					<span class="mb-2 block text-sm text-gray-400">{{ member.desc || '-' }}</span>
-					<span class="text block font-semibold text-gray-600">{{ member.position || '-' }}</span>
+					<span
+						class="mb-2 block overflow-hidden text-ellipsis whitespace-nowrap text-sm text-gray-400"
+						:title="member.desc || '-'"
+						>{{ member.desc || '-' }}</span
+					>
+					<span
+						class="text block overflow-hidden text-ellipsis whitespace-nowrap font-semibold text-gray-600"
+						:title="member.position || '-'"
+						>{{ member.position || '-' }}</span
+					>
 				</a>
 			</div>
 		</div>
@@ -179,7 +187,13 @@
 			name: 'יקיר רזניק',
 			desc: 'מפתח Fullstack, מומחה UX ובניית אתרים',
 			position: 'פיתוח תוכנה ובניית אתרים',
-			url: 'https://thereznik.com/',
+			url: 'https://thereznik.com/?utm_source=notnim-yad&utm_medium=referral&utm_campaign=about-page',
+		},
+		{
+			name: 'אדיר כהן',
+			desc: 'Product Designer & Fullstack Developer',
+			position: 'מעצב UX & UI ומפתח Fullstack',
+			url: 'https://adir.me/?utm_source=notnim-yad&utm_medium=referral&utm_campaign=about-page',
 		},
 		{
 			name: 'מירי רבינר-גרוטו',
@@ -201,7 +215,6 @@
 		{
 			name: 'אורלי נקר',
 			desc: 'עורכת לשון',
-			position: 'עריכה לשונית וספרותית',
 		},
 		{
 			name: 'סיגל רונן',
