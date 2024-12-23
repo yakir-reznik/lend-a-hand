@@ -1,5 +1,5 @@
 <template>
-	<section class="overflow-hidden py-16 desktop:py-24">
+	<section class="overflow-hidden bg-gray py-16 desktop:py-24">
 		<div class="wrapper">
 			<h2 class="relative mb-12 inline-block pl-8 pr-0 text-3xl font-bold">
 				<span class="relative z-10">נתנו יד לאחרונה</span>

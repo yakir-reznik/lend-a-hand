@@ -3,6 +3,7 @@
 	<SectionMahut />
 	<SectionGoals />
 	<SectionSignup />
+	<SectionGalleryPromo />
 	<SectionMessageBoard />
 </template>
 
