@@ -74,7 +74,7 @@
 
 	const links: Link[] = [
 		{
-			text: 'נותנים יד בדיגיטל',
+			text: 'נותנים יד באתר',
 			url: '/',
 		},
 		{
@@ -83,7 +83,7 @@
 			hidden: false,
 		},
 		{
-			text: 'יוצרים בקהילה',
+			text: 'נותנים יד - יוצרים בקהילה',
 			url: 'https://gallery.notnim-yad.net/',
 			hidden: false,
 		},

@@ -1,13 +1,14 @@
 <template>
 	<section class="bg-white py-24 mobile:py-16">
 		<div class="wrapper">
-			<h2 class="mx-auto mb-4 text-center text-4xl font-bold desktop:text-5xl">יוצרים בקהילה</h2>
+			<p class="mb-3 text-center text-lg font-medium text-gray-600">בואו לתת יד גם במיצג הקהילתי</p>
+			<h2 class="mx-auto mb-6 text-center text-4xl font-bold desktop:text-5xl">נותנים יד - יוצרים בקהילה</h2>
 			<p class="mx-auto max-w-xl text-center text-xl font-semibold text-mid desktop:text-2xl">
-				במה לשיתוף יצירות כיד הדמיון. ילדים, בני נוער, נשים וגברים, בכל הגילאים ומכל המגזרים, מוזמנים להעלות את
-				היצירות שלכם ולקחת חלק במיזם
+				במה לשיתוף יצירות המשלבות את מוטיב כף היד כסמל לערבות הדדית - לקבוצות בקהילה ובמסגרות חינוך וליוזמות
+				אישיות בכל הגילאים ומכל המגזרים
 			</p>
 
-			<div class="mt-12 grid grid-cols-3 gap-8 mobile:grid-cols-1">
+			<div class="mt-12 grid grid-cols-4 gap-8 mobile:grid-cols-1">
 				<a
 					v-for="galleryItem in galleryItems"
 					:href="galleryItem.url"
@@ -15,7 +16,7 @@
 					:style="`background-image:url('${galleryItem.imgUrl}');`"
 				>
 					<span
-						class="absolute inset-0 grid items-end bg-dark-900/50 px-4 pb-3 text-lg text-white opacity-0 transition group-hover:opacity-100"
+						class="absolute inset-0 grid items-end bg-dark-900/50 px-4 pb-3 text-lg leading-tight text-white opacity-0 transition group-hover:opacity-100"
 					>
 						{{ galleryItem.title }}
 					</span>
@@ -23,9 +24,9 @@
 			</div>
 
 			<div class="mt-16 text-center">
-				<Btn href="https://gallery.notnim-yad.net/" class="relative z-10 mobile:text-base"
-					>לכל היצירות והעלאת יצירה חדשה</Btn
-				>
+				<Btn href="https://gallery.notnim-yad.net/" class="relative z-10 mobile:text-base">
+					לכל היצירות ולהעלאת יצירה חדשה
+				</Btn>
 			</div>
 		</div>
 	</section>
@@ -53,6 +54,11 @@
 			title: 'סולידריות מעבר לים',
 			imgUrl: 'https://gallery.notnim-yad.net/up/uploads/thumb/1734126798_lg4STLjkOv.jpg',
 			url: 'https://gallery.notnim-yad.net/?imageId=5',
+		},
+		{
+			title: 'שמות יד ונותנות מהלב',
+			imgUrl: 'https://gallery.notnim-yad.net/up/uploads/thumb/1734129267_lNOfV9h6J5.jpg',
+			url: 'https://gallery.notnim-yad.net/?imageId=8',
 		},
 	]
 </script>

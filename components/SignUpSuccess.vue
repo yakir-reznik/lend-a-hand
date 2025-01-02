@@ -7,8 +7,8 @@
 				src="/img/two-yellow-hands-white-border.svg"
 				alt="two yellow hands white border"
 			/>
-			<h2 class="mx-auto mb-10 text-3xl font-bold desktop:max-w-lg desktop:text-5xl">
-				תודה שנתת את ידך להשבת החטופים הביתה
+			<h2 class="mx-auto mb-10 text-2xl font-bold desktop:max-w-lg desktop:text-4xl">
+				נפלא 👏🏼 היד שלך מחזקת את הקריאה בישראל ובתפוצות לשחרור החטופות והחטופים 💛
 			</h2>
 			<button
 				ref="shareBtn"
@@ -54,15 +54,16 @@
 				elements: [
 					{
 						content: svg,
-						probability: 8,
+						probability: 6,
 					},
 					{
 						content: '🤍',
-						probability: 1,
+						probability: 2,
 					},
 					{
-						content: '🇮🇱',
-						probability: 1,
+						content:
+							"<img class='desktop:w-[1em] w-[0.85em]' src='/img/israel-flag.png' alt='flag of israel'/>",
+						probability: 2,
 					},
 				],
 			})
