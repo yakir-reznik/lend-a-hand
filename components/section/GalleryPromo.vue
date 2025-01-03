@@ -1,7 +1,7 @@
 <template>
 	<section class="bg-white py-24 mobile:py-16">
 		<div class="wrapper">
-			<p class="mb-3 text-center text-lg font-medium text-gray-600">בואו לתת יד גם במיצג הקהילתי</p>
+			<p class="mb-4 text-center text-xl font-semibold text-secondary">בואו לתת יד גם במיצג הקהילתי</p>
 			<h2 class="mx-auto mb-6 text-center text-4xl font-bold desktop:text-5xl">נותנים יד - יוצרים בקהילה</h2>
 			<p class="mx-auto max-w-xl text-center text-xl font-semibold text-mid desktop:text-2xl">
 				במה לשיתוף יצירות המשלבות את מוטיב כף היד כסמל לערבות הדדית - לקבוצות בקהילה ובמסגרות חינוך וליוזמות
