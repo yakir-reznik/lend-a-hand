@@ -53,9 +53,8 @@ export default defineNuxtConfig({
 	hooks: {
 		// Copy php files to .output
 		close: () => {
-			const src = '/Applications/MAMP/htdocs/lend-a-hand/php'
-			const dest = '/Applications/MAMP/htdocs/lend-a-hand/.output/public/php'
-
+			const src = '/Applications/MAMP/htdocs/notnim-yad/notnim-yad.net/php'
+			const dest = '/Applications/MAMP/htdocs/notnim-yad/notnim-yad.net/.output/public/php'
 			console.log('Copying PHP files...')
 			fs.cpSync(src, dest, { recursive: true })
 		},

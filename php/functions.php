@@ -3,7 +3,7 @@
 # Define constants
 if ($_SERVER['HTTP_HOST'] === 'localhost') {
 	# DEV
-	define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . 'lend-a-hand/');
+	define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . 'notnim-yad/notnim-yad.net/');
 } else {
 	# PROD
 	define('BASE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/../');
