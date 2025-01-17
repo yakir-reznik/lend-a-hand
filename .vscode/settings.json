@@ -1,0 +1,13 @@
+{
+	"files.exclude": {
+		".nuxt": true,
+		".output": true,
+		"dist": true
+	},
+	"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#F4CC01",
+		"titleBar.activeForeground": "#5f5212",
+		"titleBar.inactiveBackground": "#fadea7",
+		"titleBar.inactiveForeground": "#f2c262"
+	}
+}
