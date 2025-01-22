@@ -232,13 +232,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'רומי גונן',
-		age: 24,
-		desc: 'נחטפה מפסטיבל הנובה',
-		image: '/img/people/notnim-yad-9.jpg',
-		gender: 'female',
-	},
-	{
 		name: 'גיא גלבוע דלאל',
 		age: 23,
 		desc: 'נחטף מפסטיבל הנובה',
@@ -589,25 +582,11 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'אורון שאול',
-		age: 20,
-		desc: 'נחטף מדרום רצועת עזה',
-		image: '/img/people/notnim-yad-69.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'טל שהם',
 		age: 39,
 		desc: 'נחטף מבארי',
 		image: '/img/people/notnim-yad-58.jpg',
 		gender: 'male',
-	},
-	{
-		name: 'דורון שטיינברכר',
-		age: 31,
-		desc: 'נחטפה מכפר עזה',
-		image: '/img/people/notnim-yad-10.jpg',
-		gender: 'female',
 	},
 	{
 		name: 'עומר שם טוב',
@@ -636,13 +615,6 @@ export const people: Person[] = [
 		desc: 'נחטף מפסטיבל נובה',
 		image: '/img/people/notnim-yad-80.jpg',
 		gender: 'male',
-	},
-	{
-		name: 'אמילי דמארי',
-		age: 28,
-		desc: 'נחטפה מכפר עזה',
-		image: '/img/people/notnim-yad-16.jpg',
-		gender: 'female',
 	},
 	{
 		name: 'אסף חממי',
