@@ -4,8 +4,8 @@
 			<p class="mb-4 text-center text-xl font-semibold text-secondary">בואו לתת יד גם במיצג הקהילתי</p>
 			<h2 class="mx-auto mb-6 text-center text-4xl font-bold desktop:text-5xl">נותנים יד - יוצרים בקהילה</h2>
 			<p class="mx-auto max-w-xl text-center text-xl font-semibold text-mid desktop:text-2xl">
-				במה לשיתוף יצירות המשלבות את מוטיב כף היד כסמל לערבות הדדית - לקבוצות בקהילה ובמסגרות חינוך וליוזמות
-				אישיות בכל הגילאים ומכל המגזרים
+				במה לשיתוף יצירות המשלבות את מוטיב כף היד כסמל לערבות הדדית או שבילי חופש מאבנים צהובות - לקבוצות בקהילה
+				ובמסגרות חינוך וליוזמות אישיות בכל הגילאים ומכל המגזרים
 			</p>
 
 			<div class="mt-12 grid grid-cols-4 gap-8 mobile:grid-cols-1">
