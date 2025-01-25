@@ -64,31 +64,10 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'לירי אלבג',
-		age: 19,
-		desc: 'נחטפה מנחל עוז',
-		image: '/img/people/notnim-yad-7.jpg',
-		gender: 'female',
-	},
-	{
 		name: 'יצחק איציק אלגרט',
 		age: 69,
 		desc: 'נחטף מניר עוז',
 		image: '/img/people/notnim-yad-60.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'חמזה אלזיאדנה',
-		age: 23,
-		desc: 'נחטף מחולית',
-		image: '/img/people/notnim-yad-4.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'יוסף אלזיאדנה',
-		age: 53,
-		desc: 'נחטף מחולית',
-		image: '/img/people/notnim-yad-3.jpg',
 		gender: 'male',
 	},
 	{
@@ -118,13 +97,6 @@ export const people: Person[] = [
 		desc: 'נחטף מניר עוז',
 		image: '/img/people/notnim-yad-72.jpg',
 		gender: 'male',
-	},
-	{
-		name: 'קרינה ארייב',
-		age: 20,
-		desc: 'נחטפה מנחל עוז',
-		image: '/img/people/notnim-yad-12.jpg',
-		gender: 'female',
 	},
 	{
 		name: 'אלקנה בוחבוט',
@@ -237,13 +209,6 @@ export const people: Person[] = [
 		desc: 'נחטף מפסטיבל הנובה',
 		image: '/img/people/notnim-yad-24.jpg',
 		gender: 'male',
-	},
-	{
-		name: 'דניאלה גלבוע',
-		age: 20,
-		desc: 'נחטפה מנחל עוז',
-		image: '/img/people/notnim-yad-11.jpg',
-		gender: 'female',
 	},
 	{
 		name: "ביפין ג'ושי",
@@ -405,13 +370,6 @@ export const people: Person[] = [
 		desc: 'נחטף מכביש 232',
 		image: '/img/people/notnim-yad-99.jpg',
 		gender: 'male',
-	},
-	{
-		name: 'נעמה לוי',
-		age: 20,
-		desc: 'נחטפה מנחל עוז',
-		image: '/img/people/notnim-yad-6.jpg',
-		gender: 'female',
 	},
 	{
 		name: 'שי לוינסון',
