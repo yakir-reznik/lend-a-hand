@@ -53,8 +53,8 @@ export default defineNuxtConfig({
 	hooks: {
 		// When build finishes -> Copy php files to .output so they can be deployed with the frontend app
 		close: () => {
-			const src = '/Applications/MAMP/htdocs/notnim-yad/notnim-yad.net/php'
-			const dest = '/Applications/MAMP/htdocs/notnim-yad/notnim-yad.net/.output/public/php'
+			const src = './php'
+			const dest = './.output/public/php'
 			console.log('Copying PHP files...')
 			fs.cpSync(src, dest, { recursive: true })
 		},
