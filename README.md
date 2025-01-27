@@ -39,7 +39,7 @@ define("VARIABLE_NAME", "VALUE");
 | DB_NAME       | mysql database name                             |                                         |
 | DB_USER       | mysql database Username                         |                                         |
 | DB_PASS       | mysql database password                         |                                         |
-| PATH_VARS     | path variables need to run NodeJS (optional)    | export PATH=/Users/yr/.nvm/versions/... |
+| PATH_VARS     | path variables needed to run NodeJS (optional)  | export PATH=/Users/yr/.nvm/versions/... |
 | SRC_DIR       | absolute path to project root                   |                                         |
 | BUILD_DIR     | absolute path to Nuxt build output "public" dir |                                         |
 | FTP_HOST      | SiteGround ftp server hostname                  |                                         |
