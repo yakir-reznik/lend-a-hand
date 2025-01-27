@@ -1,9 +1,6 @@
 # PHP enviroment variables file
 enviroment_variables.php
 
-# Deploy script
-deploy.php
-
 # Nuxt dev/build outputs
 .output
 .data
