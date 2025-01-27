@@ -14,7 +14,8 @@ This project is the backend & frontend apps deployed to https://notnim-yad.net/
 2. Install dependencies `npm install`
 3. Create a mysql database and import data structure and dummy data from `dummy-data.sql`
 4. Create "enviroment_variables.php" file in project root (See more info below)
-5. Run dev server `npm run dev`
+5. Set php src/dest folder paths in `nuxt.config.ts` (lines 56-57)
+6. Run dev server `npm run dev`
 
 ## Tech stack:
 
