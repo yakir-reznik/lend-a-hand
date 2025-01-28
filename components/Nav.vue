@@ -88,6 +88,11 @@
 			hidden: false,
 		},
 		{
+			text: 'מערכי פעילות',
+			url: 'activityPlans',
+			hidden: false,
+		},
+		{
 			text: 'צרו קשר',
 			url: '#0',
 			hidden: true,

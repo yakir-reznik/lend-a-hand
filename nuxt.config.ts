@@ -46,6 +46,7 @@ export default defineNuxtConfig({
 		'**': { prerender: false },
 		'/': { prerender: true },
 		'/about': { prerender: true },
+		'/activityPlans': { prerender: true },
 	},
 
 	devtools: { enabled: false },
