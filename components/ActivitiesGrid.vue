@@ -15,36 +15,41 @@
 	import ActivityCircleLink from './ActivityCircleLink.vue'
 
 	const activities = [
-		{ image: '/img/activityPlans/books.jpeg', title: 'נספחים', subtitle: 'השראות', to: 'yellowBrickRoad' },
+		{
+			image: '/img/activityPlans/books.jpeg',
+			title: 'נספחים',
+			subtitle: 'השראות',
+			to: { path: 'activity', query: { type: 'appendix' } },
+		},
 		{
 			image: '/img/activityPlans/wings.jpeg',
 			title: 'שילוב ידיים בסמלים',
 			subtitle: 'כנפיים של תקווה',
-			to: 'yellowBrickRoad',
+			to: { path: 'activity', query: { type: 'symbols' } },
 		},
 		{
 			image: '/img/activityPlans/hands-outline.png',
 			title: 'כפות ידיים בקו מתאר',
 			subtitle: 'משלבים ידיים',
-			to: 'yellowBrickRoad',
+			to: { path: 'activity', query: { type: 'outline' } },
 		},
 		{
 			image: '/img/activityPlans/handprints.jpeg',
 			title: 'הדפסת כפות ידיים',
 			subtitle: 'ידיים של תקווה',
-			to: 'yellowBrickRoad',
+			to: { path: 'activity', query: { type: 'prints' } },
 		},
 		{
 			image: '/img/activityPlans/hands-group.jpeg',
 			title: 'צילום כפות ידיים',
 			subtitle: 'נותנים יד לערבות הדדית',
-			to: 'yellowBrickRoad',
+			to: { path: 'activity', query: { type: 'photos' } },
 		},
 		{
 			image: '/img/activityPlans/yellow-stones.png',
 			title: 'שבילי חופש מאבנים',
 			subtitle: 'Yellow Brick Road',
-			to: 'yellowBrickRoad',
+			to: { path: 'activity', query: { type: 'stones' } },
 		},
 	]
 </script>

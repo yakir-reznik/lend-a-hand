@@ -1,6 +1,8 @@
 <template>
 	<ActivityTopSection :image="'/img/activityPlans/yellow-stones.png'" />
 	<Preparation :preparations="preparationsList" />
+	<ActivityOpeningTalk />
+	<ActivityFlow />
 </template>
 
 <script setup>
