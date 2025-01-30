@@ -52,6 +52,9 @@ export default <Partial<Config>>{
 					'900': '#3d3d3d',
 					'950': '#292929',
 				},
+				bluegray: {
+					DEFAULT: '#F1F4FB',
+				},
 			},
 			fontFamily: {
 				heebo: ['Heebo', 'sans-serif'],
@@ -60,6 +63,9 @@ export default <Partial<Config>>{
 				mobile: { max: '767px' },
 				tablet: { min: '768px', max: '1260px ' },
 				desktop: { min: '1260px' },
+			},
+			spacing: {
+				'56': '14rem',
 			},
 		},
 	},
