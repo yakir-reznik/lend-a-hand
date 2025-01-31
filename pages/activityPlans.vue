@@ -50,7 +50,7 @@
 				<div>השתתפותך במיזם תורמת</div>
 				<div>לחיבור ולחוסן שלנו ומגדילה</div>
 				<div class="relative flex flex-col items-center justify-center">
-					<div class="z-10 text-yellow-400">תקווה</div>
+					<div class="z-10 text-yellow-400">{{ currentWord }}</div>
 					<img
 						class="bottom-4 left-0 h-4 w-40"
 						src="/img/yellow-underline-2.png"
@@ -62,6 +62,29 @@
 		</div>
 	</section>
 </template>
-<script setup lang="ts"></script>
+<script>
+	export default {
+		name: 'ActivityPlans',
+		data() {
+			return {
+				words: ['חיבור אנושי', 'שותפות', 'אמפתיה', 'תקווה'],
+				currentWordIndex: 0,
+				currentWord: 'תקווה',
+			}
+		},
+		methods: {
+			updateWord() {
+				this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length
+				this.currentWord = this.words[this.currentWordIndex]
+			},
+		},
+		mounted() {
+			this.wordInterval = setInterval(this.updateWord, 2000)
+		},
+		beforeUnmount() {
+			clearInterval(this.wordInterval)
+		},
+	}
+</script>
 
 <style lang="sass" scoped></style>
