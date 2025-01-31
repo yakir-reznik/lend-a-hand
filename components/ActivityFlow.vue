@@ -8,52 +8,23 @@
 					</div>
 					<div class="align-center flex flex-col last:pr-10">
 						<h2 class="text-right text-3xl font-bold text-gray-900">מהלך הפעילות</h2>
-						<div class="mt-4 flex flex-row gap-4">
+						<div v-for="(section, index) in sections" :key="index" class="mt-4 flex flex-row gap-4">
 							<div
 								class="flex h-8 min-h-8 w-8 min-w-8 items-center justify-center rounded-full bg-yellow-300 text-center text-lg font-bold"
 							>
-								1
+								{{ index + 1 }}
 							</div>
 							<div class="flex flex-col">
-								<h3 class="text-right text-lg text-gray-900 md:text-2xl">דיון ערכי</h3>
+								<h3 class="text-right text-lg text-gray-900 md:text-2xl">{{ section.title }}</h3>
 								<ul
 									class="mt-2 list-inside text-right font-light leading-relaxed text-gray-700 [&>li]:relative"
 								>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										נצייר את קווי המתאר של כפות הידיים על המצע.
-									</li>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										ניתן לצייר לבד או בזוגות.
-									</li>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										אין צורך לדייק! מה שיוצא - זה טוב.
-									</li>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										נעודד יצירתיות ונקפיד לשמור על מרחב נוח לכולם.
-									</li>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										השרטוט מזמן מגוון אפשרויות של יחסי קרבה ומרחק בין כפות הידיים, חפיפה בין שרטוט
-										זה או ביחד, צביעה של צורות שנוצרות בין כפות הידיים, ועוד.
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="mt-4 flex flex-row gap-4">
-							<div
-								class="flex h-8 min-h-8 w-8 min-w-8 items-center justify-center rounded-full bg-yellow-300 text-center text-lg font-bold"
-							>
-								2
-							</div>
-							<div class="flex flex-col">
-								<h3 class="text-right text-lg text-gray-900 md:text-2xl">העשרת הציור</h3>
-								<ul
-									class="mt-2 list-inside text-right font-light leading-relaxed text-gray-700 [&>li]:relative"
-								>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										כתיבת מילים חיוביות או מסרים של תקווה בין ובתוך כפות הידיים.
-									</li>
-									<li class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']">
-										עיצוב יצירתי הכולל חפיפות בין כפות הידיים, יצירת צורות ביניהן ועוד.
+									<li
+										v-for="(point, idx) in section.points"
+										:key="idx"
+										class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']"
+									>
+										{{ point }}
 									</li>
 								</ul>
 							</div>
@@ -67,9 +38,9 @@
 
 <script>
 	export default {
-		name: 'Preparation',
+		name: 'ActivityFlow',
 		props: {
-			preparations: {
+			sections: {
 				type: Array,
 				required: true,
 			},

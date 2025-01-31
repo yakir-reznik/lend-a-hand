@@ -8,7 +8,7 @@
 					<div v-for="(preparation, index) in preparations" :key="index">
 						<div>
 							<div
-								class="flex h-6 w-6 items-center justify-center rounded-full bg-yellow-500 text-sm text-gray-900"
+								class="flex h-8 min-h-8 w-8 min-w-8 items-center justify-center rounded-full bg-yellow-300 text-center text-lg font-bold"
 							>
 								{{ index + 1 }}
 							</div>

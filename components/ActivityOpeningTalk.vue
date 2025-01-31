@@ -4,28 +4,17 @@
 			<div class="grid grid-cols-1 items-start md:grid-cols-1">
 				<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2">
 					<div class="flex flex-col">
-						<div class="flex flex-col">
-							<h2 class="mt-6 text-right text-3xl font-bold text-gray-900">שיחת פתיחה</h2>
-							<h3 class="mt-6 text-right text-lg font-bold text-gray-900 md:text-2xl">דיון ערכי</h3>
-							<p class="mt-2 text-right text-gray-700">נפתח במשחק אסוציאציות או בהצגת שאלות:</p>
-							<ul class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700">
-								<li>“איזו מילה מתקשרת אצלך למילים ‘קבוצה’, ‘יחד’, ‘אכפתיות’?”</li>
-								<li>“מה החשיבות של חברה בעבורנו, כפרטים המשתייכים אליה?”</li>
-								<li>נדון בערך הערבות ההדדית – נסביר את המושג ונציג דוגמאות.</li>
-							</ul>
-						</div>
-						<div class="flex flex-col">
-							<h3 class="mt-6 text-right text-lg font-bold text-gray-900 md:text-2xl">העשרה</h3>
-							<p class="mt-2 text-right text-gray-700">
-								ניתן להעשיר את הדיון בסיפור קצר, בפתגם או בהצגת דמות של חוטף או חטוף בהתאמה לקבוצה.
-							</p>
-						</div>
-						<div class="flex flex-col">
-							<h3 class="mt-6 text-right text-lg font-bold text-gray-900 md:text-2xl">חיבור לפעילות</h3>
-							<ul class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700">
-								<li>עולה רעיון: “כיצד ניתן להטביע חותם של אכפתיות וערבות הדדית?”</li>
-								<li>נציע שימוש יצירתי בכפות הידיים באמצעות ציור קו-תָּאָר של כפות הידיים.</li>
-								<li>נאפשר לכל אחת ואחד להציע רעיונות.</li>
+						<h2 class="mt-6 text-right text-3xl font-bold text-gray-900">שיחת פתיחה</h2>
+						<div v-for="(section, index) in sections" :key="index" class="flex flex-col">
+							<h3 class="mt-6 text-right text-lg font-bold text-gray-900 md:text-2xl">
+								{{ section.title }}
+							</h3>
+							<p v-if="section.intro" class="mt-2 text-right text-gray-700">{{ section.intro }}</p>
+							<ul
+								v-if="section.points"
+								class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700"
+							>
+								<li v-for="(point, idx) in section.points" :key="idx">{{ point }}</li>
 							</ul>
 						</div>
 					</div>
@@ -40,9 +29,9 @@
 
 <script>
 	export default {
-		name: 'Preparation',
+		name: 'ActivityOpeningTalk',
 		props: {
-			preparations: {
+			sections: {
 				type: Array,
 				required: true,
 			},
