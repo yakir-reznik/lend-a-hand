@@ -18,7 +18,7 @@
 		{
 			image: '/img/activityPlans/books.jpeg',
 			title: 'נספחים',
-			subtitle: 'השראות',
+			subtitle: 'תכנים, פתגמים והעשרה',
 			to: { path: 'activity', query: { type: 'appendix' } },
 		},
 		{
