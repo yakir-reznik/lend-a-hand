@@ -4,12 +4,14 @@
 	</div>
 
 	<template v-else>
+		<!-- <pre style="padding-top: 100px" dir="ltr">{{ contentfulData.fields }}</pre> -->
 		<ActivityTopSection
 			:strings="activityData.top"
 			:title="contentfulData?.fields?.name"
 			:developedBy="contentfulData?.fields?.developed_by"
+			:about="contentfulData?.fields?.about"
 		/>
-		<Preparation :preparations="activityData.preparationsList" />
+		<Preparation :preparations="contentfulData?.fields?.preperation" />
 		<ActivityOpeningTalk :sections="activityData.openingTalkSections" />
 		<ActivityFlow :sections="activityData.flowSections" />
 		<ActivitySummary :sections="activityData.summarySections" />
@@ -26,6 +28,7 @@
 	import { createClient } from 'contentful'
 
 	// Add Contentful client configuration
+	// Remove this and move to ENV
 	const client = createClient({
 		space: 'qe20kddg0lh2',
 		accessToken: 'VyxbECBy3o4f3ufGaZGU7ZfjCgyXoLAlwanHR6XUh78',

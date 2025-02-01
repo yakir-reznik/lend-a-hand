@@ -1,5 +1,5 @@
 <template>
-	<div class="px-4 py-10 md:px-10">
+	<div class="-mt-14 px-4 py-10 md:px-10">
 		<div class="mx-auto max-w-6xl text-center">
 			<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">המיזם מאפשר נתינה בדרך חדשה</h2>
 
@@ -13,10 +13,10 @@
 								{{ index + 1 }}
 							</div>
 							<h3 class="mt-4 text-right text-lg font-bold text-gray-900 md:text-2xl">
-								{{ preparation.title }}
+								{{ preparation.fields.title }}
 							</h3>
 							<div class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700">
-								{{ preparation.description }}
+								{{ preparation.fields.descrpition }}
 							</div>
 						</div>
 					</div>
