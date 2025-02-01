@@ -10,11 +10,9 @@
 	<ActivitiesGrid />
 </template>
 
-<script setup>
+<script setup lang="ts">
 	const route = useRoute()
-	const { type } = route.params
-
-	console.log(type)
+	const type = route.params.type.toString()
 
 	const stonesData = {
 		top: {
@@ -213,19 +211,78 @@
 		},
 		prints: {
 			top: printsData.top,
+			preparationsList: [
+				/* preparations for symbols */
+			],
+			openingTalkSections: [
+				/* opening talk sections for symbols */
+			],
+			flowSections: [
+				/* flow sections for symbols */
+			],
+			summarySections: [
+				/* summary sections for symbols */
+			],
+			guidelineSections: [
+				/* guideline sections for symbols */
+			],
+			galleryItems: [
+				/* gallery items for symbols */
+			],
 		},
 		outline: {
 			top: outlineData.top,
+			preparationsList: [
+				/* preparations for symbols */
+			],
+			openingTalkSections: [
+				/* opening talk sections for symbols */
+			],
+			flowSections: [
+				/* flow sections for symbols */
+			],
+			summarySections: [
+				/* summary sections for symbols */
+			],
+			guidelineSections: [
+				/* guideline sections for symbols */
+			],
+			galleryItems: [
+				/* gallery items for symbols */
+			],
 		},
 		symbols: {
 			top: symbolsData.top,
+			preparationsList: [
+				/* preparations for symbols */
+			],
+			openingTalkSections: [
+				/* opening talk sections for symbols */
+			],
+			flowSections: [
+				/* flow sections for symbols */
+			],
+			summarySections: [
+				/* summary sections for symbols */
+			],
+			guidelineSections: [
+				/* guideline sections for symbols */
+			],
+			galleryItems: [
+				/* gallery items for symbols */
+			],
 		},
 	}
 
-	const activityData = activitiesByType[type]
-
-	// Redirect to index page if unknown activity type
-	if (!activitiesByType[type]) {
-		navigateTo('activityPlans')
+	// Navigate to activity index page if type is not found
+	if (type in activitiesByType === false) {
+		navigateTo('/activity-plans')
+		throw createError({
+			statusCode: 404,
+			message: 'Activity not found',
+		})
 	}
+
+	type K = keyof typeof activitiesByType
+	const activityData = activitiesByType[type as K]
 </script>
