@@ -42,12 +42,8 @@ export default defineNuxtConfig({
 
 	nitro: { preset: 'static' },
 	routeRules: {
-		// disable prerendering for all routes except home
-		'**': { prerender: false },
-		'/': { prerender: true },
-		'/about': { prerender: true },
-		'/activityPlans': { prerender: true },
-		'/activity?type': { prerender: true },
+		// Lets just pre-render everyrthing
+		'**': { prerender: true },
 	},
 
 	devtools: { enabled: false },
