@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="mt-56 flex flex-col items-center text-lg">
-				<p class="mt-2 text-sm text-gray-500">{{ strings.developer }}</p>
+				<p class="mt-2 text-sm text-gray-500">פיתוח: {{ developedBy }}</p>
 				<h2 class="mt-6 text-4xl font-bold text-gray-900">על היצירה</h2>
 				<p class="mb-8 mt-4 max-w-screen-sm text-xl font-bold leading-relaxed text-gray-700">
 					{{ strings.description }}
@@ -35,7 +35,10 @@
 			title: {
 				type: String,
 				required: true,
-				default: '?',
+			},
+			developedBy: {
+				type: String,
+				required: true,
 			},
 		},
 	}

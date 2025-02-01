@@ -4,7 +4,11 @@
 	</div>
 
 	<template v-else>
-		<ActivityTopSection :strings="activityData.top" :title="contentfulData?.fields?.name" />
+		<ActivityTopSection
+			:strings="activityData.top"
+			:title="contentfulData?.fields?.name"
+			:developedBy="contentfulData?.fields?.developed_by"
+		/>
 		<Preparation :preparations="activityData.preparationsList" />
 		<ActivityOpeningTalk :sections="activityData.openingTalkSections" />
 		<ActivityFlow :sections="activityData.flowSections" />
@@ -30,6 +34,9 @@
 	// Add new ref for Contentful data
 	const contentfulData = ref(null)
 
+	const route = useRoute()
+	const type = ref(route.query.type)
+
 	// Add loading state
 	const isLoading = ref(true)
 
@@ -39,7 +46,7 @@
 		try {
 			const response = await client.getEntries({
 				content_type: 'activity',
-				'fields.type': 'stones',
+				'fields.type': route.query.type,
 			})
 
 			if (response.items.length > 0) {
@@ -54,9 +61,6 @@
 
 	// Call onCreate when component is created
 	onCreate()
-
-	const route = useRoute()
-	const type = ref(route.query.type)
 
 	const stonesData = {
 		top: {
