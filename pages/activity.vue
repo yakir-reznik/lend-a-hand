@@ -1,18 +1,59 @@
 <template>
-	<ActivityTopSection :strings="activityData.top" />
-	<Preparation :preparations="activityData.preparationsList" />
-	<ActivityOpeningTalk :sections="activityData.openingTalkSections" />
-	<ActivityFlow :sections="activityData.flowSections" />
-	<ActivitySummary :sections="activityData.summarySections" />
-	<ActivityGuidelines :sections="activityData.guidelineSections" />
-	<ActivityGallery :galleryItems="activityData.galleryItems" />
-	<p class="mt-12 text-center text-3xl font-bold">מערכי פעילות נוספים</p>
-	<ActivitiesGrid />
+	<div v-if="isLoading" class="flex min-h-screen items-center justify-center">
+		<div class="h-16 w-16 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"></div>
+	</div>
+
+	<template v-else>
+		<ActivityTopSection :strings="activityData.top" :title="contentfulData?.fields?.name" />
+		<Preparation :preparations="activityData.preparationsList" />
+		<ActivityOpeningTalk :sections="activityData.openingTalkSections" />
+		<ActivityFlow :sections="activityData.flowSections" />
+		<ActivitySummary :sections="activityData.summarySections" />
+		<ActivityGuidelines :sections="activityData.guidelineSections" />
+		<ActivityGallery :galleryItems="activityData.galleryItems" />
+		<p class="mt-12 text-center text-3xl font-bold">מערכי פעילות נוספים</p>
+		<ActivitiesGrid />
+	</template>
 </template>
 
 <script setup>
 	import { useRoute, onBeforeRouteUpdate } from 'vue-router'
 	import { ref, watch, computed } from 'vue'
+	import { createClient } from 'contentful'
+
+	// Add Contentful client configuration
+	const client = createClient({
+		space: 'qe20kddg0lh2',
+		accessToken: 'VyxbECBy3o4f3ufGaZGU7ZfjCgyXoLAlwanHR6XUh78',
+	})
+
+	// Add new ref for Contentful data
+	const contentfulData = ref(null)
+
+	// Add loading state
+	const isLoading = ref(true)
+
+	// Update onCreate function
+	const onCreate = async () => {
+		isLoading.value = true
+		try {
+			const response = await client.getEntries({
+				content_type: 'activity',
+				'fields.type': 'stones',
+			})
+
+			if (response.items.length > 0) {
+				contentfulData.value = response.items[0]
+			}
+		} catch (error) {
+			console.error('Error fetching data from Contentful:', error)
+		} finally {
+			isLoading.value = false
+		}
+	}
+
+	// Call onCreate when component is created
+	onCreate()
 
 	const route = useRoute()
 	const type = ref(route.query.type)
@@ -31,9 +72,9 @@
 				title: 'מעגל שיח',
 				intro: 'נשתף בחוויות ובתובנות בעקבות הפעילות בדגש על מסרים של תקווה ואחריות חברתית ועידוד הפצתם. נשאל:',
 				points: [
-					'“מה למדנו מהפעילות?”',
-					'“איך החיבור לשביל ולמסרים משפיע עלינו?”',
-					'“האם יש לנו רעיונות נוספים ליצירתיות קבוצתית?”',
+					'"מה למדנו מהפעילות?"',
+					'"איך החיבור לשביל ולמסרים משפיע עלינו?"',
+					'"האם יש לנו רעיונות נוספים ליצירתיות קבוצתית?"',
 				],
 			},
 			{
@@ -112,8 +153,8 @@
 				title: 'דיון ערכי',
 				intro: 'נפתח במשחק אסוציאציות או בהצגת שאלות:',
 				points: [
-					'“איזו מילה מתקשרת אצלך למילים ‘קבוצה’, ‘יחד’, ‘אכפתיות’?”',
-					'“מה החשיבות של חברה בעבורנו, כפרטים המשתייכים אליה?”',
+					'"איזו מילה מתקשרת אצלך למילים "קבוצה", "יחד", "אכפתיות"?"',
+					'"מה החשיבות של חברה בעבורנו, כפרטים המשתייכים אליה?"',
 					'נדון בערך הערבות ההדדית – נסביר את המושג ונציג דוגמאות.',
 				],
 			},
@@ -124,7 +165,7 @@
 			{
 				title: 'חיבור לפעילות',
 				points: [
-					'עולה רעיון: “כיצד ניתן להטביע חותם של אכפתיות וערבות הדדית?”',
+					'עולה רעיון: "כיצד ניתן להטביע חותם של אכפתיות וערבות הדדית?"',
 					'נציע שימוש יצירתי בכפות הידיים באמצעות ציור קו-תָּאָר של כפות הידיים.',
 					'נאפשר לכל אחת ואחד להציע רעיונות.',
 				],
@@ -223,7 +264,17 @@
 		},
 	}
 
-	const activityData = computed(() => activitiesByType[type.value] || {})
+	// Update computed property to merge static and Contentful data
+	const activityData = computed(() => {
+		const staticData = activitiesByType[type.value] || {}
+		if (contentfulData.value) {
+			return {
+				...staticData,
+				...{ contentful: contentfulData.value.fields },
+			}
+		}
+		return staticData
+	})
 
 	watch(
 		() => route.query.type,
