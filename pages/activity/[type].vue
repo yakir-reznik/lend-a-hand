@@ -11,11 +11,10 @@
 </template>
 
 <script setup>
-	import { useRoute, onBeforeRouteUpdate } from 'vue-router'
-	import { ref, watch, computed } from 'vue'
-
 	const route = useRoute()
-	const type = ref(route.query.type)
+	const { type } = route.params
+
+	console.log(type)
 
 	const stonesData = {
 		top: {
@@ -223,16 +222,10 @@
 		},
 	}
 
-	const activityData = computed(() => activitiesByType[type.value] || {})
+	const activityData = activitiesByType[type]
 
-	watch(
-		() => route.query.type,
-		(newType) => {
-			type.value = newType
-		}
-	)
-
-	onBeforeRouteUpdate((to) => {
-		type.value = to.query.type
-	})
+	// Redirect to index page if unknown activity type
+	if (!activitiesByType[type]) {
+		navigateTo('activityPlans')
+	}
 </script>

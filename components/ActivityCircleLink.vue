@@ -12,11 +12,13 @@
 	</NuxtLink>
 </template>
 
-<script setup>
-	defineProps({
-		image: String,
-		title: String,
-		subtitle: String,
-		to: String,
-	})
+<script setup lang="ts">
+	import type { RouteLocationRaw } from 'vue-router'
+
+	defineProps<{
+		image: string
+		title: string
+		subtitle: string
+		to: RouteLocationRaw
+	}>()
 </script>
