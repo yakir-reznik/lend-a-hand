@@ -6,14 +6,15 @@
 	<template v-else>
 		<!-- <pre style="padding-top: 100px" dir="ltr">{{ contentfulData.fields }}</pre> -->
 		<ActivityTopSection
-			:strings="activityData.top"
-			:title="contentfulData?.fields?.name"
+			:image="contentfulData?.fields?.image"
+			:subtitle="contentfulData?.fields?.subtitle"
+			:title="contentfulData?.fields?.title"
 			:developedBy="contentfulData?.fields?.developed_by"
 			:about="contentfulData?.fields?.about"
 		/>
 		<Preparation :preparations="contentfulData?.fields?.preperation" />
-		<ActivityOpeningTalk :sections="activityData.openingTalkSections" />
-		<ActivityFlow :sections="activityData.flowSections" />
+		<ActivityOpeningTalk :sections="contentfulData?.fields?.openingTalk" />
+		<ActivityFlow :sections="contentfulData?.fields?.flow" />
 		<ActivitySummary :sections="activityData.summarySections" />
 		<ActivityGuidelines :sections="activityData.guidelineSections" />
 		<ActivityGallery :galleryItems="activityData.galleryItems" />
@@ -22,7 +23,7 @@
 	</template>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	import { useRoute, onBeforeRouteUpdate } from 'vue-router'
 	import { ref, watch, computed } from 'vue'
 	import { createClient } from 'contentful'
@@ -38,7 +39,7 @@
 	const contentfulData = ref(null)
 
 	const route = useRoute()
-	const type = ref(route.query.type)
+	const type = route.params.type.toString()
 
 	// Add loading state
 	const isLoading = ref(true)
@@ -155,7 +156,7 @@
 				],
 			},
 		],
-		openingTalkSections: [
+		openingTalk: [
 			{
 				title: 'דיון ערכי',
 				intro: 'נפתח במשחק אסוציאציות או בהצגת שאלות:',
@@ -234,7 +235,7 @@
 			top: stonesData.top,
 			galleryItems: stonesData.galleryItems,
 			preparationsList: stonesData.preparationsList,
-			openingTalkSections: stonesData.openingTalkSections,
+			openingTalk: stonesData.openingTalk,
 			flowSections: stonesData.flowSections,
 			guidelineSections: stonesData.guidelineSections,
 			summarySections: stonesData.summarySections,
@@ -262,35 +263,87 @@
 		},
 		prints: {
 			top: printsData.top,
+			preparationsList: [
+				/* preparations for symbols */
+			],
+			openingTalkSections: [
+				/* opening talk sections for symbols */
+			],
+			flowSections: [
+				/* flow sections for symbols */
+			],
+			summarySections: [
+				/* summary sections for symbols */
+			],
+			guidelineSections: [
+				/* guideline sections for symbols */
+			],
+			galleryItems: [
+				/* gallery items for symbols */
+			],
 		},
 		outline: {
 			top: outlineData.top,
+			preparationsList: [
+				/* preparations for symbols */
+			],
+			openingTalkSections: [
+				/* opening talk sections for symbols */
+			],
+			flowSections: [
+				/* flow sections for symbols */
+			],
+			summarySections: [
+				/* summary sections for symbols */
+			],
+			guidelineSections: [
+				/* guideline sections for symbols */
+			],
+			galleryItems: [
+				/* gallery items for symbols */
+			],
 		},
 		symbols: {
 			top: symbolsData.top,
+			preparationsList: [
+				/* preparations for symbols */
+			],
+			openingTalkSections: [
+				/* opening talk sections for symbols */
+			],
+			flowSections: [
+				/* flow sections for symbols */
+			],
+			summarySections: [
+				/* summary sections for symbols */
+			],
+			guidelineSections: [
+				/* guideline sections for symbols */
+			],
+			galleryItems: [
+				/* gallery items for symbols */
+			],
 		},
 	}
 
 	// Update computed property to merge static and Contentful data
 	const activityData = computed(() => {
+		// Navigate to activity index page if type is not found
+		if (type in activitiesByType === false) {
+			navigateTo('/activity-plans')
+			throw createError({
+				statusCode: 404,
+				message: 'Activity not found',
+			})
+		}
 		const staticData = activitiesByType[type.value] || {}
 		if (contentfulData.value) {
+			console.log(contentfulData.value.fields)
 			return {
 				...staticData,
 				...{ contentful: contentfulData.value.fields },
 			}
 		}
 		return staticData
-	})
-
-	watch(
-		() => route.query.type,
-		(newType) => {
-			type.value = newType
-		}
-	)
-
-	onBeforeRouteUpdate((to) => {
-		type.value = to.query.type
 	})
 </script>

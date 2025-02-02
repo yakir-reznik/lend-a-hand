@@ -11,45 +11,53 @@
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+	import type { RouteLocationRaw } from 'vue-router'
 	import ActivityCircleLink from './ActivityCircleLink.vue'
 
-	const activities = [
+	type Activity = {
+		image: string
+		title: string
+		subtitle: string
+		to: RouteLocationRaw
+	}
+
+	const activities: Activity[] = [
 		{
 			image: '/img/activityPlans/books.jpeg',
 			title: 'נספחים',
 			subtitle: 'תכנים, פתגמים והעשרה',
-			to: { path: 'activity', query: { type: 'appendix' } },
+			to: { name: 'activity-type', params: { type: 'appendix' } },
 		},
 		{
 			image: '/img/activityPlans/wings.jpeg',
 			title: 'שילוב ידיים בסמלים',
 			subtitle: 'כנפיים של תקווה',
-			to: { path: 'activity', query: { type: 'symbols' } },
+			to: { name: 'activity-type', params: { type: 'symbols' } },
 		},
 		{
 			image: '/img/activityPlans/hands-outline.png',
 			title: 'כפות ידיים בקו מתאר',
 			subtitle: 'משלבים ידיים',
-			to: { path: 'activity', query: { type: 'outline' } },
+			to: { name: 'activity-type', params: { type: 'outline' } },
 		},
 		{
 			image: '/img/activityPlans/handprints.jpeg',
 			title: 'הדפסת כפות ידיים',
 			subtitle: 'ידיים של תקווה',
-			to: { path: 'activity', query: { type: 'prints' } },
+			to: { name: 'activity-type', params: { type: 'prints' } },
 		},
 		{
 			image: '/img/activityPlans/hands-group.jpeg',
 			title: 'צילום כפות ידיים',
 			subtitle: 'נותנים יד לערבות הדדית',
-			to: { path: 'activity', query: { type: 'photos' } },
+			to: { name: 'activity-type', params: { type: 'photos' } },
 		},
 		{
 			image: '/img/activityPlans/yellow-stones.png',
 			title: 'שבילי חופש מאבנים',
 			subtitle: 'Yellow Brick Road',
-			to: { path: 'activity', query: { type: 'stones' } },
+			to: { name: 'activity-type', params: { type: 'stones' } },
 		},
 	]
 </script>
