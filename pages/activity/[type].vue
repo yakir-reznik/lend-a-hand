@@ -15,8 +15,8 @@
 		<Preparation :preparations="contentfulData?.fields?.preperation" />
 		<ActivityOpeningTalk :sections="contentfulData?.fields?.openingTalk" />
 		<ActivityFlow :sections="contentfulData?.fields?.flow" />
-		<ActivitySummary :sections="activityData.summarySections" />
-		<ActivityGuidelines :sections="activityData.guidelineSections" />
+		<ActivitySummary :sections="contentfulData?.fields?.summary" />
+		<ActivityGuidelines :sections="contentfulData?.fields?.guideline" />
 		<ActivityGallery :galleryItems="activityData.galleryItems" />
 		<p class="mt-12 text-center text-3xl font-bold">מערכי פעילות נוספים</p>
 		<ActivitiesGrid />

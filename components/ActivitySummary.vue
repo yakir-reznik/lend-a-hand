@@ -7,14 +7,16 @@
 						<h2 class="mt-6 text-right text-3xl font-bold text-gray-900">סיכום</h2>
 						<div v-for="(section, index) in sections" :key="index" class="flex flex-col">
 							<h3 class="mt-6 text-right text-lg font-bold text-gray-900 md:text-2xl">
-								{{ section.title }}
+								{{ section.fields.title }}
 							</h3>
-							<p v-if="section.intro" class="mt-2 text-right text-gray-700">{{ section.intro }}</p>
+							<p v-if="section.fields.intro" class="mt-2 text-right text-gray-700">
+								{{ section.fields.intro }}
+							</p>
 							<ul
 								v-if="section.points"
 								class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700"
 							>
-								<li v-for="(point, idx) in section.points" :key="idx">{{ point }}</li>
+								<li v-for="(point, idx) in section.fields.points" :key="idx">{{ point }}</li>
 							</ul>
 						</div>
 					</div>
