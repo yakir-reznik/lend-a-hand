@@ -3,14 +3,14 @@
 		<div class="bg-secondary pb-14 pt-12 text-center">
 			<h3 class="mb-8 text-3xl font-bold text-yellow-400">מערכי פעילות</h3>
 			<h1 class="text-5xl font-bold text-white">{{ title }}</h1>
-			<p class="mt-2 text-xl font-light text-white">{{ strings.subtitle }}</p>
+			<p class="mt-2 text-xl font-light text-white">{{ subtitle }}</p>
 		</div>
 
-		<div class="relative flex flex-col items-center justify-center bg-bluegray">
+		<div class="bg-bluegray relative flex flex-col items-center justify-center">
 			<div
 				class="absolute -top-10 mb-8 h-64 w-64 overflow-hidden rounded-full border-2 border-yellow-400 shadow-lg"
 			>
-				<img :src="strings.image" alt="Yellow bricks" class="h-64 w-64" />
+				<img :src="image" alt="Yellow bricks" class="h-64 w-64" />
 			</div>
 
 			<div class="mt-56 flex flex-col items-center text-lg">
@@ -28,8 +28,12 @@
 	export default {
 		name: 'ActivityTopSection',
 		props: {
-			strings: {
-				type: Object,
+			subtitle: {
+				type: String,
+				required: true,
+			},
+			image: {
+				type: String,
 				required: true,
 			},
 			title: {
