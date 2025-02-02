@@ -4,7 +4,7 @@
 			<div class="grid grid-cols-1 items-start pt-6 md:grid-cols-1">
 				<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2">
 					<div class="flex flex-col items-center justify-center">
-						<img src="https://placehold.co/600x530" alt="Hands" class="w-full" />
+						<img :src="`https:${image}`" alt="Hands" class="w-full" />
 					</div>
 					<div class="align-center flex flex-col last:pr-10">
 						<h2 class="text-right text-3xl font-bold text-gray-900">מהלך הפעילות</h2>
@@ -49,6 +49,10 @@
 		props: {
 			sections: {
 				type: Array,
+				required: true,
+			},
+			image: {
+				type: String,
 				required: true,
 			},
 		},

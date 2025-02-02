@@ -10,7 +10,7 @@
 			<div
 				class="absolute -top-10 mb-8 h-64 w-64 overflow-hidden rounded-full border-2 border-yellow-400 shadow-lg"
 			>
-				<img :src="image" alt="Yellow bricks" class="h-64 w-64" />
+				<img :src="`https:${image}`" alt="Yellow bricks" class="h-64 w-64" />
 			</div>
 
 			<div class="mt-56 flex flex-col items-center text-lg">

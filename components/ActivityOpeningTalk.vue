@@ -21,7 +21,7 @@
 						</div>
 					</div>
 					<div class="flex flex-col items-center justify-center">
-						<img src="https://placehold.co/600x530" alt="Hands" class="w-full" />
+						<img :src="`https:${image}`" alt="Hands" class="w-full" />
 					</div>
 				</div>
 			</div>
@@ -35,6 +35,10 @@
 		props: {
 			sections: {
 				type: Array,
+				required: true,
+			},
+			image: {
+				type: String,
 				required: true,
 			},
 		},
