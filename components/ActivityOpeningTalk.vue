@@ -21,7 +21,7 @@
 						</div>
 					</div>
 					<div class="flex flex-col items-center justify-center">
-						<img :src="`https:${image}`" alt="Hands" class="w-full" />
+						<img :src="image" alt="Hands" class="w-full" />
 					</div>
 				</div>
 			</div>
