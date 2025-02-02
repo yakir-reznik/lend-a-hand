@@ -113,13 +113,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'ירדן ביבס',
-		age: 35,
-		desc: 'נחטף ניר עוז',
-		image: '/img/people/notnim-yad-65.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'כפיר ביבס',
 		age: 1,
 		desc: 'נחטף מניר עוז',
@@ -140,13 +133,7 @@ export const people: Person[] = [
 		image: '/img/people/notnim-yad-50.jpg',
 		gender: 'male',
 	},
-	{
-		name: 'אגם ברגר',
-		age: 20,
-		desc: 'נחטפה מנחל עוז',
-		image: '/img/people/notnim-yad-5.jpg',
-		gender: 'female',
-	},
+
 	{
 		name: 'אוריאל ברוך',
 		age: 35,
@@ -315,13 +302,7 @@ export const people: Person[] = [
 		image: '/img/people/notnim-yad-8.jpg',
 		gender: 'male',
 	},
-	{
-		name: 'ארבל יהוד',
-		age: 29,
-		desc: 'נחטפה מניר עוז',
-		image: '/img/people/notnim-yad-51.jpg',
-		gender: 'female',
-	},
+
 	{
 		name: 'אוהד יהלומי',
 		age: 50,
@@ -385,13 +366,7 @@ export const people: Person[] = [
 		image: '/img/people/notnim-yad-55.jpg',
 		gender: 'male',
 	},
-	{
-		name: 'גדי מוזס',
-		age: 80,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-1.jpg',
-		gender: 'male',
-	},
+
 	{
 		name: "ג'ושוע לואיטו מולל",
 		age: 21,
@@ -446,13 +421,6 @@ export const people: Person[] = [
 		age: 19,
 		desc: 'נחטף ממעבר ארז',
 		image: '/img/people/notnim-yad-18.jpg',
-		gender: 'male',
-	},
-	{
-		name: "קית' שמואל סיגל",
-		age: 65,
-		desc: 'נחטף מכפר עזה',
-		image: '/img/people/notnim-yad-59.jpg',
 		gender: 'male',
 	},
 	{
@@ -526,13 +494,6 @@ export const people: Person[] = [
 		gender: 'female',
 	},
 	{
-		name: 'עופר קלדרון',
-		age: 53,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-47.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'ליאור רודאיף',
 		age: 61,
 		desc: 'נחטף מניר יצחק',
@@ -588,20 +549,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'וואטצ׳רה סריון',
-		age: 38,
-		desc: 'נחטף מקיבוץ ניר עוז',
-		image: '/img/people/notnim-yad-37.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'סטיאן סוונאקאם',
-		age: 34,
-		desc: 'נחטף מקיבוץ ניר עוז',
-		image: '/img/people/notnim-yad-39.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'סונטיה אקרסרי',
 		age: 31,
 		desc: 'נחטף מקיבוץ בארי',
@@ -612,21 +559,6 @@ export const people: Person[] = [
 		name: 'סותטיסאק רינטלאק',
 		desc: 'נחטף מקיבוץ בארי',
 		image: '/img/people/notnim-yad-101.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'סוראסאק לאמנאו',
-		image: '/img/people/notnim-yad-41.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'פונגסאק טהנה',
-		image: '/img/people/notnim-yad-42.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'באנאוואט סהטאן',
-		image: '/img/people/notnim-yad-43.jpg',
 		gender: 'male',
 	},
 ]

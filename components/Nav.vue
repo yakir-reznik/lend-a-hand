@@ -90,7 +90,7 @@
 		{
 			text: 'מערכי פעילות',
 			url: 'activity-plans',
-			hidden: false,
+			hidden: true,
 		},
 		{
 			text: 'צרו קשר',
