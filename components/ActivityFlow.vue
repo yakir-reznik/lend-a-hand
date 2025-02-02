@@ -15,18 +15,25 @@
 								{{ index + 1 }}
 							</div>
 							<div class="flex flex-col">
-								<h3 class="text-right text-lg text-gray-900 md:text-2xl">{{ section.title }}</h3>
+								<h3 class="text-right text-lg text-gray-900 md:text-2xl">{{ section.fields.title }}</h3>
 								<ul
+									v-if="section.fields.points"
 									class="mt-2 list-inside text-right font-light leading-relaxed text-gray-700 [&>li]:relative"
 								>
 									<li
-										v-for="(point, idx) in section.points"
+										v-for="(point, idx) in section.fields.points"
 										:key="idx"
 										class="pl-4 pr-6 before:absolute before:right-0 before:content-['•']"
 									>
 										{{ point }}
 									</li>
 								</ul>
+								<p
+									v-if="section.fields.point"
+									class="text-right font-light leading-relaxed text-gray-700"
+								>
+									{{ section.fields.point }}
+								</p>
 							</div>
 						</div>
 					</div>

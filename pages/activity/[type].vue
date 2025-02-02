@@ -14,7 +14,7 @@
 		/>
 		<Preparation :preparations="contentfulData?.fields?.preperation" />
 		<ActivityOpeningTalk :sections="contentfulData?.fields?.openingTalk" />
-		<ActivityFlow :sections="activityData.flowSections" />
+		<ActivityFlow :sections="contentfulData?.fields?.flow" />
 		<ActivitySummary :sections="activityData.summarySections" />
 		<ActivityGuidelines :sections="activityData.guidelineSections" />
 		<ActivityGallery :galleryItems="activityData.galleryItems" />
