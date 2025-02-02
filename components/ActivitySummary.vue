@@ -13,7 +13,7 @@
 								{{ section.fields.intro }}
 							</p>
 							<ul
-								v-if="section.points"
+								v-if="section.fields.points"
 								class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700"
 							>
 								<li v-for="(point, idx) in section.fields.points" :key="idx">{{ point }}</li>
