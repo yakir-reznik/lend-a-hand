@@ -89,7 +89,7 @@
 		},
 		{
 			text: 'מערכי פעילות',
-			url: 'activities',
+			url: 'activity',
 			hidden: false,
 		},
 		{
