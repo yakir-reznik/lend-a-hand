@@ -50,7 +50,7 @@
 	onMounted(async () => {
 		// Navigate to activity index page if type is not found
 		if (!activitiesTypes.includes(type)) {
-			navigateTo('/activity')
+			navigateTo('/activities')
 			throw createError({
 				statusCode: 404,
 				message: 'Activity not found',
