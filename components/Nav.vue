@@ -89,8 +89,8 @@
 		},
 		{
 			text: 'מערכי פעילות',
-			url: 'activity-plans',
-			hidden: true,
+			url: 'activities',
+			hidden: false,
 		},
 		{
 			text: 'צרו קשר',

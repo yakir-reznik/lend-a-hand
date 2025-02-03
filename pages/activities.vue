@@ -64,7 +64,7 @@
 </template>
 <script>
 	export default {
-		name: 'ActivityPlans',
+		name: 'Activity',
 		data() {
 			return {
 				words: ['חיבור אנושי', 'שותפות', 'אמפתיה', 'תקווה'],
