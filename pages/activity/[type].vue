@@ -4,7 +4,6 @@
 	</div>
 
 	<template v-else>
-		<!-- <pre style="padding-top: 100px" dir="ltr">{{ contentfulData.fields }}</pre> -->
 		<ActivityTopSection
 			:image="contentfulData?.mainImage?.fields?.file?.url"
 			:subtitle="contentfulData?.subtitle"
@@ -20,7 +19,7 @@
 		<ActivityFlow :sections="contentfulData?.flow" :image="contentfulData?.flowImage?.fields?.file?.url" />
 		<ActivitySummary :sections="contentfulData?.summary" :image="contentfulData?.summaryImage?.fields?.file?.url" />
 		<ActivityGuidelines :sections="contentfulData?.guideline" />
-		<ActivityGallery :galleryItems="contentfulData.galleryItems" />
+		<ActivityGallery :galleryItems="contentfulData?.galleryItems" />
 		<p class="mt-12 text-center text-3xl font-bold">מערכי פעילות נוספים</p>
 		<ActivitiesGrid />
 	</template>
@@ -28,7 +27,7 @@
 
 <script setup lang="ts">
 	import { createClient } from 'contentful'
-
+	const activitiesTypes = ['stones', 'photos', 'prints', 'outline', 'symbols']
 	// Add Contentful client configuration
 	// Remove this and move to ENV
 	const client = createClient({
@@ -50,7 +49,7 @@
 	onMounted(async () => {
 		// Navigate to activity index page if type is not found
 		if (!activitiesTypes.includes(type)) {
-			navigateTo('/activities')
+			navigateTo('/activity')
 			throw createError({
 				statusCode: 404,
 				message: 'Activity not found',
@@ -64,8 +63,7 @@
 			})
 
 			if (response.items.length) {
-				contentfulData.value = response.items[0].fields
-				console.log('Contentful data:', contentfulData.value)
+				contentfulData.value = response.items.find((item) => item.fields.type == type).fields
 			}
 		} catch (error) {
 			console.error('Error fetching data from Contentful:', error)
@@ -73,6 +71,4 @@
 			isLoading.value = false
 		}
 	})
-
-	const activitiesTypes = ['stones', 'photos', 'prints', 'outline', 'symbols']
 </script>
