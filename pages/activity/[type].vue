@@ -33,8 +33,6 @@
 </template>
 
 <script setup lang="ts">
-	import { useRoute, onBeforeRouteUpdate } from 'vue-router'
-	import { ref, watch, computed } from 'vue'
 	import { createClient } from 'contentful'
 
 	// Add Contentful client configuration
