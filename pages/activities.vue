@@ -50,7 +50,7 @@
 				<div>השתתפותך במיזם תורמת</div>
 				<div>לחיבור ולחוסן שלנו ומגדילה</div>
 				<div class="relative flex flex-col items-center justify-center">
-					<div class="z-10 text-yellow-400">{{ currentWord }}</div>
+					<div class="z-10 text-blue-800">{{ currentWord }}</div>
 					<img
 						class="bottom-4 left-0 h-4 w-40"
 						src="/img/yellow-underline-2.png"

@@ -1,10 +1,10 @@
 <template>
-	<div class="bg-bluegray px-4 py-10 pb-20 md:px-10">
+	<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
 		<div class="mx-auto max-w-6xl text-center">
 			<div class="grid grid-cols-1 items-start md:grid-cols-1">
 				<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2">
 					<div class="flex flex-col">
-						<h2 class="mt-6 text-right text-3xl font-bold text-gray-900">שיחת פתיחה</h2>
+						<h2 class="text-right text-3xl font-bold text-gray-900">שיחת פתיחה</h2>
 						<div v-for="(section, index) in sections" :key="index" class="flex flex-col">
 							<h3 class="mt-6 text-right text-lg font-bold text-gray-900 md:text-2xl">
 								{{ section.fields.title }}

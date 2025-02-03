@@ -1,7 +1,7 @@
 <template>
 	<div class="-mt-14 px-4 py-10 md:px-10">
 		<div class="mx-auto max-w-6xl text-center">
-			<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">המיזם מאפשר נתינה בדרך חדשה</h2>
+			<h2 class="mb-8 text-right text-2xl font-bold text-gray-900 md:text-3xl">הכנה</h2>
 
 			<div class="grid grid-cols-1 items-start md:grid-cols-1">
 				<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-3">

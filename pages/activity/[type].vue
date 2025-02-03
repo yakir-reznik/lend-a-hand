@@ -20,7 +20,7 @@
 		<ActivityFlow :sections="contentfulData?.flow" :image="contentfulData?.flowImage?.fields?.file?.url" />
 		<ActivitySummary :sections="contentfulData?.summary" :image="contentfulData?.summaryImage?.fields?.file?.url" />
 		<ActivityGuidelines :sections="contentfulData?.guideline" />
-		<!-- <ActivityGallery :galleryItems="activityData.galleryItems" /> -->
+		<ActivityGallery :galleryItems="contentfulData.galleryItems" />
 		<p class="mt-12 text-center text-3xl font-bold">מערכי פעילות נוספים</p>
 		<ActivitiesGrid />
 	</template>
@@ -65,6 +65,7 @@
 
 			if (response.items.length) {
 				contentfulData.value = response.items[0].fields
+				console.log('Contentful data:', contentfulData.value)
 			}
 		} catch (error) {
 			console.error('Error fetching data from Contentful:', error)

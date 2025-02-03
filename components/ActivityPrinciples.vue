@@ -6,7 +6,7 @@
 		<!-- Grid Layout -->
 		<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-2">
 			<div v-for="(principle, index) in principles" :key="index">
-				<h3 class="text-lg font-bold text-yellow-400 md:text-xl">
+				<h3 class="text-lg font-bold text-blue-800 md:text-xl">
 					{{ principle.title }}
 				</h3>
 				<p class="mt-2 leading-relaxed text-gray-700">
