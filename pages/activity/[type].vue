@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-	import { createClient } from 'contentful'
+	import { createClient, type Entry, type EntrySkeletonType } from 'contentful'
 
 	// Add Contentful client configuration
 	// Remove this and move to ENV
@@ -43,7 +43,7 @@
 	})
 
 	// Add new ref for Contentful data
-	const contentfulData = ref(null)
+	const contentfulData = ref<Entry<EntrySkeletonType, undefined, string>>()
 
 	const route = useRoute()
 	const type = route.params.type.toString()
