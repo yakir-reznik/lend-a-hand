@@ -51,8 +51,7 @@
 	// Add loading state
 	const isLoading = ref(true)
 
-	// Update onCreate function
-	const onCreate = async () => {
+	onMounted(async () => {
 		isLoading.value = true
 		try {
 			const response = await client.getEntries({
@@ -68,10 +67,7 @@
 		} finally {
 			isLoading.value = false
 		}
-	}
-
-	// Call onCreate when component is created
-	onCreate()
+	})
 
 	const activitiesTypes = ['stones', 'photos', 'prints', 'outline', 'symbols']
 
