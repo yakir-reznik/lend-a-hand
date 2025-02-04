@@ -30,7 +30,7 @@
 			to: { name: 'activity-type', params: { type: 'appendix' } },
 		},
 		{
-			image: '/img/activityPlans/wings.jpeg',
+			image: '/img/activityPlans/wings.png',
 			title: 'שילוב ידיים בסמלים',
 			subtitle: 'כנפיים של תקווה',
 			to: { name: 'activity-type', params: { type: 'symbols' } },
@@ -55,7 +55,7 @@
 		},
 		{
 			image: '/img/activityPlans/yellow-stones.png',
-			title: 'שבילי חופש מאבנים',
+			title: 'שבילי אבנים צהובות',
 			subtitle: 'Yellow Brick Road',
 			to: { name: 'activity-type', params: { type: 'stones' } },
 		},

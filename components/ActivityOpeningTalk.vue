@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
+	<div class="bg-bluegray px-4 py-20 pb-20 md:px-10 mobile:pl-16 mobile:pr-16">
 		<div class="mx-auto max-w-6xl text-center">
 			<div class="grid grid-cols-1 items-start md:grid-cols-1">
 				<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2">
@@ -14,9 +14,16 @@
 							</p>
 							<ul
 								v-if="section.fields.points"
-								class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700"
+								class="mt-2 list-inside list-none text-right leading-relaxed text-gray-700"
 							>
-								<li v-for="(point, idx) in section.fields.points" :key="idx">{{ point }}</li>
+								<li
+									v-for="(point, idx) in section.fields.points"
+									:key="idx"
+									class="flex items-start gap-2"
+								>
+									<span>•</span>
+									<span> {{ point }}</span>
+								</li>
 							</ul>
 						</div>
 					</div>

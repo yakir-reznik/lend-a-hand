@@ -1,6 +1,6 @@
 <template>
 	<section class="pb-10 pt-20">
-		<div class="mb-16 text-center">
+		<div class="mb-16 text-center mobile:pl-16 mobile:pr-16">
 			<h2
 				class="relative inline-block text-balance px-2 pt-16 text-4xl font-bold mobile:w-64 desktop:pt-20 desktop:text-5xl"
 			>
@@ -14,7 +14,7 @@
 			<p class="m-8 mx-auto text-xl tablet:max-w-xl desktop:max-w-2xl desktop:text-2xl">
 				לגיל הרך, ליסודי, לנוער, למבוגרים ולקשישים
 			</p>
-			<p class="mx-auto mb-8 text-xl tablet:max-w-xl desktop:max-w-2xl desktop:text-2xl">
+			<p class="mx-auto mb-8 text-xl tablet:max-w-xl desktop:max-w-4xl desktop:text-2xl">
 				כל אחת ואחד יכולים, בכל מקום - בפנים או בחוץ בכל מספר של משתתפים ובכל סוגי המסגרות - חברתיות, משפחתיות,
 				קהילתיות וחינוכיות
 			</p>
@@ -23,7 +23,7 @@
 			</p>
 		</div>
 		<ActivitiesGrid />
-		<section class="bg-gray pb-24 pt-16 desktop:pt-24">
+		<section class="bg-gray pb-24 pt-16 mobile:pl-16 mobile:pr-16 desktop:pt-24">
 			<div class="wrapper text-center">
 				<h2 class="relative mx-auto mb-4 text-4xl font-bold desktop:text-5xl">
 					<span class="relative z-10">מטרת המיזם</span>
@@ -45,7 +45,7 @@
 		<InitiativeSection />
 		<div class="text-center">
 			<h2
-				class="relative inline-block text-balance px-2 pb-8 pt-16 text-2xl font-medium mobile:w-64 desktop:pt-20 desktop:text-4xl"
+				class="relative inline-block text-balance px-2 pb-8 pt-16 text-2xl font-medium desktop:pt-20 desktop:text-4xl"
 			>
 				<div>השתתפותך במיזם תורמת</div>
 				<div>לחיבור ולחוסן שלנו ומגדילה</div>
