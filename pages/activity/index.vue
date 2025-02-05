@@ -24,7 +24,7 @@
 		</div>
 		<ActivitiesGrid />
 		<section class="bg-gray pb-24 pt-16 mobile:pl-16 mobile:pr-16 desktop:pt-24">
-			<div class="wrapper text-center">
+			<div class="wrapper text-center mobile:text-center">
 				<h2 class="relative mx-auto mb-4 text-4xl font-bold desktop:text-5xl">
 					<span class="relative z-10">מטרת המיזם</span>
 				</h2>

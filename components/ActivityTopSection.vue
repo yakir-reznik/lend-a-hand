@@ -57,3 +57,15 @@
 <style scoped>
 	/* Add your styles here */
 </style>
+
+
+sharp('hands-colors.jpeg')
+  .resize(500)
+  .toFormat('webp', { quality: 50 }) // Convert to WebP (smaller than PNG/JPEG)
+  .toFile('hands-colors.webp');
+
+
+  sharp('hands-circle-diverse.jpeg')
+  .resize(500)
+  .toFormat('webp', { quality: 50 }) // Convert to WebP (smaller than PNG/JPEG)
+  .toFile('hands-circle-diverse.jpeg.webp');
