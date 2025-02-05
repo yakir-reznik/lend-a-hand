@@ -1,5 +1,5 @@
 <template>
-	<div class="-mt-14 px-4 py-10 md:px-10 mobile:pl-16 mobile:pr-16">
+	<div class="-mt-14 px-4 py-10 md:px-10 mobile:pl-12 mobile:pr-12">
 		<div class="mx-auto max-w-6xl text-center">
 			<h2 class="mb-8 text-right text-2xl font-bold text-gray-900 md:text-3xl mobile:text-center">הכנה</h2>
 

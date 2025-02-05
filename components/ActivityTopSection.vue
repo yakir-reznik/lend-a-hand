@@ -17,7 +17,7 @@
 				<p class="mt-2 text-sm text-gray-500">פיתוח: {{ developedBy }}</p>
 				<h2 class="mt-6 text-4xl font-bold text-gray-900">על היצירה</h2>
 				<p
-					class="mb-8 mt-4 max-w-screen-sm text-center text-xl font-bold leading-relaxed text-gray-700 mobile:pl-16 mobile:pr-16"
+					class="mb-8 mt-4 max-w-screen-sm text-center text-xl font-bold leading-relaxed text-gray-700 mobile:pl-12 mobile:pr-16"
 				>
 					{{ about }}
 				</p>
@@ -58,14 +58,6 @@
 	/* Add your styles here */
 </style>
 
-
-sharp('hands-colors.jpeg')
-  .resize(500)
-  .toFormat('webp', { quality: 50 }) // Convert to WebP (smaller than PNG/JPEG)
-  .toFile('hands-colors.webp');
-
-
-  sharp('hands-circle-diverse.jpeg')
-  .resize(500)
-  .toFormat('webp', { quality: 50 }) // Convert to WebP (smaller than PNG/JPEG)
-  .toFile('hands-circle-diverse.jpeg.webp');
+sharp('hands-colors.jpeg') .resize(500) .toFormat('webp', { quality: 50 }) // Convert to WebP (smaller than PNG/JPEG)
+.toFile('hands-colors.webp'); sharp('hands-circle-diverse.jpeg') .resize(500) .toFormat('webp', { quality: 50 }) //
+Convert to WebP (smaller than PNG/JPEG) .toFile('hands-circle-diverse.jpeg.webp');

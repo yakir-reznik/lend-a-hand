@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto px-4 py-8 text-center mobile:pl-16 mobile:pr-16 mobile:text-center">
+	<div class="container mx-auto px-4 py-8 text-center mobile:pl-12 mobile:pr-12 mobile:text-center">
 		<h2 class="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">רציונל מערכי הפעילות</h2>
 
 		<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-2 mobile:text-center">

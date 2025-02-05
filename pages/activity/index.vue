@@ -1,6 +1,6 @@
 <template>
 	<section class="pb-10 pt-20">
-		<div class="mb-16 text-center mobile:pl-16 mobile:pr-16">
+		<div class="mb-16 text-center mobile:pl-12 mobile:pr-12">
 			<h2
 				class="relative inline-block text-balance px-2 pt-16 text-4xl font-bold mobile:w-64 desktop:pt-20 desktop:text-5xl"
 			>
@@ -23,8 +23,8 @@
 			</p>
 		</div>
 		<ActivitiesGrid />
-		<section class="bg-gray pb-24 pt-16 mobile:pl-16 mobile:pr-16 desktop:pt-24">
-			<div class="wrapper text-center mobile:text-center">
+		<section class="bg-gray pb-24 pt-16 mobile:pl-12 mobile:pr-12 desktop:pt-24">
+			<div class="text-center mobile:text-center">
 				<h2 class="relative mx-auto mb-4 text-4xl font-bold desktop:text-5xl">
 					<span class="relative z-10">מטרת המיזם</span>
 				</h2>
