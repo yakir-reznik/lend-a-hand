@@ -1,8 +1,10 @@
 <template>
-	<div class="container mx-auto px-4 py-8 text-center mobile:pl-12 mobile:pr-12 mobile:text-center">
+	<div
+		class="desktop:pt-30 container mx-40 px-40 py-8 pb-24 pt-16 text-center mobile:mx-0 mobile:pl-12 mobile:pr-12 mobile:text-center"
+	>
 		<h2 class="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">רציונל מערכי הפעילות</h2>
 
-		<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-2 mobile:text-center">
+		<div class="mx-16 grid grid-cols-1 gap-8 text-right md:grid-cols-2 mobile:mx-0 mobile:text-center">
 			<div v-for="(principle, index) in principles" :key="index">
 				<h3 class="text-lg font-bold text-blue-800 md:text-xl">
 					{{ principle.title }}

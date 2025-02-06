@@ -14,7 +14,7 @@
 			<p class="m-8 mx-auto text-xl tablet:max-w-xl desktop:max-w-2xl desktop:text-2xl">
 				לגיל הרך, ליסודי, לנוער, למבוגרים ולקשישים
 			</p>
-			<p class="mx-auto mb-8 text-xl tablet:max-w-xl desktop:max-w-4xl desktop:text-2xl">
+			<p class="mx-auto mb-8 text-xl font-semibold tablet:max-w-xl desktop:max-w-4xl desktop:text-2xl">
 				כל אחת ואחד יכולים, בכל מקום - בפנים או בחוץ בכל מספר של משתתפים ובכל סוגי המסגרות - חברתיות, משפחתיות,
 				קהילתיות וחינוכיות
 			</p>
@@ -36,7 +36,7 @@
 				</p>
 				<p class="mx-auto text-lg tablet:max-w-xl desktop:max-w-2xl desktop:text-lg">
 					ערבות הדדית היא הדבק המלכד את החברה הישראלית רבת השבטים והחוסן המיוחד שלנו במשך אלפי שנים בתפוצות
-					ובישראל.היום, בשרשרת הישראלית, החטופות והחטופים הם החוליה שהכי זקוקה לעזרתנו.חיזוק שלהם ושל
+					ובישראל. היום, בשרשרת הישראלית, החטופות והחטופים הם החוליה שהכי זקוקה לעזרתנו. חיזוק שלהם ושל
 					משפחותיהם ירפא אותם ואותנו ויחזק את כולנו.
 				</p>
 			</div>

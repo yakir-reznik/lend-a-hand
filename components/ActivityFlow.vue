@@ -15,7 +15,9 @@
 								{{ index + 1 }}
 							</div>
 							<div class="flex flex-col">
-								<h3 class="text-right text-lg text-gray-900 md:text-2xl mobile:text-center">
+								<h3
+									class="text-right text-lg font-semibold text-gray-900 md:text-2xl mobile:text-center"
+								>
 									{{ section.fields.title }}
 								</h3>
 								<ul

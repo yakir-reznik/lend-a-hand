@@ -7,7 +7,7 @@
 			<ul class="mt-4 list-inside list-none space-y-2 text-right text-gray-700 mobile:text-center">
 				<li v-for="(point, idx) in section.fields.points" :key="idx" class="flex items-start gap-2">
 					<span>•</span>
-					<span v-html="point"></span>
+					<span v-html="point" class="text-right"></span>
 				</li>
 			</ul>
 		</div>
