@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="desktop:pt-30 container mx-40 px-40 py-8 pb-24 pt-24 text-center mobile:mx-0 mobile:pl-12 mobile:pr-12 mobile:text-center"
+		class="desktop:pt-30 container mx-auto px-40 py-8 pb-24 pt-24 text-center mobile:mx-0 mobile:pl-12 mobile:pr-12 mobile:text-center"
 	>
 		<h2 class="mb-6 text-2xl font-bold text-gray-900 md:text-3xl">רציונל מערכי הפעילות</h2>
 

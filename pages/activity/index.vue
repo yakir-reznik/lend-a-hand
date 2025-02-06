@@ -23,7 +23,7 @@
 			</p>
 		</div>
 		<ActivitiesGrid />
-		<section class="bg-gray pb-24 mobile:pl-12 mobile:pr-12 desktop:pt-24">
+		<section class="bg-gray pb-24 mobile:pl-12 mobile:pr-12 mobile:pt-20 desktop:pt-24">
 			<div class="text-center mobile:text-center">
 				<h2 class="relative mx-auto mb-4 text-4xl font-bold desktop:text-5xl">
 					<span class="relative z-10">מטרת המיזם</span>
