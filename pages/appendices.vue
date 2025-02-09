@@ -6,7 +6,7 @@
 				<p class="mt-2 text-xl font-light text-white">תכנים, פתגמים והעשרה</p>
 			</div>
 
-			<div class="relative flex flex-col items-center justify-center bg-bluegray">
+			<div class="bg-bluegray relative flex flex-col items-center justify-center">
 				<div
 					class="absolute -top-10 mb-8 h-64 w-64 overflow-hidden rounded-full border-2 border-yellow-400 shadow-lg"
 				>
@@ -415,7 +415,7 @@
 
 	const activities: Activity[] = [
 		{
-			image: '/img/activityPlans/wings.jpeg',
+			image: '/img/activityPlans/wings.png',
 			title: 'שילוב ידיים בסמלים',
 			subtitle: 'כנפיים של תקווה',
 			to: { name: 'activity-type', params: { type: 'symbols' } },
