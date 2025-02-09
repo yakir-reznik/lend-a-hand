@@ -21,7 +21,7 @@
 				>
 					{{ about }}
 					<a
-					 	v-if="link.href"
+						v-if="link"
 						:href="link.href"
 						target="_blank"
 						rel="link to"
@@ -60,7 +60,7 @@
 			},
 			link: {
 				type: Object,
-				required: true,
+				required: false,
 			},
 		},
 	}
