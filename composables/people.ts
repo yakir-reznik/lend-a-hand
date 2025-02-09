@@ -127,14 +127,6 @@ export const people: Person[] = [
 		gender: 'female',
 	},
 	{
-		name: 'אוהד בן עמי',
-		age: 55,
-		desc: 'נחטף מבארי',
-		image: '/img/people/notnim-yad-50.jpg',
-		gender: 'male',
-	},
-
-	{
 		name: 'אוריאל ברוך',
 		age: 35,
 		desc: 'נחטף מפסטיבל הנובה',
@@ -339,13 +331,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'אור לוי',
-		age: 34,
-		desc: 'נחטף מפסטיבל הנובה',
-		image: '/img/people/notnim-yad-36.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'איתן לוי',
 		age: 53,
 		desc: 'נחטף מכביש 232',
@@ -512,13 +497,6 @@ export const people: Person[] = [
 		age: 22,
 		desc: 'נחטף מפסטיבל נובה',
 		image: '/img/people/notnim-yad-34.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'אלי שרעבי',
-		age: 52,
-		desc: 'נחטף מבארי',
-		image: '/img/people/notnim-yad-2.jpg',
 		gender: 'male',
 	},
 	{

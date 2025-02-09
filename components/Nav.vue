@@ -5,7 +5,7 @@
 		:class="{ isOpen }"
 		@click="isOpen = false"
 	></div>
-	<nav class="fixed left-0 top-0 z-30 w-full bg-secondary">
+	<nav class="fixed left-0 top-0 z-30 w-full bg-secondary shadow-xl">
 		<div class="wrapper">
 			<div class="flex items-center justify-between tablet:py-3 desktop:py-3">
 				<NuxtLink to="/">

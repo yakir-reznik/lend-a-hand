@@ -10,14 +10,10 @@
 			</div>
 		</div>
 
-		<NuxtLink to="https://gallery.notnim-yad.net/?popup=upload" class="mt-8 block">
-			<button
-				class="mx-auto mt-12 flex items-center rounded-full bg-yellow-400 px-6 py-3 font-bold text-black shadow-lg hover:bg-yellow-500"
-			>
-				<span class="text-xl">+</span>
-				<span class="mr-2">להעלאת יצירה חדשה</span>
-			</button>
-		</NuxtLink>
+		<Btn href="https://gallery.notnim-yad.net/" class="mt-20 mobile:text-base">
+			<span class="text-xl">+</span>
+			<span class="mr-2">להעלאת יצירה חדשה</span>
+		</Btn>
 	</div>
 </template>
 

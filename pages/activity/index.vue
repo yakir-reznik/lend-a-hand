@@ -1,6 +1,6 @@
 <template>
 	<section class="pb-10 pt-20">
-		<div class="mb-16 text-center">
+		<div class="mb-16 text-center mobile:pl-12 mobile:pr-12">
 			<h2
 				class="relative inline-block text-balance px-2 pt-16 text-4xl font-bold mobile:w-64 desktop:pt-20 desktop:text-5xl"
 			>
@@ -14,7 +14,7 @@
 			<p class="m-8 mx-auto text-xl tablet:max-w-xl desktop:max-w-2xl desktop:text-2xl">
 				לגיל הרך, ליסודי, לנוער, למבוגרים ולקשישים
 			</p>
-			<p class="mx-auto mb-8 text-xl tablet:max-w-xl desktop:max-w-2xl desktop:text-2xl">
+			<p class="mx-auto mb-8 text-xl font-semibold tablet:max-w-xl desktop:max-w-4xl desktop:text-2xl">
 				כל אחת ואחד יכולים, בכל מקום - בפנים או בחוץ בכל מספר של משתתפים ובכל סוגי המסגרות - חברתיות, משפחתיות,
 				קהילתיות וחינוכיות
 			</p>
@@ -23,8 +23,8 @@
 			</p>
 		</div>
 		<ActivitiesGrid />
-		<section class="bg-gray pb-24 pt-16 desktop:pt-24">
-			<div class="wrapper text-center">
+		<section class="bg-gray pb-24 mobile:pl-12 mobile:pr-12 mobile:pt-20 desktop:pt-24">
+			<div class="text-center mobile:text-center">
 				<h2 class="relative mx-auto mb-4 text-4xl font-bold desktop:text-5xl">
 					<span class="relative z-10">מטרת המיזם</span>
 				</h2>
@@ -36,7 +36,7 @@
 				</p>
 				<p class="mx-auto text-lg tablet:max-w-xl desktop:max-w-2xl desktop:text-lg">
 					ערבות הדדית היא הדבק המלכד את החברה הישראלית רבת השבטים והחוסן המיוחד שלנו במשך אלפי שנים בתפוצות
-					ובישראל.היום, בשרשרת הישראלית, החטופות והחטופים הם החוליה שהכי זקוקה לעזרתנו.חיזוק שלהם ושל
+					ובישראל. היום, בשרשרת הישראלית, החטופות והחטופים הם החוליה שהכי זקוקה לעזרתנו. חיזוק שלהם ושל
 					משפחותיהם ירפא אותם ואותנו ויחזק את כולנו.
 				</p>
 			</div>
@@ -45,7 +45,7 @@
 		<InitiativeSection />
 		<div class="text-center">
 			<h2
-				class="relative inline-block text-balance px-2 pb-8 pt-16 text-2xl font-medium mobile:w-64 desktop:pt-20 desktop:text-4xl"
+				class="relative inline-block text-balance px-2 pb-8 pt-16 text-2xl font-medium desktop:pt-20 desktop:text-4xl"
 			>
 				<div>השתתפותך במיזם תורמת</div>
 				<div>לחיבור ולחוסן שלנו ומגדילה</div>
@@ -64,7 +64,6 @@
 </template>
 <script>
 	export default {
-		name: 'Activity',
 		data() {
 			return {
 				words: ['חיבור אנושי', 'שותפות', 'אמפתיה', 'תקווה'],

@@ -10,6 +10,7 @@
 			:title="contentfulData?.title"
 			:developedBy="contentfulData?.developed_by"
 			:about="contentfulData?.about"
+			:link="contentfulData?.links ? contentfulData?.links[0]?.fields : null"
 		/>
 		<Preparation :preparations="contentfulData?.preperation" />
 		<ActivityOpeningTalk
