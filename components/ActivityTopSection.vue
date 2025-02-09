@@ -20,9 +20,13 @@
 					class="mb-8 mt-4 max-w-screen-sm text-center text-xl font-bold leading-relaxed text-gray-700 mobile:pl-12 mobile:pr-16"
 				>
 					{{ about }}
-					<a :href="link.href" target="_blank" rel="link to" class="hover:text-gray-500 hover:opacity-90">{{
-						link.title
-					}}</a>
+					<a
+						:href="link.href"
+						target="_blank"
+						rel="link to"
+						class="text-nowrap border-b-2 border-gray-700 hover:text-gray-500 hover:opacity-90"
+						>{{ link.title }}</a
+					>
 				</p>
 			</div>
 		</div>
