@@ -65,7 +65,6 @@
 
 			if (response.items.length) {
 				contentfulData.value = response.items.find((item) => item.fields.type == type).fields
-				console.log('Contentful data:', contentfulData.value)
 			}
 		} catch (error) {
 			console.error('Error fetching data from Contentful:', error)
