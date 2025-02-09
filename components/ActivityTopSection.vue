@@ -20,8 +20,8 @@
 					class="mb-8 mt-4 max-w-screen-sm text-center text-xl font-bold leading-relaxed text-gray-700 mobile:pl-12 mobile:pr-16"
 				>
 					{{ about }}
-					<a :href="link1" target="_blank" rel="link to" class="hover:text-gray-500 hover:opacity-90">{{
-						link1
+					<a :href="link.href" target="_blank" rel="link to" class="hover:text-gray-500 hover:opacity-90">{{
+						link.title
 					}}</a>
 				</p>
 			</div>
@@ -53,8 +53,8 @@
 				type: String,
 				required: true,
 			},
-			link1: {
-				type: String,
+			link: {
+				type: Object,
 				required: true,
 			},
 		},
