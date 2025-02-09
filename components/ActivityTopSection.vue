@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-white pb-16">
-		<div class="bg-secondary pb-32 pt-12 text-center">
+		<div class="bg-secondary pb-16 pt-32 text-center">
 			<h3 class="mb-8 text-3xl font-bold text-yellow-400">מערכי פעילות</h3>
 			<h1 class="text-5xl font-bold text-white">{{ title }}</h1>
 			<p class="mt-2 text-xl font-light text-white">{{ subtitle }}</p>
@@ -20,6 +20,9 @@
 					class="mb-8 mt-4 max-w-screen-sm text-center text-xl font-bold leading-relaxed text-gray-700 mobile:pl-12 mobile:pr-16"
 				>
 					{{ about }}
+					<a :href="link1" target="_blank" rel="link to" class="hover:text-gray-500 hover:opacity-90">{{
+						link1
+					}}</a>
 				</p>
 			</div>
 		</div>
@@ -47,6 +50,10 @@
 				required: true,
 			},
 			about: {
+				type: String,
+				required: true,
+			},
+			link1: {
 				type: String,
 				required: true,
 			},

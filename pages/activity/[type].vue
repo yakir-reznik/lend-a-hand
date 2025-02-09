@@ -10,6 +10,7 @@
 			:title="contentfulData?.title"
 			:developedBy="contentfulData?.developed_by"
 			:about="contentfulData?.about"
+			:link1="contentfulData?.link1"
 		/>
 		<Preparation :preparations="contentfulData?.preperation" />
 		<ActivityOpeningTalk
@@ -64,6 +65,7 @@
 
 			if (response.items.length) {
 				contentfulData.value = response.items.find((item) => item.fields.type == type).fields
+				console.log('Contentful data:', contentfulData.value)
 			}
 		} catch (error) {
 			console.error('Error fetching data from Contentful:', error)
