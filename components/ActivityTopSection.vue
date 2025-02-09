@@ -21,6 +21,7 @@
 				>
 					{{ about }}
 					<a
+					 	v-if="link.href"
 						:href="link.href"
 						target="_blank"
 						rel="link to"
