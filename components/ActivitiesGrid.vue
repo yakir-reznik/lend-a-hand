@@ -27,7 +27,7 @@
 			image: '/img/activityPlans/books.jpeg',
 			title: 'נספחים',
 			subtitle: 'תכנים, פתגמים והעשרה',
-			to: { name: 'activity-type', params: { type: 'appendix' } },
+			to: '/activity/appendices',
 		},
 		{
 			image: '/img/activityPlans/wings.png',

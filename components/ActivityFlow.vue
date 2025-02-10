@@ -7,17 +7,15 @@
 						<img :src="image" alt="Hands" class="w-full" />
 					</div>
 					<div class="align-center flex flex-col last:pr-10 mobile:last:pr-0">
-						<h2 class="text-right text-3xl font-bold text-gray-900 mobile:text-center">מהלך הפעילות</h2>
+						<h2 class="text-right text-3xl font-bold text-gray-900">מהלך הפעילות</h2>
 						<div v-for="(section, index) in sections" :key="index" class="mt-4 flex flex-row gap-4">
 							<div
-								class="flex h-8 min-h-8 w-8 min-w-8 items-center justify-center rounded-full bg-yellow-300 text-center text-lg font-bold mobile:text-center"
+								class="flex h-8 min-h-8 w-8 min-w-8 items-center justify-center rounded-full bg-yellow-300 text-center text-lg font-bold"
 							>
 								{{ index + 1 }}
 							</div>
 							<div class="flex flex-col">
-								<h3
-									class="text-right text-lg font-semibold text-gray-900 md:text-2xl mobile:text-center"
-								>
+								<h3 class="text-right text-lg font-semibold text-gray-900 md:text-2xl">
 									{{ section.fields.title }}
 								</h3>
 								<ul
@@ -33,7 +31,7 @@
 										<span> {{ point }}</span>
 									</li>
 								</ul>
-								<p v-if="section.fields.point" class="text-right text-gray-700 mobile:text-center">
+								<p v-if="section.fields.point" class="text-right text-gray-700">
 									{{ section.fields.point }}
 								</p>
 							</div>
