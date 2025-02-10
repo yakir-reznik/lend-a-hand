@@ -61,7 +61,7 @@
 								</p>
 							</div>
 							<div class="flex flex-col items-center justify-center">
-								<img src="/img/appendcies/hands.png" alt="Hands" class="h-[260px] w-[380px] object-cover" />
+								<img src="/img/appendices/hands.png" alt="Hands" class="h-[260px] w-[380px] object-cover" />
 							</div>
 						</div>
 					</div>
@@ -119,9 +119,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
+		<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
 			<div class="mx-auto max-w-6xl text-center">
-				<h2 class="mb-2 text-2xl font-bold text-gray-900 md:text-3xl">המיזם מאפשר נתינה בדרך חדשה</h2>
+				<h2 class="mb-2 text-2xl font-bold text-gray-900 md:text-3xl">ערך הערבות ההדדית בתרבויות ובדתות נוספות</h2>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
 					<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-3">
 						<div v-for="(preparation, index) in mutualResponsibilityValue" :key="index">
@@ -129,8 +129,7 @@
 								<h3 class="mt-4 text-right text-lg font-bold text-gray-900 md:text-2xl">
 									{{ preparation.title }}
 								</h3>
-								<div class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700">
-									{{ preparation.descrpition }}
+								<div class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700" v-html="preparation.descrpition">
 								</div>
 							</div>
 						</div>
@@ -145,16 +144,22 @@
 				</h2>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
 					<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-2">
-						<pre>
-רשימה שמות החטופים להדפסה  
-עמוד מתעדכן | מגזין גלויה
-תמונות החטופים בעזה 
-עמוד מתעדכן | כאן
-שמות, תמונות וסיפורים של החטופים בעזה
-עמוד מתעדכן | ישראל היום
-						</pre
-						>
-						<img src="https://placehold.co/400x300?text=400x300" alt="400x300" />
+						<div class="flex flex-col">
+
+    <div class="grid grid-cols-1 gap-8 text-right md:grid-cols-1">
+        <div class="flex flex-col">
+            <a href="https://gluya.org/the-hostages-names/" class="text-xl font-bold underline mb-2">רשימת שמות החטופים להדפסה</a>
+            <span class="text-gray-600">עמוד מתעדכן | מגזין גלויה</span>
+
+            <a href="https://www.kan.org.il/lobby/kidnapped/" class="text-xl font-bold underline mb-2 mt-6">תמונות החטופים בעזה</a>
+            <span class="text-gray-600">עמוד מתעדכן | כאן</span>
+
+            <a href="https://www.israelhayom.co.il/news/local/article/16155444" class="text-xl font-bold underline mb-2 mt-6">שמות, תמונות וסיפורים של החטופים בעזה</a>
+            <span class="text-gray-600">עמוד מתעדכן | ישראל היום</span>
+        </div>
+    </div>
+						</div>
+						<img src="/img/appendices/news_title.png" alt="400x300" />
 					</div>
 				</div>
 			</div>
@@ -167,8 +172,8 @@
 				</h2>
 				<h4 class="-mt-4 mb-8">הילדים והנוער בליווי המדריכים והמדריכות, המורים והמורות מוזמנים:</h4>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
-					<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-3">
-						<div v-for="(preparation, index) in preparations" :key="index">
+					<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-4">
+						<div v-for="(meet, index) in meetHostage" :key="index">
 							<div>
 								<div
 									class="flex h-8 min-h-8 w-8 min-w-8 items-center justify-center rounded-full bg-yellow-300 text-center text-lg font-bold"
@@ -176,10 +181,9 @@
 									{{ index + 1 }}
 								</div>
 								<h3 class="mt-4 text-right text-lg font-bold text-gray-900 md:text-2xl">
-									{{ preparation.fields.title }}
+									{{ meet.title }}
 								</h3>
-								<div class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700">
-									{{ preparation.fields.descrpition }}
+								<div class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700" v-html="meet.description">
 								</div>
 							</div>
 						</div>
@@ -200,63 +204,16 @@
 		<div class="px-4 py-10 pb-10 md:px-10">
 			<div class="mx-auto max-w-6xl text-center">
 				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">פתגמים וציטוטים ממקורות שונים ביהדות</h2>
-				<div class="grid grid-cols-1 items-start md:grid-cols-1">
-					<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-2">
-						<div class="flex flex-col">
-							<p class="font-bold">"כל ישראל ערבים זה בזה"</p>
-							<span class="text-sm text-gray-700">(חז"ל)</span>
-						</div>
-						<p>
-							חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים
-							אחראי כלפי הכלל. הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את
-							אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד
-							החינוך תש"פ ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).
-						</p>
-						<div class="flex flex-col">
-							<p class="font-bold">
-								"הלא פרוס לרעב לחמך ועניים מרודים תביא בית, כי תראה ערום וכיסיתו ומבשרך לא תתעלם"
-							</p>
-							<span class="text-sm text-gray-700">(חז"ל)</span>
-						</div>
-						<p>
-							חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים
-							אחראי כלפי הכלל. הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את
-							אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד
-							החינוך תש"פ ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).
-						</p>
-						<div class="flex flex-col">
-							<p class="font-bold">"כל ישראל ערבים זה בזה"</p>
-							<span class="text-sm text-gray-700">(חז"ל)</span>
-						</div>
-						<p>
-							חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים
-							אחראי כלפי הכלל. הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את
-							אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד
-							החינוך תש"פ ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).
-						</p>
-						<div class="flex flex-col">
-							<p class="font-bold">"כל ישראל ערבים זה בזה"</p>
-							<span class="text-sm text-gray-700">(חז"ל)</span>
-						</div>
-						<p>
-							חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים
-							אחראי כלפי הכלל. הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את
-							אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד
-							החינוך תש"פ ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).
-						</p>
-						<div class="flex flex-col">
-							<p class="font-bold">"כל ישראל ערבים זה בזה"</p>
-							<span class="text-sm text-gray-700">(חז"ל)</span>
-						</div>
-						<p>
-							חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים
-							אחראי כלפי הכלל. הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את
-							אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד
-							החינוך תש"פ ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).
-						</p>
-					</div>
-				</div>
-			</div>
+				<div class="grid grid-cols-1 items-start md:grid-cols-1 gap-8">
+					    <div v-for="(quote, index) in quotes" :key="index" class="grid grid-cols-1 gap-8 text-right md:grid-cols-2">
+        <div class="flex flex-col text-xl max-w-md">
+            <p class="font-bold" v-html="quote.title"></p>
+            <span v-if="quote.title" class="text-sm text-gray-700">(חז"ל)</span>
+        </div>
+        <p v-html="quote.description"></p>
+    </div>
+</div>
+</div>
 		</div>
 		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
 			<div class="mx-auto max-w-6xl text-center">
@@ -278,7 +235,7 @@
 					</div>
 				</div>
 				<div class="flex flex-col items-center justify-center gap-8 pb-8">
-					<img src="https://placehold.co/52x32?text=52x32" alt="52x32" />
+					<img src="/img/appendices/two-yellow-hands.png" alt="52x32" />
 					<h3 class="text-xl font-bold">שירים לגילאים שונים</h3>
 				</div>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
@@ -413,7 +370,23 @@
 	const mutualResponsibilityValue = [
 		{
 			title: "בדת הדרוזית",
-			descrpition: 'حفظ اﻻخوان خفد الأخوان، "لسمر عليهم" - عرض الموجه لمجموعات مختلفة. شيطان قسم بالدر: "المسؤولية والمسؤولية لأخيك البيولوجي، لبن عمك، لأخيك الإنساني في كل مكان". من عطف الاقتباس',
+			descrpition: `<p>حفظ الاخوان חפד אלאחוואן, "לשמור על האחים" - ערך העוסק במעגלים שונים. <br>
+שיח' קאסם בדר: "אחריות ומחויבות לאחיך הביולוגי, לבן עמך, לאחיך האנושי בכל מקום".<br>
+<a class="underline" href="https://meyda.education.gov.il/files/olim/arvuthadddit.pdf" target="_blank">אל מקור הציטוט</a>
+</p>`,
+		},
+		{
+			title: "באיסלאם",
+			descrpition: `<p>"[...] המעשים הטובים הם נחלת המאמין באלוהים וביום האחרון ובמלאכים ובספר הנביאים, והמעניק מרכושו על אף היותו אהוב עליו, לקרובי המשפחה והיתומים והנזקקים ולהלך בדרכים ולקבצן, ולשחרור עבדים והמקיימים את התפילה והנותנים זכאת [...] כל אלה, אמת בפיהם והם היראים" (הקוראן, סורת אל-בקרה, איה 177).<br>
+<a class="underline" href="https://meyda.education.gov.il/files/olim/arvuthadddit.pdf" target="_blank">אל מקור הציטוט</a>
+</p>`,
+		},
+		{
+			title: "בנצרות",
+			descrpition: `<p>כָּל אֶחָד אַל יִדְאַג רַק לְעִנְיָנָיו, אֶלָּא גַּם לְעִנְיָנָיו שֶׁל זוּלָתוֹ (הברית החדשה, אל הפיליפים, ב'4).<br>
+נָשִׂים לִבֵּנוּ אִישׁ אֶל רֵעֵהוּ, לְעוֹרֵר זֶה אֶת זֶה לְאַהֲבָה וּלְמַעֲשִׂים טוֹבִים (הברית החדשה, אל העברים, י'24).<br>
+<a class="underline" href="https://web.archive.org/web/20140327011929/http://www.ancient-hebrew.org/docs/13_GinsburgHebrewNT.pdf" target="_blank">אל מקור הציטוט</a>
+</p>`,
 		},
 	]
 
@@ -432,6 +405,52 @@
 			title: 'אוגדן פעילויות (2020) מנהל חברה ונוער',
 			url: '',
 			description: 'מגוון נושאים: ערבות הדדית בקבוצה החברתית, שוויון הזדמנויות, הצלת חיים, יזמות תפוצות ועוד.',
+		},
+	]
+
+const quotes = [
+  {
+    title: "<strong>כל ישראל ערבים זה בזה</strong>",
+    description: "(חז\"ל) - חז\"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים אחראי כלפי הכלל."
+  },
+  {
+    title: "",
+    description: "הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ\"ל משרד החינוך תש\"פ, ערכה לערבות הדדית, משרד החינוך תש\"פ, ערכה למנהל ולמחנך)."
+  },
+  {
+    title: "<strong>הלא פרוס לרעב לחמך ועניים מרודים תביא בית, כי תראה ערום וכיסיתו ומבשרך לא תתעלם</strong>",
+    description: "(ישעיהו נ\"ח ז') - הנביא ישעיהו, מבקש לסמן בדבריו את הדרך הראויה בה נלך - דרך של צדק וחסד. אם נשכיל להבין שהרעב הוא גם שלנו, שהעירום הוא גם אצלנו, שככלי הרשע קושרים גם אותנו והמצוקה היא בבשרנו, הרי שלא נוכל להסיט את עינינו ולאטום את ליבנו (טרופר, ח' (2007) יהדות ynet צום גדליה: \"ומבשרך לא תתעלם\")."
+  },
+  {
+    title: "<strong>והחוט המשולש לא במהרה ינתק</strong>",
+    description: "(קהלת ד' ט'-י\"ב) - פירוש אבן עזרא: \"היה לו טוב להיות לו מי שיתחבר עמו ויעזור אותו... ואם יארע לו חולי או ייפול זה את זה - יעזרנו חברו\""
+  },
+  {
+    title: "<strong>את אחיי אנוכי מבקש</strong>",
+    description: "(בראשית ל\"ז ט\"ז) - אהרון רזאל, \"את אחיי אנוכי מבקש\" - לשיר את השיר עם אהרון רזאל היא חוויה מגבשת של שירת רבים ותפילה המחברת אותנו יחד ואל אחינו ואחיותינו החטופים."
+  },
+  {
+    title: "<strong>אחר המעשים נמשכים הלבבות</strong>",
+    description: "(ספר החינוך (מצוה ט\"ז) הלכות מידות, שולחן ערוך הרמב\"ם) - \"דע כי האדם נפעל כפי פעולותיו, ולבו וכל מחשבותיו תמיד אחר מעשיו שהוא עוסק בהם, אם טוב ואם רע.\" (ספר החינוך - סדר דפוס פרנקפורט ט\"ז). ליצור במו ידינו יצירות של ערבות הדדית מושך את ליבנו ומחשבותינו אל אחינו ואחיותינו הזקוקים לנו כעת. החיבור אליהם ולמשפחותיהם מחזק אותם ואותנו כאומה."
+		},
+	]
+
+	const meetHostage = [
+		{
+			title: 'לראיין קרובי משפחה של חטופים ',
+			description: 'שיספרו על העולם של החטופה או החטוף ששמם ייכתב ביצירה',
+		},
+		{
+			title: 'להכיר את המאכלים שהם הכי אוהבים',
+			description: `המאכלים שהם הכי אוהבים - פרויקט מיוחד של עדי שילון, <a class="underline" href="https://www.foodish.org/topic/%d7%94%d7%9e%d7%90%d7%9b%d7%9c%d7%99%d7%9d-%d7%a9%d7%94%d7%9d-%d7%94%d7%9b%d7%99-%d7%90%d7%95%d7%94%d7%91%d7%99%d7%9d/" target="_blank">FOODISH</a>`,
+		},
+		{
+			title: 'להכיר את השירים שהם הכי אוהבים',
+			description: `הפלייליסטים של החטופים שלנו ב-<a class="underline" href="https://eco99fm.maariv.co.il" target="_blank">eco99fm</a> וב-<a class="underline" href="https://www.spotify.com" target="_blank">ספוטיפיי</a> תמצאו את השירים שהם הכי אוהבים לשמוע`,
+		},
+		{
+			title: 'לקרוא ולהקשיב ברשת',
+			description: 'להתחבר לחטופה או חטוף ולמצוא ברשת מידע אודותם: לדעת מה אהוב עליהם מחבר אותנו אליהם, ונותן להם ומשפחות חיבוק וכוח.',
 		},
 	]
 
