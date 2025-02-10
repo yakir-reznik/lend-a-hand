@@ -16,7 +16,9 @@
 				<div class="mt-56 flex flex-col items-center gap-4 pb-16 text-lg">
 					<p class="mt-2 text-sm text-gray-500">השראות וחומרי עזר</p>
 
-					<ul class="mt-42 my-42 mx-56 flex flex-row flex-wrap justify-center gap-6 px-56">
+					<ul
+						class="mt-42 my-42 mx-56 flex flex-row flex-wrap justify-center gap-6 px-56 mobile:mx-0 mobile:px-0"
+					>
 						<li
 							v-for="(item, index) in appendixItems"
 							:key="index"
