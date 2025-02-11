@@ -13,7 +13,7 @@
 					<img src="/img/activityPlans/books.jpeg" alt="Yellow bricks" class="h-64 w-64 object-cover" />
 				</div>
 
-				<div class="mt-56 flex flex-col items-center gap-4 pb-16 text-lg">
+				<div class="mt-56 flex flex-col items-center gap-4 pb-16 text-lg mobile:mx-8">
 					<p class="mt-2 text-sm text-gray-500">השראות וחומרי עזר</p>
 
 					<ul
@@ -29,7 +29,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="bg-white px-4 py-20 pb-20 md:px-10">
+			<div class="bg-white px-4 py-20 pb-20 md:px-10 mobile:mx-8">
 				<div class="mx-auto max-w-6xl text-center">
 					<div class="grid grid-cols-1 items-start md:grid-cols-1">
 						<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2">
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 			<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
-				<div class="mx-auto max-w-6xl text-center">
+				<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 					<div class="grid grid-cols-1 items-start md:grid-cols-1">
 						<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-1">
 							<div class="flex flex-col">
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="-mt-14 px-4 py-10 pb-10 md:px-10">
+		<div class="-mt-14 px-4 py-10 pb-10 md:px-10 mobile:mx-8">
 			<div class="mx-auto max-w-6xl text-center">
 				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">מערכי-שיעור על ערבות הדדית</h2>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
@@ -135,7 +135,7 @@
 			</div>
 		</div>
 		<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
-			<div class="mx-auto max-w-6xl text-center">
+			<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-2 text-2xl font-bold text-gray-900 md:text-3xl">
 					ערך הערבות ההדדית בתרבויות ובדתות נוספות
 				</h2>
@@ -156,7 +156,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="px-4 py-10 pb-10 md:px-10">
+		<div class="px-4 py-10 pb-10 md:px-10 mobile:mx-8">
 			<div class="mx-auto max-w-6xl text-center">
 				<h2 class="mb-8 mt-8 text-2xl font-bold text-gray-900 md:text-3xl">
 					רשימת שמות החטופות והחטופים עם תמונות וכתבות
@@ -194,9 +194,8 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
-			<div class="mx-auto mb-8 max-w-6xl text-center">
+			<div class="mx-auto mb-8 max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-8 mt-8 text-2xl font-bold text-gray-900 md:text-3xl">
 					להכיר את עולמם ולהתחבר לחטוף או לחטופה
 				</h2>
@@ -233,7 +232,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="px-4 py-10 pb-10 md:px-10">
+		<div class="px-4 py-10 pb-10 md:px-10 mobile:mx-8">
 			<div class="mx-auto mb-8 mt-8 max-w-6xl text-center">
 				<h2 class="mb-12 text-2xl font-bold text-gray-900 md:text-3xl">פתגמים וציטוטים ממקורות שונים ביהדות</h2>
 				<div class="grid grid-cols-1 items-start gap-8 md:grid-cols-1">
@@ -252,7 +251,7 @@
 			</div>
 		</div>
 		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
-			<div class="mx-auto max-w-6xl text-center">
+			<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-8 mt-12 text-2xl font-bold text-gray-900 md:text-3xl">שירים</h2>
 				<h3 class="-mt-4 mb-12 text-xl font-bold text-gray-900 md:text-xl">שירים לילדים צעירים</h3>
 				<div class="grid grid-cols-1 items-start pb-16 md:grid-cols-3">
@@ -296,14 +295,14 @@
 							<span class="text-sm font-bold text-gray-700"
 								>מילים: גידי קורן, לחן: מוני ארנון וגידי קורן</span
 							>
-							<div class="ml-24 flex justify-between">
-								<p class="w-44 leading-7">
+							<div class="ml-24 flex justify-between mobile:ml-0">
+								<p class="w-44 leading-7 mobile:w-28">
 									היי, בסוף כל הדרכים במקום הקרוב לליבך שם תמצא חלום ישן שחיכה עידנים לשובך בסוף הדרך
 									בסוף כל הדרכים כי שם כולם אחים ואחיות היי, בסוף כל הדרכים במקום בו העצב חולף שם תמצא
 									מלון אורחים להשעין את גבך העייף אם נחפש, אם שוב נאמין עוד נמצא באחד הימים אם נחפש,
 									אם שוב נאמין עוד נמצא באחד הימים
 								</p>
-								<p class="w-44 leading-7">
+								<p class="w-44 leading-7 mobile:w-28">
 									בסוף הדרך בסוף כל הדרכים כי שם כולם אחים ואחיות היי, בסוף כל הדרכים שוב תמצא את שביל
 									הזהב שם תדע לבטח כי לא הלכת, אחינו, לשווא אם נחפש, אם שוב נאמין עוד נמצא באחד הימים
 									אם נחפש, אם שוב נאמין עוד נמצא באחד הימים בסוף הדרך בסוף כל הדרכים כי שם כולם אחים
@@ -338,14 +337,14 @@
 						<div class="flex flex-col gap-4">
 							<p class="text-xl font-bold">"יד ביד"</p>
 							<span class="text-sm font-bold text-gray-700"> מילים: בצלאל אלוני, לחן: צביקה פיק</span>
-							<div class="ml-24 flex justify-between">
-								<p class="w-36 leading-7">
+							<div class="ml-24 flex justify-between mobile:ml-0">
+								<p class="w-36 leading-7 mobile:w-28">
 									אם המים גועשים וחייך כה קשים אל תיפול ברוחך בוא גלה את עצמך רק בך עוצמה רבה כמעיין
 									המתגבר יד ביד הן שיר חוזר שתי עיניך ועיני הן הכוח עד בלי די הן האור באפלה יד ביד אם
 									רק תיתן לי יד יד ביד נצעד את כל הדרך יד ביד אם רק תיתן לי יד יד אם רק תיתן יד ביד
 									לאורך כל הדרך יד ביד
 								</p>
-								<p class="w-36 leading-7">
+								<p class="w-36 leading-7 mobile:w-28">
 									יד ביד לאוהבים אין תקווה לבודדים יד ביד לחיילים אל הבית שוב חוזרים שוב חוזרים יד ביד
 									לנדכאים עצובי מבט תוהים אל האור במרחקים אל האור שבמרומים לתקווה בחלומות יד ביד אם רק
 									תיתן לי יד... 
@@ -357,7 +356,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="-mb-16 flex flex-col px-4 py-10 pb-0 md:px-10">
+		<div class="-mb-16 flex flex-col px-4 py-10 pb-0 md:px-10 mobile:mx-0">
 			<h2 class="text-center text-2xl font-bold">מערכי פעילות נוספים</h2>
 			<div class="flex flex-wrap justify-center gap-6 py-6 pb-24">
 				<ActivityCircleLink
