@@ -120,7 +120,7 @@
 								>
 									{{ index + 1 }}
 								</div>
-								<a :href="classRoomActivity.url"
+								<a :href="classRoomActivity.url" target="_blank"
 									><h3 class="mt-4 text-right text-lg font-bold text-gray-900 underline md:text-2xl">
 										{{ classRoomActivity.title }}
 									</h3></a
@@ -158,7 +158,7 @@
 		</div>
 		<div class="px-4 py-10 pb-10 md:px-10">
 			<div class="mx-auto max-w-6xl text-center">
-				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">
+				<h2 class="mb-8 mt-8 text-2xl font-bold text-gray-900 md:text-3xl">
 					רשימת שמות החטופות והחטופים עם תמונות וכתבות
 				</h2>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
@@ -196,8 +196,8 @@
 		</div>
 
 		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
-			<div class="mx-auto max-w-6xl text-center">
-				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">
+			<div class="mx-auto mb-8 max-w-6xl text-center">
+				<h2 class="mb-8 mt-8 text-2xl font-bold text-gray-900 md:text-3xl">
 					להכיר את עולמם ולהתחבר לחטוף או לחטופה
 				</h2>
 				<h4 class="-mt-4 mb-8">הילדים והנוער בליווי המדריכים והמדריכות, המורים והמורות מוזמנים:</h4>
@@ -234,8 +234,8 @@
 			</div>
 		</div>
 		<div class="px-4 py-10 pb-10 md:px-10">
-			<div class="mx-auto max-w-6xl text-center">
-				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">פתגמים וציטוטים ממקורות שונים ביהדות</h2>
+			<div class="mx-auto mb-8 mt-8 max-w-6xl text-center">
+				<h2 class="mb-12 text-2xl font-bold text-gray-900 md:text-3xl">פתגמים וציטוטים ממקורות שונים ביהדות</h2>
 				<div class="grid grid-cols-1 items-start gap-8 md:grid-cols-1">
 					<div
 						v-for="(quote, index) in quotes"
@@ -243,8 +243,8 @@
 						class="grid grid-cols-1 gap-8 text-right md:grid-cols-2"
 					>
 						<div class="flex max-w-md flex-col text-xl">
-							<p class="font-bold" v-html="quote.title"></p>
-							<span v-if="quote.title" class="text-sm text-gray-700">{{ quote.subTitle }}</span>
+							<p class="font-semibold" v-html="quote.title"></p>
+							<span v-if="quote.subTitle" class="text-sm text-gray-700">{{ quote.subTitle }}</span>
 						</div>
 						<p v-html="quote.description"></p>
 					</div>
@@ -253,21 +253,36 @@
 		</div>
 		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
 			<div class="mx-auto max-w-6xl text-center">
-				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">שירים</h2>
+				<h2 class="mb-8 mt-12 text-2xl font-bold text-gray-900 md:text-3xl">שירים</h2>
 				<h3 class="-mt-4 mb-12 text-xl font-bold text-gray-900 md:text-xl">שירים לילדים צעירים</h3>
 				<div class="grid grid-cols-1 items-start pb-16 md:grid-cols-3">
 					<div>
 						<h4 class="font-bold">חברות וערבות הדדית</h4>
-						<a class="text-sm underline">למידת ערכים | מירב האוסמן</a>
+						<a
+							class="text-sm underline"
+							target="_blank"
+							href="https://www.youtube.com/watch?v=YhEkzCabDKQ&ab_channel=%D7%9E%D7%99%D7%A8%D7%91%D7%94%D7%90%D7%95%D7%A1%D7%9E%D7%9F%D7%97%D7%95%D7%95%D7%99%D7%94%D7%9E%D7%95%D7%A1%D7%99%D7%A7%D7%9C%D7%99%D7%AA"
+							>למידת ערכים | מירב האוסמן</a
+						>
 					</div>
 					<div>
-						<h4 class="font-bold">חברות וערבות הדדית</h4>
-						<a class="text-sm underline">למידת ערכים | מירב האוסמן</a>
+						<h4 class="font-bold">שפת הלב</h4>
+						<a
+							class="text-sm underline"
+							target="_blank"
+							href="https://www.youtube.com/watch?v=RrQmaDrBQA0&ab_channel=%D7%99%D7%9C%D7%93%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94-%D7%A2%D7%A4%D7%A8%D7%94%D7%95%D7%A2%D7%99%D7%93%D7%9F%D7%A2%D7%99%D7%A0%D7%91"
+							>שיר על ערבות הדדית | עפרה ועידן יניב</a
+						>
 					</div>
 
 					<div>
-						<h4 class="font-bold">חברות וערבות הדדית</h4>
-						<a class="text-sm underline">למידת ערכים | מירב האוסמן</a>
+						<h4 class="font-bold">פרויקט שרים ומסמנים</h4>
+						<a
+							class="text-sm underline"
+							target="_blank"
+							href="https://www.youtube.com/watch?v=TfItsrbUhWE&feature=shared"
+							>להדליק את האור | עפרה ועידן יניב</a
+						>
 					</div>
 				</div>
 				<div class="flex flex-col items-center justify-center gap-8 pb-8">
@@ -447,27 +462,27 @@
 	const classRoomActivities = [
 		{
 			title: 'ערכה לערבות הדדית, משרד החינוך תש"פ',
-			url: '',
+			url: 'https://meyda.education.gov.il/files/Merkaz/arvut/activity-kit.pdf',
 			description: 'להקשיב, לשמוע, לראות ולהשפיע ערכה לאנשי החינוך, תש"ף',
 		},
 		{
 			title: 'אוגדן פעילויות (2020) מנהל חברה ונוער',
-			url: '',
+			url: 'https://meyda.education.gov.il/files/olim/arvuthadddit.pdf',
 			description: 'מגוון נושאים: ערבות הדדית בקבוצה החברתית, שוויון הזדמנויות, הצלת חיים, יזמות תפוצות ועוד.',
 		},
 		{
 			title: 'אוגדן פעילויות (2020) מנהל חברה ונוער',
-			url: '',
+			url: 'https://pop.education.gov.il/tchumey_daat/global-subjects/annual-theme/mutual-responsibility/',
 			description: 'מגוון נושאים: ערבות הדדית בקבוצה החברתית, שוויון הזדמנויות, הצלת חיים, יזמות תפוצות ועוד.',
 		},
 	]
 
 	const quotes = [
 		{
-			title: '<strong>כל ישראל ערבים זה בזה</strong>',
+			title: '"כל ישראל ערבים זה בזה"',
 			subTitle: 'חז״ל',
 			description:
-				'(חז"ל) - חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים אחראי כלפי הכלל.',
+				'חז"ל קבעו כלל מוסרי הלכתי שמשמעותו המקורית: הקהילה אחראית כלפי כל אחד מחבריה וכל אחד מהחברים אחראי כלפי הכלל.',
 		},
 		{
 			title: '',
@@ -475,28 +490,28 @@
 				'הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד החינוך תש"פ, ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).',
 		},
 		{
-			title: '<strong>הלא פרוס לרעב לחמך ועניים מרודים תביא בית, כי תראה ערום וכיסיתו ומבשרך לא תתעלם</strong>',
+			title: '"הלא פרוס לרעב לחמך ועניים מרודים תביא בית, כי תראה ערום וכיסיתו ומבשרך לא תתעלם"',
 			subTitle: '(ישעיהו נ"ח ז\')',
 			description:
-				'(ישעיהו נ"ח ז\') - הנביא ישעיהו, מבקש לסמן בדבריו את הדרך הראויה בה נלך - דרך של צדק וחסד. אם נשכיל להבין שהרעב הוא גם שלנו, שהעירום הוא גם אצלנו, שככלי הרשע קושרים גם אותנו והמצוקה היא בבשרנו, הרי שלא נוכל להסיט את עינינו ולאטום את ליבנו (טרופר, ח\' (2007) יהדות ynet צום גדליה: "ומבשרך לא תתעלם").',
+				' הנביא ישעיהו, מבקש לסמן בדבריו את הדרך הראויה בה נלך - דרך של צדק וחסד. אם נשכיל להבין שהרעב הוא גם שלנו, שהעירום הוא גם אצלנו, שככלי הרשע קושרים גם אותנו והמצוקה היא בבשרנו, הרי שלא נוכל להסיט את עינינו ולאטום את ליבנו (טרופר, ח\' (2007) יהדות ynet צום גדליה: "ומבשרך לא תתעלם").',
 		},
 		{
-			title: '<strong>והחוט המשולש לא במהרה ינתק</strong>',
+			title: '"והחוט המשולש לא במהרה ינתק"',
 			subTitle: "(קהלת ד' ט\'-י\"ב)",
 			description:
-				'(קהלת ד\' ט\'-י"ב) - פירוש אבן עזרא: "היה לו טוב להיות לו מי שיתחבר עמו ויעזור אותו... ואם יארע לו חולי או ייפול זה את זה - יעזרנו חברו"',
+				'פירוש אבן עזרא: "היה לו טוב להיות לו מי שיתחבר עמו ויעזור אותו... ואם יארע לו חולי או ייפול זה את זה - יעזרנו חברו"',
 		},
 		{
-			title: '<strong>את אחיי אנוכי מבקש</strong>',
+			title: '"את אחיי אנוכי מבקש"',
 			subTitle: '(בראשית ל\"ז ט"\ז)',
 			description:
-				'(בראשית ל"ז ט"ז) - אהרון רזאל, "את אחיי אנוכי מבקש" - לשיר את השיר עם אהרון רזאל היא חוויה מגבשת של שירת רבים ותפילה המחברת אותנו יחד ואל אחינו ואחיותינו החטופים.',
+				'אהרון רזאל, ""את אחיי אנוכי מבקש"" - לשיר את השיר עם אהרון רזאל היא חוויה מגבשת של שירת רבים ותפילה המחברת אותנו יחד ואל אחינו ואחיותינו החטופים.',
 		},
 		{
-			title: '<strong>אחר המעשים נמשכים הלבבות</strong>',
+			title: '"אחר המעשים נמשכים הלבבות"',
 			subTitle: '(ספר החינוך (מצוה ט\"ז) הלכות מידות, שולחן ערוך הרמב\"ם)',
 			description:
-				'(ספר החינוך (מצוה ט"ז) הלכות מידות, שולחן ערוך הרמב"ם) - "דע כי האדם נפעל כפי פעולותיו, ולבו וכל מחשבותיו תמיד אחר מעשיו שהוא עוסק בהם, אם טוב ואם רע." (ספר החינוך - סדר דפוס פרנקפורט ט"ז). ליצור במו ידינו יצירות של ערבות הדדית מושך את ליבנו ומחשבותינו אל אחינו ואחיותינו הזקוקים לנו כעת. החיבור אליהם ולמשפחותיהם מחזק אותם ואותנו כאומה.',
+				' "דע כי האדם נפעל כפי פעולותיו, ולבו וכל מחשבותיו תמיד אחר מעשיו שהוא עוסק בהם, אם טוב ואם רע."<a target="_blank" href="https://he.m.wikisource.org/wiki/%D7%A1%D7%A4%D7%A8_%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9A_(%D7%A1%D7%93%D7%A8_%D7%93%D7%A4%D7%95%D7%A1_%D7%A4%D7%A8%D7%A0%D7%A7%D7%A4%D7%95%D7%A8%D7%98)/%D7%98%D7%96">(ספר החינוך</a> - סדר דפוס פרנקפורט ט"ז). ליצור במו ידינו יצירות של ערבות הדדית מושך את ליבנו ומחשבותינו אל אחינו ואחיותינו הזקוקים לנו כעת. החיבור אליהם ולמשפחותיהם מחזק אותם ואותנו כאומה.',
 		},
 	]
 
@@ -511,7 +526,7 @@
 		},
 		{
 			title: 'להכיר את השירים שהם הכי אוהבים',
-			description: `הפלייליסטים של החטופים שלנו ב-<a class="underline" href="https://eco99fm.maariv.co.il" target="_blank">eco99fm</a> וב-<a class="underline" href="https://www.spotify.com" target="_blank">ספוטיפיי</a> תמצאו את השירים שהם הכי אוהבים לשמוע`,
+			description: `הפלייליסטים של החטופים שלנו ב-<a class="underline" href="https://eco99fm.maariv.co.il" target="_blank">eco99fm</a> וב-<a class="underline" href="https://open.spotify.com/playlist/5gTUeFMXBjARzzRHyzcwS3?si=lRwRtZisS8WifeY-0plzEg&pi=dOLzaBQURsSvI&nd=1&dlsi=571660062fc648d1" target="_blank">ספוטיפיי</a> תמצאו את השירים שהם הכי אוהבים לשמוע`,
 		},
 		{
 			title: 'לקרוא ולהקשיב ברשת',
