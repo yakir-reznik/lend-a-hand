@@ -24,12 +24,14 @@
 							:key="index"
 							class="text-md flex min-w-32 items-center justify-center rounded-full border border-yellow-400 p-2 px-4 shadow-md"
 						>
-							{{ item }}
+							<a :href="`#${item.id}`">
+								{{ item.title }}
+							</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div class="bg-white px-4 py-20 pb-20 md:px-10 mobile:mx-8">
+			<div class="bg-white px-4 py-20 pb-20 md:px-10 mobile:mx-8" :id="appendixItems[0].id">
 				<div class="mx-auto max-w-6xl text-center">
 					<div class="grid grid-cols-1 items-start md:grid-cols-1">
 						<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2">
@@ -76,7 +78,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
+			<div class="bg-bluegray px-4 py-20 pb-20 md:px-10" :id="appendixItems[1].id">
 				<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 					<div class="grid grid-cols-1 items-start md:grid-cols-1">
 						<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-1">
@@ -108,7 +110,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="-mt-14 px-4 py-10 pb-10 md:px-10 mobile:mx-8">
+		<div class="-mt-14 px-4 py-10 pb-10 md:px-10 mobile:mx-8" :id="appendixItems[2].id">
 			<div class="mx-auto max-w-6xl text-center">
 				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">מערכי-שיעור על ערבות הדדית</h2>
 				<div class="grid grid-cols-1 items-start md:grid-cols-1">
@@ -134,7 +136,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bg-bluegray px-4 py-20 pb-20 md:px-10">
+		<div class="bg-bluegray px-4 py-20 pb-20 md:px-10" :id="appendixItems[3].id">
 			<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-2 text-2xl font-bold text-gray-900 md:text-3xl">
 					ערך הערבות ההדדית בתרבויות ובדתות נוספות
@@ -156,7 +158,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="px-4 py-10 pb-10 md:px-10 mobile:mx-8">
+		<div class="px-4 py-10 pb-10 md:px-10 mobile:mx-8" :id="appendixItems[7].id">
 			<div class="mx-auto max-w-6xl text-center">
 				<h2 class="mb-8 mt-8 text-2xl font-bold text-gray-900 md:text-3xl">
 					רשימת שמות החטופות והחטופים עם תמונות וכתבות
@@ -194,7 +196,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
+		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10" :id="appendixItems[5].id">
 			<div class="mx-auto mb-8 max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-8 mt-8 text-2xl font-bold text-gray-900 md:text-3xl">
 					להכיר את עולמם ולהתחבר לחטוף או לחטופה
@@ -226,13 +228,30 @@
 				</p>
 				<span class="block pt-2 text-center text-sm text-gray-700">(משנה, סנהדרין ד', ה')</span>
 				<p class="mt-8 text-center text-sm text-gray-700">
-					ביטוי המתייחס לערכם הרב של חיי אדם (על פי א"א אורבך, "'כל המקיים נפש אחת...' גלגוליו של נוסח,
-					תהפוכות צנזורה ועסקי מדפיסים", תרביץ, מ, תשל"א, מובא בתוך: ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה
-					למנהל ולמחנך).
+					ביטוי המתייחס לערכם הרב של חיי אדם (על פי
+					<a
+						target="_blank"
+						class="underline"
+						href="https://www.hamichlol.org.il/%D7%90%D7%A4%D7%A8%D7%99%D7%9D_%D7%90%D7%9C%D7%99%D7%9E%D7%9C%D7%9A_%D7%90%D7%95%D7%A8%D7%91%D7%9A"
+						>א״א אורבך</a
+					>
+					, "'כל המקיים נפש אחת...' גלגוליו של נוסח, תהפוכות צנזורה ועסקי מדפיסים",
+					<a
+						href="https://www.hamichlol.org.il/%D7%AA%D7%A8%D7%91%D7%99%D7%A5"
+						target="_blank"
+						class="underline"
+						>תרביץ</a
+					>, מ, תשל"א, מובא בתוך: ערכה לערבות הדדית, משרד החינוך תש"פ,
+					<a
+						href="https://meyda.education.gov.il/files/Merkaz/arvut/activity-kit.pdf"
+						target="_blank"
+						class="underline"
+						>ערכה למנהל ולמחנך</a
+					>).
 				</p>
 			</div>
 		</div>
-		<div class="px-4 py-10 pb-10 md:px-10 mobile:mx-8">
+		<div class="px-4 py-10 pb-10 md:px-10 mobile:mx-8" :id="appendixItems[4].id">
 			<div class="mx-auto mb-8 mt-8 max-w-6xl text-center">
 				<h2 class="mb-12 text-2xl font-bold text-gray-900 md:text-3xl">פתגמים וציטוטים ממקורות שונים ביהדות</h2>
 				<div class="grid grid-cols-1 items-start gap-8 md:grid-cols-1">
@@ -250,7 +269,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
+		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10" :id="appendixItems[6].id">
 			<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-8 mt-12 text-2xl font-bold text-gray-900 md:text-3xl">שירים</h2>
 				<h3 class="-mt-4 mb-12 text-xl font-bold text-gray-900 md:text-xl">שירים לילדים צעירים</h3>
@@ -423,37 +442,60 @@
 	// Add loading state
 	const isLoading = ref(true)
 
-	const appendixItems = [
-		'כף היד',
-		'ערבות הדדית',
-		'מערכים על ערבות',
-		'ערבות בדתות ותרבויות',
-		'פתגמים וציטוטים',
-		'להכיר ולהתחבר',
-		'שירים',
-		'שמות חטופים',
-		// Add more items here
-	]
+	const appendixItems = ref([
+		{
+			id: 'כף היד',
+			title: 'כף היד',
+		},
+		{
+			id: 'ערבות הדדית',
+			title: 'ערבות הדדית',
+		},
+		{
+			id: 'מערכים על ערבות',
+			title: 'מערכים על ערבות',
+		},
+		{
+			id: 'ערבות בדתות ותרבויות',
+			title: 'ערבות בדתות ותרבויות',
+		},
+		{
+			id: 'פתגמים וציטוטים',
+			title: 'פתגמים וציטוטים',
+		},
+		{
+			id: 'להכיר ולהתחבר',
+			title: 'להכיר ולהתחבר',
+		},
+		{
+			id: 'שירים',
+			title: 'שירים',
+		},
+		{
+			id: 'שמות החטופים',
+			title: 'שמות החטופים',
+		},
+	])
 
 	const mutualResponsibilityValue = [
 		{
 			title: 'בדת הדרוזית',
 			descrpition: `<p>حفظ الاخوان חפד אלאחוואן, "לשמור על האחים" - ערך העוסק במעגלים שונים. <br>
 	שיח' קאסם בדר: "אחריות ומחויבות לאחיך הביולוגי, לבן עמך, לאחיך האנושי בכל מקום".<br>
-	<a class="underline" href="https://meyda.education.gov.il/files/olim/arvuthadddit.pdf" target="_blank">אל מקור הציטוט</a>
+	<a class="underline" href="https://meyda.education.gov.il/files/olim/arvuthadddit.pdf" target="_blank" class="underline">אל מקור הציטוט</a>
 	</p>`,
 		},
 		{
 			title: 'באיסלאם',
 			descrpition: `<p>"[...] המעשים הטובים הם נחלת המאמין באלוהים וביום האחרון ובמלאכים ובספר הנביאים, והמעניק מרכושו על אף היותו אהוב עליו, לקרובי המשפחה והיתומים והנזקקים ולהלך בדרכים ולקבצן, ולשחרור עבדים והמקיימים את התפילה והנותנים זכאת [...] כל אלה, אמת בפיהם והם היראים" (הקוראן, סורת אל-בקרה, איה 177).<br>
-	<a class="underline" href="https://meyda.education.gov.il/files/olim/arvuthadddit.pdf" target="_blank">אל מקור הציטוט</a>
+	<a class="underline" href="https://meyda.education.gov.il/files/olim/arvuthadddit.pdf" target="_blank" class="underline">אל מקור הציטוט</a>
 	</p>`,
 		},
 		{
 			title: 'בנצרות',
 			descrpition: `<p>כָּל אֶחָד אַל יִדְאַג רַק לְעִנְיָנָיו, אֶלָּא גַּם לְעִנְיָנָיו שֶׁל זוּלָתוֹ (הברית החדשה, אל הפיליפים, ב'4).<br>
 	נָשִׂים לִבֵּנוּ אִישׁ אֶל רֵעֵהוּ, לְעוֹרֵר זֶה אֶת זֶה לְאַהֲבָה וּלְמַעֲשִׂים טוֹבִים (הברית החדשה, אל העברים, י'24).<br>
-	<a class="underline" href="https://web.archive.org/web/20140327011929/http://www.ancient-hebrew.org/docs/13_GinsburgHebrewNT.pdf" target="_blank">אל מקור הציטוט</a>
+	<a class="underline" href="https://web.archive.org/web/20140327011929/http://www.ancient-hebrew.org/docs/13_GinsburgHebrewNT.pdf" class="underline" target="_blank">אל מקור הציטוט</a>
 	</p>`,
 		},
 	]
@@ -486,7 +528,7 @@
 		{
 			title: '',
 			description:
-				'הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד החינוך תש"פ, ערכה לערבות הדדית, משרד החינוך תש"פ, ערכה למנהל ולמחנך).',
+				'הביטוי המעשי הרווח של ערך הערבות ההדדית כיום הוא עזרה לזולת, והוא מבטא את אחריות הקהילה ואת אחריות כל פרט בה לשלומם ורווחתם של יתר החברים. (שמואל אבואב, מזכ"ל משרד החינוך תש"פ, ערכה לערבות הדדית, משרד החינוך תש"פ, <a href="https://meyda.education.gov.il/files/Merkaz/arvut/activity-kit.pdf" target="_blank" class="underline">ערכה למנהל ולמחנך</a>).',
 		},
 		{
 			title: '"הלא פרוס לרעב לחמך ועניים מרודים תביא בית, כי תראה ערום וכיסיתו ומבשרך לא תתעלם"',
@@ -504,7 +546,7 @@
 			title: '"את אחיי אנוכי מבקש"',
 			subTitle: '(בראשית ל\"ז ט"\ז)',
 			description:
-				'אהרון רזאל, ""את אחיי אנוכי מבקש"" - לשיר את השיר עם אהרון רזאל היא חוויה מגבשת של שירת רבים ותפילה המחברת אותנו יחד ואל אחינו ואחיותינו החטופים.',
+				'אהרון רזאל, "<a href="https://www.youtube.com/watch?v=8LbPioCL0xg" class="underline" target="_blank">"את אחיי אנוכי מבקש"</a>" - לשיר את השיר עם אהרון רזאל היא חוויה מגבשת של שירת רבים ותפילה המחברת אותנו יחד ואל אחינו ואחיותינו החטופים.',
 		},
 		{
 			title: '"אחר המעשים נמשכים הלבבות"',
