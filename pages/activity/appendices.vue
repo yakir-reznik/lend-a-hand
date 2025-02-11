@@ -254,7 +254,7 @@
 		<div class="bg-bluegray px-4 py-10 pb-10 md:px-10">
 			<div class="mx-auto max-w-6xl text-center">
 				<h2 class="mb-8 text-2xl font-bold text-gray-900 md:text-3xl">שירים</h2>
-				<h3 class="-mt-4 mb-8 text-xl font-bold text-gray-900 md:text-xl">שירים לילדים צעירים</h3>
+				<h3 class="-mt-4 mb-12 text-xl font-bold text-gray-900 md:text-xl">שירים לילדים צעירים</h3>
 				<div class="grid grid-cols-1 items-start pb-16 md:grid-cols-3">
 					<div>
 						<h4 class="font-bold">חברות וערבות הדדית</h4>
@@ -274,55 +274,70 @@
 					<img src="/img/appendices/two-yellow-hands.png" alt="52x32" />
 					<h3 class="text-xl font-bold">שירים לגילאים שונים</h3>
 				</div>
-				<div class="grid grid-cols-1 items-start md:grid-cols-1">
-					<div class="grid grid-cols-1 gap-8 text-right md:grid-cols-2">
+				<div class="mt-8 grid grid-cols-1 items-start md:grid-cols-1">
+					<div class="mb-12 grid grid-cols-1 gap-16 text-right md:grid-cols-2">
 						<div class="flex flex-col gap-4">
-							<p class="font-bold">"בסוף כל הדרכים"</p>
+							<p class="text-xl font-bold">"בסוף כל הדרכים"</p>
 							<span class="text-sm font-bold text-gray-700"
 								>מילים: גידי קורן, לחן: מוני ארנון וגידי קורן</span
 							>
-							<p>
-								בסוף הדרך בסוף כל הדרכים כי שם כולם אחים ואחיות היי, בסוף כל הדרכים שוב תמצא את שביל
-								הזהב שם תדע לבטח כי לא הלכת, אחינו, לשווא אם נחפש, אם שוב נאמין עוד נמצא באחד הימים אם
-								נחפש, אם שוב נאמין עוד נמצא באחד הימים בסוף הדרך בסוף כל הדרכים כי שם כולם אחים ואחיות
-								היי, בסוף כל הדרכים שוב תמצא את שביל הזהב היי, בסוף כל הדרכים במקום הקרוב לליבך שם תמצא
-								חלום ישן שחיכה עידנים לשובך בסוף הדרך בסוף כל הדרכים כי שם כולם אחים ואחיות היי, בסוף כל
-								הדרכים במקום בו העצב חולף שם תמצא מלון אורחים להשעין את גבך העייף אם נחפש, אם שוב נאמין
-								עוד נמצא באחד הימים אם נחפש, אם שוב נאמין עוד נמצא באחד הימים
-							</p>
+							<div class="ml-24 flex justify-between">
+								<p class="w-44 leading-7">
+									היי, בסוף כל הדרכים במקום הקרוב לליבך שם תמצא חלום ישן שחיכה עידנים לשובך בסוף הדרך
+									בסוף כל הדרכים כי שם כולם אחים ואחיות היי, בסוף כל הדרכים במקום בו העצב חולף שם תמצא
+									מלון אורחים להשעין את גבך העייף אם נחפש, אם שוב נאמין עוד נמצא באחד הימים אם נחפש,
+									אם שוב נאמין עוד נמצא באחד הימים
+								</p>
+								<p class="w-44 leading-7">
+									בסוף הדרך בסוף כל הדרכים כי שם כולם אחים ואחיות היי, בסוף כל הדרכים שוב תמצא את שביל
+									הזהב שם תדע לבטח כי לא הלכת, אחינו, לשווא אם נחפש, אם שוב נאמין עוד נמצא באחד הימים
+									אם נחפש, אם שוב נאמין עוד נמצא באחד הימים בסוף הדרך בסוף כל הדרכים כי שם כולם אחים
+									ואחיות היי, בסוף כל הדרכים שוב תמצא את שביל הזהב
+								</p>
+							</div>
 						</div>
-						<img class="self-center" src="https://placehold.co/560x376?text=560x376" alt="560x376" />
+						<img
+							class="mt-20 rotate-2 transform self-center"
+							src="/img/activityPlans/song-1.png"
+							alt="song image"
+						/>
 
 						<div class="flex flex-col gap-4">
-							<p class="font-bold">"כנפי הרוח"</p>
+							<p class="text-xl font-bold">"כנפי הרוח"</p>
 							<span class="text-sm font-bold text-gray-700">
 								מילים: אברהם הכהן קוק יצחק, לחן: אביגיל עמר עוזיאל</span
 							>
-							<p>
+							<p class="w-36 leading-7">
 								בֶּן אָדָם, עֲלֵה לְמַעְלָה, עֲלֵה. עֲלֵה לְמַעְלָה, עֲלֵה, בֶּן אָדָם. עֲלֵה, לְמַעְלָה
 								עָלָה. כִּי כֹּחַ עַז לָךְ, יֵשׁ לְךָ כַּנְפֵי רוּחַ, כַּנְפֵי נְשָׁרִים אַבִּירִים. אַל
 								תְּכַחֵשׁ בָּם, פֶּן יְכַחֲשׁוּ לְךָ. דְּרֹשׁ אוֹתָם – דְּרֹשׁ, בֶּן אָדָם,
 								וְיִמָּצְאוּ לְךָ מִיָּד
 							</p>
 						</div>
-						<img class="self-center" src="https://placehold.co/560x376?text=560x376" alt="560x376" />
+						<img
+							class="mt-20 -rotate-2 transform self-center"
+							src="/img/activityPlans/song-2.jpg"
+							alt="song image"
+						/>
 
 						<div class="flex flex-col gap-4">
-							<p class="font-bold">"יד ביד"</p>
+							<p class="text-xl font-bold">"יד ביד"</p>
 							<span class="text-sm font-bold text-gray-700"> מילים: בצלאל אלוני, לחן: צביקה פיק</span>
-							<p>
-								אם המים גועשים וחייך כה קשים אל תיפול ברוחך בוא גלה את עצמך רק בך עוצמה רבה כמעיין
-								המתגבר יד ביד הן שיר חוזר שתי עיניך ועיני הן הכוח עד בלי די הן האור באפלה יד ביד אם רק
-								תיתן לי יד יד ביד נצעד את כל הדרך יד ביד אם רק תיתן לי יד יד אם רק תיתן יד ביד לאורך כל
-								הדרך יד ביד
-							</p>
-							<p>
-								יד ביד לאוהבים אין תקווה לבודדים יד ביד לחיילים אל הבית שוב חוזרים שוב חוזרים יד ביד
-								לנדכאים עצובי מבט תוהים אל האור במרחקים אל האור שבמרומים לתקווה בחלומות יד ביד אם רק
-								תיתן לי יד... 
-							</p>
+							<div class="ml-24 flex justify-between">
+								<p class="w-36 leading-7">
+									אם המים גועשים וחייך כה קשים אל תיפול ברוחך בוא גלה את עצמך רק בך עוצמה רבה כמעיין
+									המתגבר יד ביד הן שיר חוזר שתי עיניך ועיני הן הכוח עד בלי די הן האור באפלה יד ביד אם
+									רק תיתן לי יד יד ביד נצעד את כל הדרך יד ביד אם רק תיתן לי יד יד אם רק תיתן יד ביד
+									לאורך כל הדרך יד ביד
+								</p>
+								<p class="w-36 leading-7">
+									יד ביד לאוהבים אין תקווה לבודדים יד ביד לחיילים אל הבית שוב חוזרים שוב חוזרים יד ביד
+									לנדכאים עצובי מבט תוהים אל האור במרחקים אל האור שבמרומים לתקווה בחלומות יד ביד אם רק
+									תיתן לי יד... 
+								</p>
+							</div>
 						</div>
-						<img class="self-center" src="https://placehold.co/560x376?text=560x376" alt="560x376" />
+						<img class="mt-20 rotate-2 self-center" src="/img/activityPlans/song-3.jpeg" alt="song image" />
 					</div>
 				</div>
 			</div>
