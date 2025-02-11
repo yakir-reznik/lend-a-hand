@@ -254,7 +254,7 @@
 			<div class="mx-auto max-w-6xl text-center mobile:mx-8">
 				<h2 class="mb-8 mt-12 text-2xl font-bold text-gray-900 md:text-3xl">שירים</h2>
 				<h3 class="-mt-4 mb-12 text-xl font-bold text-gray-900 md:text-xl">שירים לילדים צעירים</h3>
-				<div class="grid grid-cols-1 items-start pb-16 md:grid-cols-3">
+				<div class="grid grid-cols-1 items-start pb-16 md:grid-cols-3 mobile:gap-4">
 					<div>
 						<h4 class="font-bold">חברות וערבות הדדית</h4>
 						<a
