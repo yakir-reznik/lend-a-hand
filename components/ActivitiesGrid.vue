@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-wrap justify-center gap-6 py-6 pb-24 mobile:gap-10">
+	<div class="flex flex-wrap justify-center gap-6 py-6 pb-24 mobile:gap-3">
 		<ActivityCircleLink
 			v-for="(activity, index) in activities.slice().reverse()"
 			:key="index"

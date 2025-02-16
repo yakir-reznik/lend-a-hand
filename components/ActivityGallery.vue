@@ -1,6 +1,6 @@
 <template>
 	<div class="mx-auto max-w-6xl p-8 text-center">
-		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mobile:pl-8 mobile:pr-8">
 			<div v-for="(item, index) in galleryItems" :key="index" class="overflow-hidden rounded-lg shadow-md">
 				<img :src="item.fields.file.url" :alt="item.fields.title" class="h-60 w-full object-cover" />
 				<div class="p-4">

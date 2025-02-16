@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-white pb-16">
-		<div class="bg-secondary pb-16 pt-32 text-center">
+		<div class="bg-secondary pb-16 pt-32 text-center mobile:pl-16 mobile:pr-16">
 			<h3 class="mb-8 text-3xl font-bold text-yellow-400">מערכי פעילות</h3>
 			<h1 class="text-5xl font-bold text-white">{{ title }}</h1>
 			<p class="mt-2 text-xl font-light text-white">{{ subtitle }}</p>

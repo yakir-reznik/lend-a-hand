@@ -1,5 +1,5 @@
 <template>
-	<div class="mx-auto max-w-6xl pb-20 pt-16 text-center md:px-10 mobile:pl-12 mobile:pr-12">
+	<div class="mx-auto max-w-6xl pb-20 pt-16 text-center md:px-10 mobile:pl-16 mobile:pr-16">
 		<div v-for="(section, index) in sections" :key="index">
 			<h2 class="mt-4 text-right text-3xl font-bold text-gray-900">
 				{{ section.fields.title }}

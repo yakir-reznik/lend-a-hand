@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-bluegray px-4 py-20 pb-20 md:px-10 mobile:pl-12 mobile:pr-12">
+	<div class="bg-bluegray px-4 py-20 pb-20 md:px-10 mobile:pl-16 mobile:pr-16">
 		<div class="mx-auto max-w-6xl text-center">
 			<div class="grid grid-cols-1 items-start md:grid-cols-1">
 				<div class="grid grid-cols-1 gap-8 pl-10 text-right md:grid-cols-2 mobile:pl-0">

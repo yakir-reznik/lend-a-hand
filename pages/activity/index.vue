@@ -34,7 +34,7 @@
 				<p class="mx-auto mb-8 text-xl desktop:max-w-2xl desktop:text-2xl">
 					והנכחת התמיכה של כולנו בשחרור החטופים.
 				</p>
-				<p class="mx-auto text-lg tablet:max-w-xl desktop:max-w-2xl desktop:text-lg">
+				<p class="mx-auto text-lg tablet:max-w-xl desktop:max-w-3xl desktop:text-lg">
 					ערבות הדדית היא הדבק המלכד את החברה הישראלית רבת השבטים והחוסן המיוחד שלנו במשך אלפי שנים בתפוצות
 					ובישראל. היום, בשרשרת הישראלית, החטופות והחטופים הם החוליה שהכי זקוקה לעזרתנו. חיזוק שלהם ושל
 					משפחותיהם ירפא אותם ואותנו ויחזק את כולנו.

@@ -375,8 +375,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="-mb-16 flex flex-col px-4 py-10 pb-0 md:px-10 mobile:mx-0">
-			<h2 class="text-center text-2xl font-bold">מערכי פעילות נוספים</h2>
+		<h2 class="mt-16 text-center text-2xl font-bold">מערכי פעילות נוספים</h2>
+		<div class="flex flex-wrap justify-center gap-6 py-6 pb-24 mobile:gap-3">
 			<div class="flex flex-wrap justify-center gap-6 py-6 pb-24">
 				<ActivityCircleLink
 					v-for="(activity, index) in activities.slice().reverse()"

@@ -37,7 +37,7 @@
 							תמיכה במיצג דיגיטלי
 						</h3>
 						<ul class="mt-2 list-inside list-disc text-right leading-relaxed text-gray-700">
-							<li class="text-right">כניסה לעמוד נתינה מאפשרת הוספת כף יד למיצג התמיכה.</li>
+							<li class="text-right">כניסה לעמוד נחיתה מאפשרת הוספת כף יד למיצג התמיכה.</li>
 							<li class="text-right">שיקוף המיצג הדיגיטלי באמצעות הקרנה על מסכים במרחב הציבורי.</li>
 						</ul>
 					</div>
