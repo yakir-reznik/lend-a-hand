@@ -211,13 +211,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'יאיר הורן',
-		age: 46,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-53.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'ענבר היימן',
 		age: 27,
 		desc: 'נחטפה מפסטיבל הנובה',
@@ -280,21 +273,6 @@ export const people: Person[] = [
 		image: '/img/people/notnim-yad-82.jpg',
 		gender: 'male',
 	},
-	{
-		name: 'שגיא דקל חן',
-		age: 36,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-19.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'אלכסנדר סשה טרופנוב',
-		age: 28,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-8.jpg',
-		gender: 'male',
-	},
-
 	{
 		name: 'אוהד יהלומי',
 		age: 50,
