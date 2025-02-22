@@ -106,27 +106,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'אריאל ביבס',
-		age: 5,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-62.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'כפיר ביבס',
-		age: 1,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-61.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'שירי ביבס',
-		age: 33,
-		desc: 'נחטפה מניר עוז',
-		image: '/img/people/notnim-yad-63.jpg',
-		gender: 'female',
-	},
-	{
 		name: 'אוריאל ברוך',
 		age: 35,
 		desc: 'נחטף מפסטיבל הנובה',
@@ -323,14 +302,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'עודד ליפשיץ',
-		age: 83,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-55.jpg',
-		gender: 'male',
-	},
-
-	{
 		name: "ג'ושוע לואיטו מולל",
 		age: 21,
 		desc: 'נחטף מנחל עוז',
@@ -349,13 +320,6 @@ export const people: Person[] = [
 		age: 47,
 		desc: 'נחטף מנחל עוז',
 		image: '/img/people/notnim-yad-13.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'אברה מנגיטסו',
-		age: 38,
-		desc: 'נחטף מצפון רצועת עזה',
-		image: '/img/people/notnim-yad-45.jpg',
 		gender: 'male',
 	},
 	{
@@ -461,13 +425,6 @@ export const people: Person[] = [
 		age: 61,
 		desc: 'נחטף מניר יצחק',
 		image: '/img/people/notnim-yad-87.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'טל שהם',
-		age: 39,
-		desc: 'נחטף מבארי',
-		image: '/img/people/notnim-yad-58.jpg',
 		gender: 'male',
 	},
 	{
