@@ -50,13 +50,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'הישאם אל סעיד',
-		age: 36,
-		desc: 'נחטף מדרום רצועת עזה',
-		image: '/img/people/notnim-yad-46.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'מוחמד אלעטרש',
 		age: 39,
 		desc: 'נחטף מעוטף עזה',
@@ -211,13 +204,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'עומר ונקרט',
-		age: 23,
-		desc: 'נחטף מפסטיבל נובה',
-		image: '/img/people/notnim-yad-14.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'אריה זלמנוביץ',
 		age: 85,
 		desc: 'נחטף מניר עוז',
@@ -264,13 +250,6 @@ export const people: Person[] = [
 		age: 59,
 		desc: 'נחטף מניר עוז',
 		image: '/img/people/notnim-yad-91.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'אליה כהן',
-		age: 27,
-		desc: 'נחטף מפסטיבל הנובה',
-		image: '/img/people/notnim-yad-23.jpg',
 		gender: 'male',
 	},
 	{
@@ -425,13 +404,6 @@ export const people: Person[] = [
 		age: 61,
 		desc: 'נחטף מניר יצחק',
 		image: '/img/people/notnim-yad-87.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'עומר שם טוב',
-		age: 22,
-		desc: 'נחטף מפסטיבל נובה',
-		image: '/img/people/notnim-yad-34.jpg',
 		gender: 'male',
 	},
 	{
