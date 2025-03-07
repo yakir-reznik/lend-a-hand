@@ -57,13 +57,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'יצחק איציק אלגרט',
-		age: 69,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-60.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'עידן אלכסנדר',
 		age: 20,
 		desc: 'נחטף מעוטף עזה',
@@ -239,13 +232,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'אוהד יהלומי',
-		age: 50,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-64.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'יאיר יעקב',
 		age: 59,
 		desc: 'נחטף מניר עוז',
@@ -302,13 +288,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'שלמה מנסור',
-		age: 86,
-		desc: 'נחטף מכיסופים',
-		image: '/img/people/notnim-yad-22.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'אליהו מרגלית',
 		age: 75,
 		desc: 'נחטף מניר עוז',
@@ -341,13 +320,6 @@ export const people: Person[] = [
 		age: 19,
 		desc: 'נחטף מכיסופים',
 		image: '/img/people/notnim-yad-88.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'צחי עידן',
-		age: 50,
-		desc: 'נחטף מנחל עוז',
-		image: '/img/people/notnim-yad-17.jpg',
 		gender: 'male',
 	},
 	{
