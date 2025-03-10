@@ -46,6 +46,26 @@
 						Adir Cohen - Product Design & Fullstack
 					</a>
 				</li>
+				<li class="hidden px-2 text-white/30 desktop:block">|</li>
+				<li>
+					<a
+						href="https://almogkashany.com/"
+						target="_blank"
+						class="block text-center text-white/60 hover:text-white/80"
+					>
+						Almog Kashany - Fullstack Developer
+					</a>
+				</li>
+				<li class="hidden px-2 text-white/30 desktop:block">|</li>
+				<li>
+					<a
+						href="https://nirtz.co.il/"
+						target="_blank"
+						class="block text-center text-white/60 hover:text-white/80"
+					>
+						Nir Tzezana - Fullstack Developer
+					</a>
+				</li>
 			</ul>
 		</div>
 	</footer>
