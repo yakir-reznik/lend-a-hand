@@ -74,6 +74,10 @@
 
 	const links: Link[] = [
 		{
+			text: 'שבילי החופש',
+			url: 'https://safa-ahat.com/notnim-yad/',
+		},
+		{
 			text: 'נותנים יד באתר',
 			url: '/',
 		},
