@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 				},
 				{
 					name: 'og:image',
-					content: 'https://notnim-yad.net/img/os-image.jpeg',
+					content: 'https://notnim-yad.net/img/og-image.jpeg',
 				},
 			],
 			script: [
