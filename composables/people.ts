@@ -57,13 +57,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'עידן אלכסנדר',
-		age: 20,
-		desc: 'נחטף מעוטף עזה',
-		image: '/img/people/notnim-yad-28.jpg',
-		gender: 'male',
-	},
-	{
 		name: 'רונן אנגל',
 		age: 54,
 		desc: 'נחטף מניר עוז',
