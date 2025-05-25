@@ -4,7 +4,7 @@
 	<SectionGoals />
 	<SectionSignup />
 	<SectionGalleryPromo />
-	<SectionMessageBoard />
+	<!-- <SectionMessageBoard /> -->
 </template>
 
 <script setup lang="ts">

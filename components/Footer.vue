@@ -14,7 +14,7 @@
 				</p>
 			</div>
 
-			<div class="mx-auto mb-5 mt-3 h-[2px] w-16 rounded bg-white/20" />
+			<!-- <div class="mx-auto mb-5 mt-3 h-[2px] w-16 rounded bg-white/20" />
 
 			<ul class="flex flex-col justify-center gap-2 desktop:flex-row">
 				<li>
@@ -66,7 +66,7 @@
 						Nir Tzezana - Fullstack Developer
 					</a>
 				</li>
-			</ul>
+			</ul> -->
 		</div>
 	</footer>
 </template>
