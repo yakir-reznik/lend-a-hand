@@ -197,20 +197,6 @@ export const people: Person[] = [
 		gender: 'male',
 	},
 	{
-		name: 'גד חגי',
-		age: 73,
-		desc: 'נחטף מניר עוז',
-		image: '/img/people/notnim-yad-81.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'ג׳ודי ווינשטיין חגי',
-		age: 70,
-		desc: 'נחטפה מניר עוז',
-		image: '/img/people/notnim-yad-66.jpg',
-		gender: 'female',
-	},
-	{
 		name: 'טל חיימי',
 		age: 41,
 		desc: 'נחטף מניר יצחק',
@@ -389,13 +375,6 @@ export const people: Person[] = [
 		name: 'אסף חממי',
 		age: 41,
 		image: '/img/people/notnim-yad-70.jpg',
-		gender: 'male',
-	},
-	{
-		name: 'פינטה נטפונג',
-		age: 35,
-		desc: 'נחטף מקיבוץ ניר עוז',
-		image: '/img/people/notnim-yad-37.jpg',
 		gender: 'male',
 	},
 	{
